@@ -19,12 +19,11 @@ G(n, d/n) is interpreted for positive integers n and 0 ≤ d ≤ n; for each fix
 d ≥ 0, this condition holds for all sufficiently large n.
 
 Both are the single statement `ThresholdChallenge.MainStatement` in `Challenge.lean` (Mathlib only, 125 lines).
-`Solution.lean` supplies `ThresholdChallenge.main` with no `sorry`. Before the
-source cleanup, the Comparator accepted the proof with con-ron `--verified`,
-NanoDa, and Lean's default kernel, using only `propext`, `Quot.sound`, and
-`Classical.choice`. The checked-in records under `verification/` describe that
-run. The current cleanup has been checked statically; Lean and the Comparator
-have not been rerun after the import changes.
+`Solution.lean` supplies `ThresholdChallenge.main` with no `sorry`. After the
+source cleanup, a clean rebuild compiled all 444 project modules. The Comparator
+accepted the proof with con-ron `--verified`, NanoDa, and Lean's default kernel,
+using only `propext`, `Quot.sound`, and `Classical.choice`. The records are in
+`verification/rebuild/` and `verification/comparator/` (see `verification/README.md`).
 
 ## Manuscript
 
@@ -74,10 +73,11 @@ sandbox enabled. The requested kernels are `con-ron --verified`, NanoDa, and
 Lean's default kernel (`leanchecker`). Success requires all three acceptance
 markers and `Your solution is okay!`.
 
-`verification/package-audit.json` records the original release's source hashes,
-dependency revisions, and static import closure. The current source checks and
-cleanup inventory are in `verification/source-audit.json`.
-`verification/release-source.sha256` covers the current Lean sources and the four
+`verification/rebuild/` and `verification/comparator/` record the clean rebuild and
+Comparator run of this release. `verification/package-audit.json` records the
+original release's source hashes, dependency revisions, and static import closure.
+The static source checks and cleanup inventory are in `verification/source-audit.json`.
+`verification/release-source.sha256` covers all 444 `.lean` files of the package and the four
 toolchain, dependency, build, and Comparator configuration files.
 
 ## Licence

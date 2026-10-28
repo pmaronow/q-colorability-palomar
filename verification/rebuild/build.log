@@ -1,0 +1,4080 @@
+✔ [8931/9377] Built ThLean.Defs.Probability (3.2s)
+⚠ [8932/9377] Built Challenge (3.4s)
+warning: Challenge.lean:122:8: declaration uses `sorry`
+✔ [8934/9377] Built ThLean.Challenge.MainDefinitions (3.4s)
+✔ [8935/9377] Built ThLean.Defs.Tree (2.9s)
+✔ [8936/9377] Built ThLean.Defs.Graph (2.0s)
+✔ [8937/9377] Built ThLean.Defs.Frozen (2.0s)
+✔ [8938/9377] Built ThLean.Defs.Cycles (3.1s)
+✔ [8939/9377] Built ThLean.Defs.High (3.0s)
+✔ [8940/9377] Built ThLean.Defs.Process (3.2s)
+✔ [8941/9377] Built ThLean.Defs.Quantile (3.0s)
+✔ [8942/9377] Built ThLean.Defs.Simple (2.0s)
+✔ [8943/9377] Built ThLean.Defs.Low (3.1s)
+✔ [8944/9377] Built ThLean.Defs.Poisson (3.2s)
+✔ [8945/9377] Built ThLean.Defs.Parameters (3.2s)
+✔ [8946/9377] Built ThLean.Defs.Extras (3.7s)
+✔ [8947/9377] Built ThLean.Defs.Sanity (3.0s)
+✔ [8948/9377] Built ThLean.Defs.Interface (3.9s)
+✔ [8949/9377] Built ThLean.Defs.Bridge (3.4s)
+✔ [8950/9377] Built ThLean.Defs (3.1s)
+✔ [8951/9377] Built ThLean.W.BR01.PairBridge (3.5s)
+⚠ [8952/9377] Built ThLean.W.BR03.PublicModels (4.2s)
+warning: ThLean/W/BR03/PublicModels.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR03/PublicModels.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR03/PublicModels.lean:95:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR03/PublicModels.lean:98:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8953/9377] Built ThLean.W.BR05.WindowProbability (4.5s)
+warning: ThLean/W/BR05/WindowProbability.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR05/WindowProbability.lean:61:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR05/WindowProbability.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/BR05/WindowProbability.lean:82:44: This simp argument is unused:
+  tupleGraph
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [survival, uniformProb, uniformMean, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/BR05/WindowProbability.lean:177:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/BR05/WindowProbability.lean:206:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/BR05/WindowProbability.lean:197:6: Try this: intro k hk habs
+
+Note: This linter can be disabled with `set_option linter.tacticAnalysis.introMerge false`
+✔ [8954/9377] Built ThLean.BP.S4.Objects (3.3s)
+✔ [8955/9377] Built ThLean.BP.S4.Finite (3.4s)
+✔ [8956/9377] Built ThLean.BP.SA.Common (3.3s)
+✔ [8957/9377] Built ThLean.W.BR01S.PairBridge (2.0s)
+✔ [8958/9377] Built ThLean.BP.S3.Support (3.6s)
+✔ [8959/9377] Built ThLean.BP.S6.Foundation (3.6s)
+✔ [8960/9377] Built ThLean.BP.S5.Support (3.7s)
+✔ [8961/9377] Built ThLean.BP.S4.Parameters (3.8s)
+✔ [8962/9377] Built ThLean.BP.SA.Basics (3.7s)
+✔ [8963/9377] Built ThLean.Contrib.SA28.Endpoints (3.8s)
+✔ [8964/9377] Built ThLean.BP.SA.Tree (4.2s)
+✔ [8965/9377] Built ThLean.BP.SA.Transfer (4.2s)
+✔ [8966/9377] Built ThLean.BP.SA.Interpolation (4.5s)
+⚠ [8967/9377] Built ThLean.W.S407.MinEstimates (5.0s)
+warning: ThLean/W/S407/MinEstimates.lean:27:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S407/MinEstimates.lean:31:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [8968/9377] Built ThLean.W.S402.FiniteVariance (5.1s)
+✔ [8969/9377] Built ThLean.W.S601.FiniteMean (5.2s)
+⚠ [8970/9377] Built ThLean.W.S405.FiniteOmission (5.6s)
+warning: ThLean/W/S405/FiniteOmission.lean:52:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:113:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:144:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:145:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:147:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S405/FiniteOmission.lean:149:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8971/9377] Built ThLean.W.S403.FiniteVariance (5.9s)
+⚠ [8972/9377] Built ThLean.W.S404.FiniteTensor (5.9s)
+warning: ThLean/W/S404/FiniteTensor.lean:22:21: This simp argument is unused:
+  hs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [uniformMean]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S404/FiniteTensor.lean:80:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:187:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:188:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:241:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:250:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:251:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:262:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S404/FiniteTensor.lean:267:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8973/9377] Built ThLean.W.S609.S6_06 (5.8s)
+✔ [8974/9377] Built ThLean.BP.S3.Graph (5.9s)
+✔ [8975/9377] Built ThLean.BP.S5.Structure (5.8s)
+✔ [8976/9377] Built ThLean.BP.S3.Process (6.5s)
+✔ [8977/9377] Built ThLean.BP.S5.Elementary (6.4s)
+✔ [8978/9377] Built ThLean.BP.S6.Credit (6.5s)
+⚠ [8979/9377] Built ThLean.W.S602.Foundation (6.5s)
+warning: ThLean/W/S602/Foundation.lean:86:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8980/9377] Built ThLean.W.S607.S6_04b (6.8s)
+warning: ThLean/W/S607/S6_04b.lean:27:25: This simp argument is unused:
+  A
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S607/S6_04b.lean:42:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [eraseEdge, hx]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S607/S6_04b.lean:50:21: This simp argument is unused:
+  hge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eraseEdge]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8981/9377] Built ThLean.W.S611.S6_08 (6.8s)
+⚠ [8982/9377] Built ThLean.W.S610.S6_07 (6.9s)
+warning: ThLean/W/S610/S6_07.lean:16:24: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:19:24: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:38:24: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:42:24: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:50:34: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:59:40: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:66:32: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:93:22: This simp argument is unused:
+  Sym2.map_map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:93:36: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:241:40: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sym2Perm, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S610/S6_07.lean:337:8: `Equiv.apply_eq_iff_eq_symm_apply` has been deprecated: Use `Equiv.eq_symm_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u_1} {β : Sort u_2} (e : α ≃ β) {x : β} {y : α}, y = e.symm x ↔ e y = x
+instead of
+  ∀ {α : Sort u} {β : Sort v} {x : α} {y : β} (f : α ≃ β), f x = y ↔ x = f.symm y
+✔ [8983/9377] Built ThLean.BP.S4.Deletion (7.3s)
+✔ [8984/9377] Built ThLean.BP.S6.Deletion (7.4s)
+⚠ [8985/9377] Built ThLean.W.S406.Finite (7.9s)
+warning: ThLean/W/S406/Finite.lean:60:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S406/Finite.lean:150:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8986/9377] Built ThLean.W.S605.S6_03 (8.1s)
+warning: ThLean/W/S605/S6_03.lean:206:21: This simp argument is unused:
+  hxy.ne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8987/9377] Built ThLean.W.S608.Foundation (8.4s)
+warning: ThLean/W/S608/Foundation.lean:55:4: Unused tactic linter: `change (a, b) ∈ relation q G u ↔ (b, a) ∈ relation q G u` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8988/9377] Built ThLean.W.S606.S6_04a (8.6s)
+warning: ThLean/W/S606/S6_04a.lean:63:19: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+✔ [8989/9377] Built ThLean.W.S409.FiniteScalar (9.5s)
+✔ [8990/9377] Built ThLean.W.S426.Parameters (6.0s)
+✔ [8991/9377] Built ThLean.W.S428.Parameters (6.6s)
+✔ [8992/9377] Built ThLean.W.S431.Parameters (6.6s)
+⚠ [8993/9377] Built ThLean.W.SA15.FiniteProbabilities (6.8s)
+warning: ThLean/W/SA15/FiniteProbabilities.lean:115:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA15/FiniteProbabilities.lean:143:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA15/FiniteProbabilities.lean:157:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA15/FiniteProbabilities.lean:150:54: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/SA15/FiniteProbabilities.lean:172:55: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8994/9377] Built ThLean.W.S430.Parameters (6.8s)
+⚠ [8995/9377] Built ThLean.W.SA18.QuantileComparison (7.2s)
+warning: ThLean/W/SA18/QuantileComparison.lean:63:13: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA18/QuantileComparison.lean:70:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA18/QuantileComparison.lean:81:30: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA18/QuantileComparison.lean:81:42: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA18/QuantileComparison.lean:85:30: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/SA18/QuantileComparison.lean:143:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8996/9377] Built ThLean.W.SA16.Basics (7.6s)
+✔ [8997/9377] Built ThLean.W.S429.Parameters (7.8s)
+⚠ [8998/9377] Built ThLean.W.SA53.Tree (7.8s)
+warning: ThLean/W/SA53/Tree.lean:33:27: This simp argument is unused:
+  Nat.mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.mul_add, Nat.add_mul, Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8999/9377] Built ThLean.W.SA55.Tree (8.1s)
+✔ [9000/9377] Built ThLean.W.SA56.Tree (8.7s)
+✔ [9001/9377] Built ThLean.W.SA57.TreeGrowth (8.7s)
+✔ [9002/9377] Built ThLean.W.S425.Parameters (9.2s)
+✔ [9003/9377] Built ThLean.W.SA80.Transfer (9.5s)
+✔ [9004/9377] Built ThLean.W.SA70.Transfer (9.7s)
+✔ [9005/9377] Built ThLean.W.SA61.TreeCondensation (9.7s)
+✔ [9006/9377] Built ThLean.W.SA63.TreeLimit (9.9s)
+✔ [9007/9377] Built ThLean.W.SA69.SA_X51b (10s)
+✔ [9008/9377] Built ThLean.W.SA26.SmoothSupport (9.9s)
+✔ [9009/9377] Built ThLean.W.SA28S.Graph (9.0s)
+✔ [9010/9377] Built ThLean.W.SA62.T36 (10s)
+✔ [9011/9377] Built ThLean.W.SA79.SA_X59a (10s)
+✔ [9012/9377] Built ThLean.W.SA33.Interpolation (10s)
+✔ [9013/9377] Built ThLean.W.SA59.TreeTail (10s)
+✔ [9014/9377] Built ThLean.Contrib.SA20.Histogram (8.9s)
+⚠ [9015/9377] Built ThLean.W.SA34.InterpolationCount (10s)
+warning: ThLean/W/SA34/InterpolationCount.lean:14:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA34/InterpolationCount.lean:60:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9016/9377] Built ThLean.W.SA67.Transfer (10s)
+✔ [9017/9377] Built ThLean.W.SA27S.SignedWeights (10s)
+✔ [9018/9377] Built ThLean.W.SA38.Interpolation (10s)
+⚠ [9019/9377] Built ThLean.W.SA72.Transfer (10s)
+warning: ThLean/W/SA72/Transfer.lean:86:24: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9020/9377] Built ThLean.W.SA54.Tree (11s)
+✔ [9021/9377] Built ThLean.Contrib.SA27.Interpolation (9.3s)
+✔ [9022/9377] Built ThLean.W.SA19.Interpolation (9.6s)
+✔ [9023/9377] Built ThLean.W.SA78.TransferTails (11s)
+✔ [9024/9377] Built ThLean.BP.SA.Alternatives (9.6s)
+⚠ [9025/9377] Built ThLean.W.SA75.SA_X56 (11s)
+warning: ThLean/W/SA75/SA_X56.lean:21:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA75/SA_X56.lean:50:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA75/SA_X56.lean:51:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA75/SA_X56.lean:107:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA75/SA_X56.lean:108:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9026/9377] Built ThLean.W.SA28.Interpolation (11s)
+✔ [9027/9377] Built ThLean.W.S562.S5_02 (8.7s)
+✔ [9028/9377] Built ThLean.W.SA23.Interpolation (11s)
+✔ [9029/9377] Built ThLean.W.SA66.Transfer (11s)
+✔ [9030/9377] Built ThLean.W.S560.S5_01A (8.6s)
+✔ [9031/9377] Built ThLean.W.SA71.Monotonicity (12s)
+✔ [9032/9377] Built ThLean.BP.SA.Quantiles (10s)
+✔ [9033/9377] Built ThLean.W.S306.Graph (9.8s)
+⚠ [9034/9377] Built ThLean.W.S568.S5_06 (9.5s)
+warning: ThLean/W/S568/S5_06.lean:101:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S568/S5_06.lean:101:39: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S568/S5_06.lean:103:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9035/9377] Built ThLean.W.S515.S5_E09 (6.7s)
+✔ [9036/9377] Built ThLean.W.S302.S3_03a (8.1s)
+✔ [9037/9377] Built ThLean.W.S567.Structure (9.7s)
+✔ [9038/9377] Built ThLean.W.S301.Graph (8.6s)
+✔ [9039/9377] Built ThLean.W.S516.Elementary (7.3s)
+✔ [9040/9377] Built ThLean.W.SA20S.Histogram (11s)
+✔ [9041/9377] Built ThLean.BP.S3.Terminal (6.8s)
+✔ [9042/9377] Built ThLean.BP.S5.Poisson (8.5s)
+✔ [9043/9377] Built ThLean.W.SA73.Transfer (13s)
+✔ [9044/9377] Built ThLean.W.S308.S3_12 (10s)
+✔ [9045/9377] Built ThLean.W.S569.QuotientEdges (10s)
+✔ [9046/9377] Built ThLean.W.SA58.TreeInduction (13s)
+✔ [9047/9377] Built ThLean.BP.S3.Lifetime (7.7s)
+⚠ [9048/9377] Built ThLean.W.S311.Process (7.5s)
+warning: ThLean/W/S311/Process.lean:97:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S311/Process.lean:100:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9049/9377] Built ThLean.W.S303.Graph (7.0s)
+warning: ThLean/W/S303/Graph.lean:37:30: This simp argument is unused:
+  Fintype.card_pos_iff.mpr inferInstance
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_const]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S303/Graph.lean:68:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S303/Graph.lean:68:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S303/Graph.lean:68:57: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S303/Graph.lean:69:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S303/Graph.lean:93:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S303/Graph.lean:123:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S303/Graph.lean:254:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S303/Graph.lean:254:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9050/9377] Built ThLean.W.SA65.Transfer (14s)
+warning: ThLean/W/SA65/Transfer.lean:150:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA65/Transfer.lean:177:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA65/Transfer.lean:213:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/SA65/Transfer.lean:146:5: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/SA65/Transfer.lean:216:6: Try this: intro x hx hxeq
+
+Note: This linter can be disabled with `set_option linter.tacticAnalysis.introMerge false`
+warning: ThLean/W/SA65/Transfer.lean:238:2: Unused tactic linter: `change
+  (∑ a ∈ (Finset.univ : Finset α), if P a then (1 : ℝ) else 0) / (Fintype.card α : ℝ) = _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/SA65/Transfer.lean:245:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA65/Transfer.lean:248:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA65/Transfer.lean:268:24: This simp argument is unused:
+  EdgeTuple
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tupleCount]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/SA65/Transfer.lean:317:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/SA65/Transfer.lean:317:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9051/9377] Built ThLean.W.SA24.Interpolation (13s)
+✔ [9052/9377] Built ThLean.W.SA21.SupportReduction (13s)
+⚠ [9053/9377] Built ThLean.W.S310.S3_04a (7.4s)
+warning: ThLean/W/S310/S3_04a.lean:62:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S310/S3_04a.lean:69:15: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S310/S3_04a.lean:72:27: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S310/S3_04a.lean:125:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S310/S3_04a.lean:126:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S310/S3_04a.lean:134:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S310/S3_04a.lean:191:19: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9054/9377] Built ThLean.W.S316.Quantile (8.4s)
+warning: ThLean/W/S316/Quantile.lean:89:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S316/Quantile.lean:97:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9055/9377] Built ThLean.W.S312.Process (7.8s)
+warning: ThLean/W/S312/Process.lean:151:24: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S312/Process.lean:151:47: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S312/Process.lean:154:24: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S312/Process.lean:154:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S312/Process.lean:248:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S312/Process.lean:297:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S312/Process.lean:299:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S312/Process.lean:320:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S312/Process.lean:321:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9056/9377] Built ThLean.W.S314.Quantile (8.0s)
+warning: ThLean/W/S314/Quantile.lean:61:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9057/9377] Built ThLean.W.S305.Frozen (11s)
+✔ [9058/9377] Built ThLean.W.S514.Elementary (6.8s)
+✔ [9059/9377] Built ThLean.W.S304.S3_09a (7.7s)
+✔ [9060/9377] Built ThLean.W.S510.Elementary (6.0s)
+✔ [9061/9377] Built ThLean.W.S513.S5_E07 (7.8s)
+✔ [9062/9377] Built ThLean.W.S309.Process (8.8s)
+⚠ [9063/9377] Built ThLean.W.SA37.Interpolation (16s)
+warning: ThLean/W/SA37/Interpolation.lean:113:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:116:53: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:118:53: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:210:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [addEdge, he]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/SA37/Interpolation.lean:210:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/SA37/Interpolation.lean:210:61: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/SA37/Interpolation.lean:313:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA37/Interpolation.lean:331:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:356:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:380:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/SA37/Interpolation.lean:396:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA37/Interpolation.lean:426:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9064/9377] Built ThLean.W.S623.S6_22a (7.5s)
+warning: ThLean/W/S623/S6_22a.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9065/9377] Built ThLean.W.S624.CreditLog (7.7s)
+✔ [9066/9377] Built ThLean.W.S505.Elementary (7.9s)
+⚠ [9067/9377] Built ThLean.W.S307.S3_11 (15s)
+warning: ThLean/W/S307/S3_11.lean:282:12: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9068/9377] Built ThLean.W.S507.S5_E02 (8.6s)
+warning: ThLean/W/S507/S5_E02.lean:74:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S507/S5_E02.lean:86:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S507/S5_E02.lean:154:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S507/S5_E02.lean:177:20: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9069/9377] Built ThLean.BP.S6.Potential (7.7s)
+✔ [9070/9377] Built ThLean.W.S420.Deletion (7.8s)
+✔ [9071/9377] Built ThLean.W.S509.Elementary (8.0s)
+✔ [9072/9377] Built ThLean.W.S622.S6_21 (8.4s)
+⚠ [9073/9377] Built ThLean.W.S618.Credit (8.2s)
+warning: ThLean/W/S618/Credit.lean:24:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S618/Credit.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S618/Credit.lean:46:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S618/Credit.lean:56:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S618/Credit.lean:73:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9074/9377] Built ThLean.W.S421.S4_RED_08A (8.4s)
+✔ [9075/9377] Built ThLean.BP.S4.Bridges (7.2s)
+✔ [9076/9377] Built ThLean.W.S620.S6_19 (8.6s)
+✔ [9077/9377] Built ThLean.W.S413.DeletionCylinder (7.6s)
+✔ [9078/9377] Built ThLean.W.S412.Red01B (7.7s)
+✔ [9079/9377] Built ThLean.W.S417.Diagonal (8.4s)
+⚠ [9080/9377] Built ThLean.W.S615.DeletionSection (7.7s)
+warning: ThLean/W/S615/DeletionSection.lean:12:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:36:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:47:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:61:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:75:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S615/DeletionSection.lean:76:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9081/9377] Built ThLean.W.S419.Deletion06 (9.1s)
+⚠ [9082/9377] Built ThLean.W.SA36.InterpolationDerivative (17s)
+warning: ThLean/W/SA36/InterpolationDerivative.lean:71:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/SA36/InterpolationDerivative.lean:172:4: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [supportMean, ThresholdFoundations.poissonSupportMean, Finset.mul_sum, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/SA36/InterpolationDerivative.lean:172:30: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [supportMean, ThresholdFoundations.poissonSupportMean, Finset.mul_sum, mul_assoc, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/SA36/InterpolationDerivative.lean:210:75: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, α, zero_mul, Finset.sum_const_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/SA36/InterpolationDerivative.lean:330:85: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, α, zero_mul, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9083/9377] Built ThLean.W.S411.Deletion (8.2s)
+warning: ThLean/W/S411/Deletion.lean:66:20: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hLU]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S411/Deletion.lean:66:45: This simp argument is unused:
+  hLU
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.add_sub_cancel_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9084/9377] Built ThLean.W.S415.RED03 (8.8s)
+✔ [9085/9377] Built ThLean.W.S617.DeletionSymmetry (8.2s)
+⚠ [9086/9377] Built ThLean.W.S422.TerminalHelpers (8.7s)
+warning: ThLean/W/S422/TerminalHelpers.lean:110:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9087/9377] Built ThLean.W.S416.S4_RED_04A (9.3s)
+warning: ThLean/W/S416/S4_RED_04A.lean:65:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S416/S4_RED_04A.lean:69:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S416/S4_RED_04A.lean:104:34: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S416/S4_RED_04A.lean:122:28: This simp argument is unused:
+  tuplePrefix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [addPair, addEdge, deletedPrefix, s, t, hxe]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S416/S4_RED_04A.lean:122:59: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [addPair, addEdge, tuplePrefix, deletedPrefix, s, hxe]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S416/S4_RED_04A.lean:132:28: This simp argument is unused:
+  tuplePrefix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [addPair, addEdge, deletedPrefix, s, t, hxe']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S416/S4_RED_04A.lean:132:59: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [addPair, addEdge, tuplePrefix, deletedPrefix, s, hxe']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S416/S4_RED_04A.lean:281:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S416/S4_RED_04A.lean:282:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9088/9377] Built ThLean.W.SA28S.Coefficients (8.2s)
+✔ [9089/9377] Built ThLean.W.SA45.Quantiles (7.2s)
+✔ [9090/9377] Built ThLean.W.SA20.Interpolation (8.2s)
+✔ [9091/9377] Built ThLean.W.S414.DeletionSquare (9.2s)
+✔ [9092/9377] Built ThLean.W.S619.CreditAbsorption (10s)
+✔ [9093/9377] Built ThLean.W.S613.S6_10 (9.1s)
+✔ [9094/9377] Built ThLean.W.S418.RedWeight (10s)
+✔ [9095/9377] Built ThLean.W.SA77.X58a (21s)
+✔ [9096/9377] Built ThLean.BP.SA.Convergence (8.7s)
+✔ [9097/9377] Built ThLean.W.SA43.QuantileEnvelope (7.9s)
+✔ [9098/9377] Built ThLean.W.SA46.QuantileCutoff (8.7s)
+✔ [9099/9377] Built ThLean.W.SA64.T39 (8.7s)
+✔ [9100/9377] Built ThLean.W.SA44.Quantiles (8.3s)
+✔ [9101/9377] Built ThLean.W.S321.S3_19a (7.5s)
+✔ [9102/9377] Built ThLean.W.S318.Hazard (7.3s)
+✔ [9103/9377] Built ThLean.W.S616.Deletion (10s)
+✔ [9104/9377] Built ThLean.W.S614.Deletion (10s)
+⚠ [9105/9377] Built ThLean.W.S317.S3_14 (7.8s)
+warning: ThLean/W/S317/S3_14.lean:19:34: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_assoc, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9106/9377] Built ThLean.W.S559S.Laws (7.9s)
+✔ [9107/9377] Built ThLean.W.SA40S.FiniteSampling (8.8s)
+✔ [9108/9377] Built ThLean.W.S612.Deletion (10s)
+⚠ [9109/9377] Built ThLean.W.S322.FixedPair (8.0s)
+warning: ThLean/W/S322/FixedPair.lean:188:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [N]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S322/FixedPair.lean:141:48: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hAf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9110/9377] Built ThLean.W.S558.PoissonRoot (8.2s)
+warning: ThLean/W/S558/PoissonRoot.lean:119:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9111/9377] Built ThLean.W.S319.S3_16 (8.6s)
+warning: ThLean/W/S319/S3_16.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S319/S3_16.lean:100:6: This simp argument is unused:
+  uniformMean_const
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [processSurvival, survival, uniformProb, uniformMean, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S319/S3_16.lean:195:33: This simp argument is unused:
+  ENNReal.ofReal_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [zENN, indicator, he, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S319/S3_16.lean:195:53: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [zENN, indicator, he, ENNReal.ofReal_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S319/S3_16.lean:203:40: This simp argument is unused:
+  kappa_nonneg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [zENN, ENNReal.ofReal_mul, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S319/S3_16.lean:238:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S319/S3_16.lean:250:5: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S319/S3_16.lean:305:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S319/S3_16.lean:338:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S319/S3_16.lean:346:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9112/9377] Built ThLean.W.S320.Terminal (8.7s)
+warning: ThLean/W/S320/Terminal.lean:74:12: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [he']
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S320/Terminal.lean:43:6: This simp argument is unused:
+  Fin.val_castSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ThLean.BP.S3.initTuple, ThLean.BP.S3.lastPair, Fin.val_last]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S320/Terminal.lean:43:24: This simp argument is unused:
+  Fin.val_last
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ThLean.BP.S3.initTuple, ThLean.BP.S3.lastPair, Fin.val_castSucc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S320/Terminal.lean:97:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S320/Terminal.lean:108:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S320/Terminal.lean:139:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9113/9377] Built ThLean.W.S557.PoissonShift (7.8s)
+✔ [9114/9377] Built ThLean.W.SA47.QuantileInversion (10s)
+⚠ [9115/9377] Built ThLean.W.S555.S5_13 (8.3s)
+warning: ThLean/W/S555/S5_13.lean:150:33: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [indicator, hb, hp, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S555/S5_13.lean:169:31: This simp argument is unused:
+  hl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [indicator, hb, hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9116/9377] Built ThLean.Contrib.S553.Nodes (6.3s)
+✔ [9117/9377] Built ThLean.Contrib.S559.Hazard (6.7s)
+✔ [9118/9377] Built ThLean.W.S548.S5_08C (7.0s)
+⚠ [9119/9377] Built ThLean.W.S625.CreditNumerator (14s)
+warning: ThLean/W/S625/CreditNumerator.lean:213:50: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_const, nsmul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S625/CreditNumerator.lean:235:44: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_const, nsmul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S625/CreditNumerator.lean:287:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S625/CreditNumerator.lean:287:24: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9120/9377] Built ThLean.Contrib.S554.PartnerAverage (6.6s)
+✔ [9121/9377] Built ThLean.W.S549S.ProductMean (7.3s)
+✔ [9122/9377] Built ThLean.W.S552.PoissonOccupation (8.6s)
+✔ [9123/9377] Built ThLean.Contrib.S549.PoissonSplit (6.8s)
+⚠ [9124/9377] Built ThLean.W.S546.S5_08A (7.4s)
+warning: ThLean/W/S546/S5_08A.lean:114:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9125/9377] Built ThLean.W.S550.PoissonRoot (8.6s)
+warning: ThLean/W/S550/PoissonRoot.lean:14:25: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S550/PoissonRoot.lean:64:46: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S550/PoissonRoot.lean:273:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S550/PoissonRoot.lean:274:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S550/PoissonRoot.lean:276:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9126/9377] Built ThLean.W.S621.Credit (15s)
+warning: ThLean/W/S621/Credit.lean:129:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S621/Credit.lean:166:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9127/9377] Built ThLean.W.S547.S5_08BHelpers (8.2s)
+warning: ThLean/W/S547/S5_08BHelpers.lean:30:13: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S547/S5_08BHelpers.lean:80:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S547/S5_08BHelpers.lean:149:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S547/S5_08BHelpers.lean:235:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9128/9377] Built ThLean.BP.S3.Poisson (7.7s)
+✔ [9129/9377] Built ThLean.W.S331.LifetimeClassmass (7.7s)
+✔ [9130/9377] Built ThLean.W.SA17S.F02 (6.9s)
+✔ [9131/9377] Built ThLean.W.S626.CreditBound (17s)
+⚠ [9132/9377] Built ThLean.W.S329.Lifetime (8.3s)
+warning: ThLean/W/S329/Lifetime.lean:107:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S329/Lifetime.lean:108:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S329/Lifetime.lean:140:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [i]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S329/Lifetime.lean:163:20: This simp argument is unused:
+  P
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [f, g, A, B, B1, pref, i, j, hj0raw, ha, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S329/Lifetime.lean:164:20: This simp argument is unused:
+  P
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [f, g, A, B, B1, pref, i, j, hj0raw, ha, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S329/Lifetime.lean:165:18: This simp argument is unused:
+  P
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [f, g, A, B, B1, pref, i, j, hj0raw, ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S329/Lifetime.lean:242:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S329/Lifetime.lean:255:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S329/Lifetime.lean:253:5: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S329/Lifetime.lean:279:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S329/Lifetime.lean:297:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hzero]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [9133/9377] Built ThLean.W.S327.LifetimeEnvelope (8.4s)
+✔ [9134/9377] Built ThLean.BP.S5.Identification (9.3s)
+⚠ [9135/9377] Built ThLean.W.S324.Lifetime (8.1s)
+warning: ThLean/W/S324/Lifetime.lean:130:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S324/Lifetime.lean:162:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S324/Lifetime.lean:190:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S324/Lifetime.lean:191:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S324/Lifetime.lean:238:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S324/Lifetime.lean:239:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9136/9377] Built ThLean.W.S632.S6_30b (7.7s)
+warning: ThLean/W/S632/S6_30b.lean:16:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S632/S6_30b.lean:50:15: This simp argument is unused:
+  Finset.mem_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_univ, true_and] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S632/S6_30b.lean:50:34: This simp argument is unused:
+  Finset.mem_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, true_and] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S632/S6_30b.lean:50:51: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_univ] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9137/9377] Built ThLean.BP.S6.Analytic (7.2s)
+✔ [9138/9377] Built ThLean.BP.S6.Measure (7.5s)
+✔ [9139/9377] Built ThLean.Contrib.S434.Bridge01C (6.5s)
+✔ [9140/9377] Built ThLean.W.S437.Bridge03B (7.1s)
+⚠ [9141/9377] Built ThLean.W.S323.Lifetime (8.5s)
+warning: ThLean/W/S323/Lifetime.lean:37:15: This simp argument is unused:
+  Finset.mem_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_univ, true_and] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S323/Lifetime.lean:37:34: This simp argument is unused:
+  Finset.mem_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, true_and] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S323/Lifetime.lean:37:51: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_univ] at hi ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S323/Lifetime.lean:48:29: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S323/Lifetime.lean:48:40: This simp argument is unused:
+  WithTop.coe_lt_coe
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [firstFailure, dif_pos h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S323/Lifetime.lean:104:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S323/Lifetime.lean:105:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S323/Lifetime.lean:141:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S323/Lifetime.lean:178:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S323/Lifetime.lean:241:6: Unused tactic linter: `change ENNReal.ofReal (truncatedLifetime q b G) ≤ lifetime q G` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S323/Lifetime.lean:271:6: Unused tactic linter: `change (1 : ℝ≥0∞) ≤ lifetime q G` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S323/Lifetime.lean:188:6: Try this: intro i j hij hi hj
+
+Note: This linter can be disabled with `set_option linter.tacticAnalysis.introMerge false`
+✔ [9142/9377] Built ThLean.W.S328.Lifetime (9.9s)
+✔ [9143/9377] Built ThLean.W.S424.RED10B (7.3s)
+✔ [9144/9377] Built ThLean.W.SA20S.Interpolation (6.5s)
+⚠ [9145/9377] Built ThLean.W.SA27.Interpolation (16s)
+warning: ThLean/W/SA27/Interpolation.lean:32:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA27/Interpolation.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/SA27/Interpolation.lean:34:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9146/9377] Built ThLean.W.S631.S6_30a (8.0s)
+warning: ThLean/W/S631/S6_30a.lean:30:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:123:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:124:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:126:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:128:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:137:20: This simp argument is unused:
+  ThLean.BP.S6.takePrefix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S631/S6_30a.lean:137:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S631/S6_30a.lean:163:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:164:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S631/S6_30a.lean:266:43: This simp argument is unused:
+  Nat.succ_ne_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [binomialWeight, hk, hj, hjm, Nat.succ_sub_one, hchoose, hpow, hpow2, pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S631/S6_30a.lean:267:10: This simp argument is unused:
+  Nat.succ_sub_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [binomialWeight, hk, hj, hjm, Nat.succ_ne_zero, hchoose, hpow, hpow2, pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S631/S6_30a.lean:257:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S631/S6_30a.lean:268:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S631/S6_30a.lean:273:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S631/S6_30a.lean:300:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9147/9377] Built ThLean.W.S303.DegreeDistribution (9.6s)
+warning: ThLean/W/S303/DegreeDistribution.lean:20:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S303/DegreeDistribution.lean:35:58: This simp argument is unused:
+  p
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [uniformMeanENN, touchCount, binomialWeight]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S303/DegreeDistribution.lean:36:58: This simp argument is unused:
+  p
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [uniformMeanENN, touchCount, binomialWeight, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S303/DegreeDistribution.lean:141:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S303/DegreeDistribution.lean:142:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S303/DegreeDistribution.lean:146:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S303/DegreeDistribution.lean:147:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9148/9377] Built ThLean.W.S326.LifetimeBounds (10s)
+info: ThLean/W/S326/LifetimeBounds.lean:36:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ThLean/W/S326/LifetimeBounds.lean:57:41: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S326/LifetimeBounds.lean:184:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S326/LifetimeBounds.lean:185:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: ThLean/W/S326/LifetimeBounds.lean:240:10: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ThLean/W/S326/LifetimeBounds.lean:204:14: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.cast_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S326/LifetimeBounds.lean:239:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9149/9377] Built ThLean.W.S436S.FiniteLifetime (8.4s)
+⚠ [9150/9377] Built ThLean.W.S633.Occupation (9.5s)
+warning: ThLean/W/S633/Occupation.lean:14:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S633/Occupation.lean:23:6: Unused tactic linter: `change (x ⟨i.val, Nat.lt_of_lt_of_le i.isLt hm⟩).val = e` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S633/Occupation.lean:68:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S633/Occupation.lean:76:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S633/Occupation.lean:161:31: This simp argument is unused:
+  hdGraph
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [indicator, hd, htime, hc, hgraph x]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S633/Occupation.lean:165:31: This simp argument is unused:
+  hdGraph
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [indicator, hd, htime, hc, hzero, hgraph x]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9151/9377] Built ThLean.W.SA28S.EndpointSeries (7.3s)
+⚠ [9152/9377] Built ThLean.W.S422.S4_RED_08B (7.6s)
+warning: ThLean/W/S422/S4_RED_08B.lean:165:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S422/S4_RED_08B.lean:188:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S422/S4_RED_08B.lean:189:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S422/S4_RED_08B.lean:190:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9153/9377] Built ThLean.BP.S4.Reduction (8.1s)
+⚠ [9154/9377] Built ThLean.W.S432.S4Bridge01A (8.4s)
+warning: ThLean/W/S432/S4Bridge01A.lean:67:13: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S432/S4Bridge01A.lean:74:13: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S432/S4Bridge01A.lean:105:15: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: ThLean/W/S432/S4Bridge01A.lean:108:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S432/S4Bridge01A.lean:101:13: This simp argument is unused:
+  tupleGraph
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.card_filter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S432/S4Bridge01A.lean:209:60: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:209:90: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:209:60: Unused tactic linter: `exact Subsingleton.elim _ _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:209:90: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:222:60: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:222:90: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:222:60: Unused tactic linter: `exact Subsingleton.elim _ _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:222:90: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:230:27: This simp argument is unused:
+  Function.const_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [terminalStep, indicator]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S432/S4Bridge01A.lean:239:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:239:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:266:60: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:266:60: Unused tactic linter: `exact Subsingleton.elim _ _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:273:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S432/S4Bridge01A.lean:288:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S432/S4Bridge01A.lean:288:12: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9155/9377] Built ThLean.W.S433.Bridge01B (8.4s)
+warning: ThLean/W/S433/Bridge01B.lean:135:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9156/9377] Built ThLean.W.S629.S6_28 (9.7s)
+✔ [9157/9377] Built ThLean.W.SA42.QuantileUpper (16s)
+✔ [9158/9377] Built ThLean.W.S435.S4Bridge02 (9.1s)
+✔ [9159/9377] Built ThLean.W.SA04.Convergence (7.2s)
+✔ [9160/9377] Built ThLean.W.SA08.SA_C64b (7.6s)
+✔ [9161/9377] Built ThLean.W.S423.S4_RED_10A (9.2s)
+✔ [9162/9377] Built ThLean.W.S551S.Series (14s)
+✔ [9163/9377] Built ThLean.W.S627.Potential (10s)
+✔ [9164/9377] Built ThLean.W.SA09.Convergence (8.1s)
+⚠ [9165/9377] Built ThLean.W.S628.Telescope (10s)
+warning: ThLean/W/S628/Telescope.lean:95:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S628/Telescope.lean:98:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S628/Telescope.lean:83:62: This simp argument is unused:
+  hval
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hcurr, hje, hlt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S628/Telescope.lean:88:10: This simp argument is unused:
+  Nat.lt_succ_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S628/Telescope.lean:116:51: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S628/Telescope.lean:218:36: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S628/Telescope.lean:219:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S628/Telescope.lean:219:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9166/9377] Built ThLean.W.SA01.SA_C60a (6.6s)
+✔ [9167/9377] Built ThLean.W.SA07.Convergence (7.7s)
+✔ [9168/9377] Built ThLean.W.SA06.Convergence (7.9s)
+⚠ [9169/9377] Built ThLean.W.SA41.QuantileLower (17s)
+warning: ThLean/W/SA41/QuantileLower.lean:235:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA41/QuantileLower.lean:238:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/SA41/QuantileLower.lean:245:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/SA41/QuantileLower.lean:250:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9170/9377] Built ThLean.BP.SA.Interfaces (7.1s)
+✔ [9171/9377] Built ThLean.W.SA02.Convergence (7.9s)
+✔ [9172/9377] Built ThLean.W.SA03.Convergence (8.1s)
+✔ [9173/9377] Built ThLean.W.S325.S3_23 (12s)
+✔ [9174/9377] Built ThLean.W.SA05.Convergence (8.7s)
+✔ [9175/9377] Built ThLean.W.SA40S.Q20 (7.8s)
+✔ [9176/9377] Built ThLean.W.SA10.Convergence (9.7s)
+⚠ [9177/9377] Built ThLean.W.S553.S5_11 (8.2s)
+warning: ThLean/W/S553/S5_11.lean:197:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9178/9377] Built ThLean.W.S345.Poisson (6.7s)
+⚠ [9179/9377] Built ThLean.W.S559.Poisson (8.2s)
+warning: ThLean/W/S559/Poisson.lean:99:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S559/Poisson.lean:100:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S559/Poisson.lean:171:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9180/9377] Built ThLean.W.S549S.EdgeBlocks (8.3s)
+✔ [9181/9377] Built ThLean.W.S346.PoissonIntegral (6.0s)
+✔ [9182/9377] Built ThLean.W.S341.PoissonZero (6.8s)
+✔ [9183/9377] Built ThLean.W.S347.PoissonOccupation (7.3s)
+⚠ [9184/9377] Built ThLean.W.S547.S5_08B (7.7s)
+warning: ThLean/W/S547/S5_08B.lean:20:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S547/S5_08B.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9185/9377] Built ThLean.BP.S3.Tails (6.4s)
+✔ [9186/9377] Built ThLean.W.S549.PoissonSplit (9.2s)
+✔ [9187/9377] Built ThLean.W.S332.PoissonMass (6.7s)
+✔ [9188/9377] Built ThLean.W.SA27S.TripleWeights (22s)
+✔ [9189/9377] Built ThLean.W.S334.Shuffle (7.6s)
+✔ [9190/9377] Built ThLean.W.S531.Identification (7.1s)
+✔ [9191/9377] Built ThLean.W.S523S.Measurability (6.4s)
+✔ [9192/9377] Built ThLean.Contrib.S529.EarlyAssembly (6.3s)
+⚠ [9193/9377] Built ThLean.W.S336.ListSums (9.2s)
+warning: ThLean/W/S336/ListSums.lean:46:12: This simp argument is unused:
+  poissonListMass
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.prod_ofFn, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S336/ListSums.lean:46:29: This simp argument is unused:
+  List.prod_ofFn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [poissonListMass, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S336/ListSums.lean:148:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S336/ListSums.lean:168:33: This simp argument is unused:
+  indicator
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Set.indicator, hw, hw']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S336/ListSums.lean:169:19: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9194/9377] Built ThLean.W.S554.S5_12 (11s)
+⚠ [9195/9377] Built ThLean.W.S506.Elementary (26s)
+warning: ThLean/W/S506/Elementary.lean:114:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [h, hw]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:116:10: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [decode', decode, heq, ov]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:143:8: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [pos, decode, hn]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:161:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [n]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:166:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S506/Elementary.lean:220:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [h, hw]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:344:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [WordOn, m, O, wordFiberCard]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S506/Elementary.lean:281:22: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [(y.2.1 i).1 h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S506/Elementary.lean:289:16: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hnot, hget]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S506/Elementary.lean:349:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9196/9377] Built ThLean.W.S520.S5_17D (6.6s)
+warning: ThLean/W/S520/S5_17D.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S520/S5_17D.lean:53:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S520/S5_17D.lean:64:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9197/9377] Built ThLean.W.S523S.Kernels (7.2s)
+✔ [9198/9377] Built ThLean.W.S526.S5_23 (8.1s)
+✔ [9199/9377] Built ThLean.W.S648.Analytic (6.1s)
+✔ [9200/9377] Built ThLean.BP.S5.Completion (6.7s)
+✔ [9201/9377] Built ThLean.W.S523S.GraphSplit (7.4s)
+✔ [9202/9377] Built ThLean.W.S524.LowTilt (7.5s)
+✔ [9203/9377] Built ThLean.W.S527.S5_24 (8.3s)
+✔ [9204/9377] Built ThLean.W.S650.S6_X03 (6.6s)
+✔ [9205/9377] Built ThLean.W.S335.PoissonSplit (9.6s)
+⚠ [9206/9377] Built ThLean.W.SA68.SA_X51a (36s)
+warning: ThLean/W/SA68/SA_X51a.lean:8:47: Variable name `hx0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9207/9377] Built ThLean.W.S518.S5_17B (7.4s)
+warning: ThLean/W/S518/S5_17B.lean:80:0: Definition `_private.ThLean.W.S518.S5_17B.0.ThLean.W.S518.genericPairFintype` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: ThLean/W/S518/S5_17B.lean:82:9: Variable name `e` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _e
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S518/S5_17B.lean:84:0: Definition `_private.ThLean.W.S518.S5_17B.0.ThLean.W.S518.genericEdgeTupleFintype` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: ThLean/W/S518/S5_17B.lean:100:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S518/S5_17B.lean:209:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S518/S5_17B.lean:210:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9208/9377] Built ThLean.BP.S6.Descent (7.4s)
+✔ [9209/9377] Built ThLean.W.S634.S6_31b (6.4s)
+✔ [9210/9377] Built ThLean.W.S639.Geometric (6.7s)
+✔ [9211/9377] Built ThLean.W.SA28S.Interpolation (6.5s)
+⚠ [9212/9377] Built ThLean.W.S434.S4_BRIDGE_01C (6.7s)
+warning: ThLean/W/S434/S4_BRIDGE_01C.lean:44:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S434/S4_BRIDGE_01C.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S434/S4_BRIDGE_01C.lean:62:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9213/9377] Built ThLean.W.S439.Reduction (6.7s)
+✔ [9214/9377] Built ThLean.W.S440.SplitBound (6.7s)
+✔ [9215/9377] Built ThLean.W.S530.Identification (9.9s)
+✔ [9216/9377] Built ThLean.W.S441.S4Red16 (6.9s)
+✔ [9217/9377] Built ThLean.W.S646.S6_44a (6.4s)
+✔ [9218/9377] Built ThLean.W.S651.Analytic (8.9s)
+⚠ [9219/9377] Built ThLean.W.S438.RedVarlower (7.7s)
+warning: ThLean/W/S438/RedVarlower.lean:15:0: Definition `_private.ThLean.W.S438.RedVarlower.0.ThLean.W.S438.quantileTupleFintype` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+✔ [9220/9377] Built ThLean.W.S645.Analytic (8.0s)
+⚠ [9221/9377] Built ThLean.W.S522.S5_19 (9.0s)
+warning: ThLean/W/S522/S5_19.lean:28:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S522/S5_19.lean:29:10: This simp argument is unused:
+  hA
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [indicator]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S522/S5_19.lean:64:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S522/S5_19.lean:65:10: This simp argument is unused:
+  hA
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S522/S5_19.lean:92:4: `Measurable.ennreal_tsum` has been deprecated: Use `Measurable.tsum` from `Mathlib.MeasureTheory.Constructions.Polish.Basic` instead
+info: ThLean/W/S522/S5_19.lean:319:10: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ThLean/W/S522/S5_19.lean:398:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S522/S5_19.lean:401:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S522/S5_19.lean:398:36: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S522/S5_19.lean:401:34: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9222/9377] Built ThLean.BP.S4.Window (8.9s)
+✔ [9223/9377] Built ThLean.W.S549S.PoissonSplit (5.7s)
+✔ [9224/9377] Built ThLean.W.S352.Tails (6.1s)
+⚠ [9225/9377] Built ThLean.W.S350.Tails (6.2s)
+warning: ThLean/W/S350/Tails.lean:49:13: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S350/Tails.lean:49:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9226/9377] Built ThLean.W.SA27S.GraphSupports (5.8s)
+✔ [9227/9377] Built ThLean.W.S551S.Aggregation (8.8s)
+✔ [9228/9377] Built ThLean.BP.S3.Cycles (6.6s)
+⚠ [9229/9377] Built ThLean.W.S354.Tails (6.7s)
+warning: ThLean/W/S354/Tails.lean:19:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S354/Tails.lean:20:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S354/Tails.lean:63:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S354/Tails.lean:76:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S354/Tails.lean:110:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9230/9377] Built ThLean.W.S355.Tails (6.7s)
+warning: ThLean/W/S355/Tails.lean:24:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+info: ThLean/W/S355/Tails.lean:71:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ThLean/W/S355/Tails.lean:78:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S355/Tails.lean:71:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S355/Tails.lean:78:10: Unused tactic linter: `ring_nf` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9231/9377] Built ThLean.W.S357.S3_50 (6.7s)
+warning: ThLean/W/S357/S3_50.lean:115:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S357/S3_50.lean:115:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S357/S3_50.lean:144:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S357/S3_50.lean:144:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9232/9377] Built ThLean.W.S523S.Aggregation (4.9s)
+✔ [9233/9377] Built ThLean.W.S529S.Averages (4.0s)
+✔ [9234/9377] Built ThLean.W.S351.S3_44 (7.2s)
+✔ [9235/9377] Built ThLean.W.S353.S3_46 (7.2s)
+✔ [9236/9377] Built ThLean.W.S644.Analytic42 (10s)
+✔ [9237/9377] Built ThLean.W.S504.CompletionKernel (5.2s)
+✔ [9238/9377] Built ThLean.W.S525.Identification (13s)
+✔ [9239/9377] Built ThLean.W.S349.Tails (7.6s)
+✔ [9240/9377] Built ThLean.BP.S5.Occupation (5.5s)
+⚠ [9241/9377] Built ThLean.W.S529.S5_26A (5.0s)
+warning: ThLean/W/S529/S5_26A.lean:13:5: Variable name `h20` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h20
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S529/S5_26A.lean:13:28: Variable name `h21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S529/S5_26A.lean:16:5: Variable name `hE08` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hE08
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9242/9377] Built ThLean.W.S503.S5_28B (5.8s)
+✔ [9243/9377] Built ThLean.W.S642.S6_39a (4.9s)
+✔ [9244/9377] Built ThLean.W.S501.S5_27 (5.9s)
+✔ [9245/9377] Built ThLean.W.S502.Completion (5.0s)
+⚠ [9246/9377] Built ThLean.W.S637.Analytic (11s)
+warning: ThLean/W/S637/Analytic.lean:28:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ThLean/W/S637/Analytic.lean:88:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9247/9377] Built ThLean.W.S356.Tails (8.4s)
+✔ [9248/9377] Built ThLean.W.S640.Descent (5.4s)
+✔ [9249/9377] Built ThLean.W.S434S.Normalization (5.3s)
+✔ [9250/9377] Built ThLean.W.S519.Occupation (13s)
+⚠ [9251/9377] Built ThLean.W.S521.PairCounting (13s)
+warning: ThLean/W/S521/PairCounting.lean:141:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S521/PairCounting.lean:143:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9252/9377] Built ThLean.BP.S6.Main (5.8s)
+⚠ [9253/9377] Built ThLean.W.S528.Identification (15s)
+warning: ThLean/W/S528/Identification.lean:13:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9254/9377] Built ThLean.W.S336.PoissonSplit (7.3s)
+warning: ThLean/W/S336/PoissonSplit.lean:158:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S336/PoissonSplit.lean:167:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S336/PoissonSplit.lean:167:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S336/PoissonSplit.lean:177:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S336/PoissonSplit.lean:177:29: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S336/PoissonSplit.lean:112:45: This simp argument is unused:
+  hν.1 e
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hEq, (hb_true e).mpr h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S336/PoissonSplit.lean:218:18: This simp argument is unused:
+  hzero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [(hb_false e).mpr hzero, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9255/9377] Built ThLean.W.S641.S6_38 (6.1s)
+✔ [9256/9377] Built ThLean.W.S638.S6_35 (6.4s)
+⚠ [9257/9377] Built ThLean.W.S635S.Finite (7.0s)
+warning: ThLean/W/S635S/Finite.lean:87:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S635S/Finite.lean:107:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S635S/Finite.lean:134:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9258/9377] Built ThLean.W.S559S.Averages (19s)
+⚠ [9259/9377] Built ThLean.W.S636.HighDescent (8.1s)
+warning: ThLean/W/S636/HighDescent.lean:168:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S636/HighDescent.lean:172:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9260/9377] Built ThLean.BP.S4.Main (5.4s)
+⚠ [9261/9377] Built ThLean.W.S339.ListMean (19s)
+warning: ThLean/W/S339/ListMean.lean:72:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9262/9377] Built ThLean.W.S365.Cycles (5.4s)
+✔ [9263/9377] Built ThLean.W.S368S.Transport (5.4s)
+✔ [9264/9377] Built ThLean.W.S360.Leaf57a (5.5s)
+✔ [9265/9377] Built ThLean.W.S368S.Components (5.5s)
+✔ [9266/9377] Built ThLean.BP.S3.Centre (5.9s)
+✔ [9267/9377] Built ThLean.Contrib.S364.S3_61Connector (6.0s)
+⚠ [9268/9377] Built ThLean.W.S362.CycleIndex (5.0s)
+warning: ThLean/W/S362/CycleIndex.lean:11:0: automatically included section variable(s) unused in theorem `ThLean.W.S362.cycleLen_pos`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S362/CycleIndex.lean:154:0: automatically included section variable(s) unused in theorem `ThLean.W.S362.pathVertices_reverse`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S362/CycleIndex.lean:168:0: automatically included section variable(s) unused in theorem `ThLean.W.S362.pathOccurrences_reverse`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S362/CycleIndex.lean:182:0: automatically included section variable(s) unused in theorem `ThLean.W.S362.reversePath_from`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9269/9377] Built ThLean.W.S372.Cycles (5.0s)
+✔ [9270/9377] Built ThLean.W.S359.Cycles (6.2s)
+⚠ [9271/9377] Built ThLean.W.S363.Rotate (6.3s)
+warning: ThLean/W/S363/Rotate.lean:34:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/Rotate.lean:50:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/Rotate.lean:63:6: Unused tactic linter: `change c.vertex ((finCycle s) ((finCycle s).symm i)) = c.vertex i` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S363/Rotate.lean:70:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/Rotate.lean:83:6: Unused tactic linter: `change c.edge ((finCycle s) ((finCycle s).symm i)) = c.edge i` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S363/Rotate.lean:93:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9272/9377] Built ThLean.W.S369.ThetaEncoding (6.3s)
+✔ [9273/9377] Built ThLean.W.S541S.Probability (5.3s)
+⚠ [9274/9377] Built ThLean.W.S361.S3_58 (6.5s)
+warning: ThLean/W/S361/S3_58.lean:43:39: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S361/S3_58.lean:44:31: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S361/S3_58.lean:46:41: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S361/S3_58.lean:47:41: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S361/S3_58.lean:53:51: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S361/S3_58.lean:14:53: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S361/S3_58.lean:53:18: This simp argument is unused:
+  w.getElem_edges (i := i.val) (by simpa using i.isLt)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [edgeFn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S361/S3_58.lean:52:4: Unused tactic linter: `change (edgeFn i).1 = _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S361/S3_58.lean:60:24: This simp argument is unused:
+  PathFrom
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [occPathOfWalk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S361/S3_58.lean:62:8: automatically included section variable(s) unused in theorem `_private.ThLean.W.S361.S3_58.0.ThLean.W.S361.occLift_injective`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S361/S3_58.lean:112:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9275/9377] Built ThLean.BP.S6.Export (4.4s)
+✔ [9276/9377] Built ThLean.W.SA27S.TripleSeries (12s)
+⚠ [9277/9377] Built ThLean.W.S358.S3_55 (6.9s)
+warning: ThLean/W/S358/S3_55.lean:19:12: This simp argument is unused:
+  graphSupport
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [treeMGraph, SimpleGraph.mem_edgeSet, hadj] at hpos
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S358/S3_55.lean:21:29: This simp argument is unused:
+  graphSupport
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [treeMGraph, SimpleGraph.mem_edgeSet, hadj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S358/S3_55.lean:26:20: This simp argument is unused:
+  SimpleGraph.mem_edgeSet
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [treeMGraph]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S358/S3_55.lean:234:45: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S358/S3_55.lean:235:45: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9278/9377] Built ThLean.W.S370S.Lists (6.0s)
+warning: ThLean/W/S370S/Lists.lean:137:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.cycle_edgeList`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Lists.lean:145:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.path_edgeList`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9279/9377] Built ThLean.W.S539.S5_30_Prelim (5.9s)
+warning: ThLean/W/S539/S5_30_Prelim.lean:64:0: automatically included section variable(s) unused in theorem `ThLean.W.S539.frozen_symm`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S539/S5_30_Prelim.lean:141:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:141:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:147:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Sym2.map_mk, hv]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S539/S5_30_Prelim.lean:148:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:148:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:241:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S539/S5_30_Prelim.lean:250:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:260:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S539/S5_30_Prelim.lean:287:0: automatically included section variable(s) unused in theorem `ThLean.W.S539.lawMean_summable_of_bounded`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S539/S5_30_Prelim.lean:288:13: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S539/S5_30_Prelim.lean:319:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9280/9377] Built ThLean.W.S366.Cycles63a (7.1s)
+warning: ThLean/W/S366/Cycles63a.lean:16:8: automatically included section variable(s) unused in theorem `_private.ThLean.W.S366.Cycles63a.0.ThLean.W.S366.occLift_injective`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S366/Cycles63a.lean:29:8: automatically included section variable(s) unused in theorem `_private.ThLean.W.S366.Cycles63a.0.ThLean.W.S366.cycle_occ_touches_vertices`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9281/9377] Built ThLean.BP.S5.Main (6.0s)
+✔ [9282/9377] Built ThLean.Contrib.S544.Occupation (6.1s)
+✔ [9283/9377] Built ThLean.W.S523S.S5_20 (7.1s)
+⚠ [9284/9377] Built ThLean.W.S434S.Main (5.4s)
+warning: ThLean/W/S434S/Main.lean:21:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9285/9377] Built ThLean.W.S371.CyclesCount (7.7s)
+✔ [9286/9377] Built ThLean.W.S543.Occupation (6.8s)
+⚠ [9287/9377] Built ThLean.W.S521.S5_18 (5.8s)
+warning: ThLean/W/S521/S5_18.lean:82:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S521/S5_18.lean:83:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S521/S5_18.lean:103:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S521/S5_18.lean:104:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9288/9377] Built ThLean.W.S647.S6_44b (5.7s)
+warning: ThLean/W/S647/S6_44b.lean:37:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S647/S6_44b.lean:63:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S647/S6_44b.lean:111:14: This simp argument is unused:
+  indicator
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S647/S6_44b.lean:117:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S647/S6_44b.lean:130:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9289/9377] Built ThLean.W.S545.Occupation (7.3s)
+warning: ThLean/W/S545/Occupation.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:131:0: Definition `ThLean.W.S545.canonicalTupleFintype` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: ThLean/W/S545/Occupation.lean:134:11: Variable name `e` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _e
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S545/Occupation.lean:144:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:145:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:146:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:194:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:195:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:221:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:222:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:229:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:230:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:252:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:253:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:254:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S545/Occupation.lean:256:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9290/9377] Built ThLean.W.S529S.S5_26A (7.4s)
+⚠ [9291/9377] Built ThLean.W.S542.Occupation (7.4s)
+warning: ThLean/W/S542/Occupation.lean:54:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S542/Occupation.lean:62:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S542/Occupation.lean:108:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S542/Occupation.lean:109:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S542/Occupation.lean:118:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S542/Occupation.lean:128:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9292/9377] Built ThLean.W.S635S.S6_32a (5.0s)
+warning: ThLean/W/S635S/S6_32a.lean:12:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S635S/S6_32a.lean:47:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S635S/S6_32a.lean:96:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9293/9377] Built ThLean.W.S559S.Poisson (5.4s)
+✔ [9294/9377] Built ThLean.W.S367.S3_63b (9.0s)
+✔ [9295/9377] Built ThLean.BP.S3.Main (4.2s)
+⚠ [9296/9377] Built ThLean.W.S643.Main (7.8s)
+warning: ThLean/W/S643/Main.lean:52:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S643/Main.lean:134:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9297/9377] Built ThLean.W.S373.Cycles (10s)
+warning: ThLean/W/S373/Cycles.lean:214:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S373/Cycles.lean:216:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9298/9377] Built ThLean.W.S374.Cycles (10s)
+warning: ThLean/W/S374/Cycles.lean:29:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S374/Cycles.lean:59:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S374/Cycles.lean:194:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9299/9377] Built ThLean.W.S364.S3_61 (4.3s)
+✔ [9300/9377] Built ThLean.W.S378.S3_72 (4.7s)
+⚠ [9301/9377] Built ThLean.W.S540.S5_31 (9.4s)
+warning: ThLean/W/S540/S5_31.lean:39:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ThLean/W/S540/S5_31.lean:39:67: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9302/9377] Built ThLean.W.S368S.S3_65 (5.3s)
+✔ [9303/9377] Built ThLean.W.S541S.RootGraph (4.6s)
+✔ [9304/9377] Built ThLean.W.SA27S.Interpolation (4.5s)
+⚠ [9305/9377] Built ThLean.W.S362.CycleArcs (5.5s)
+warning: ThLean/W/S362/CycleArcs.lean:225:0: automatically included section variable(s) unused in theorem `ThLean.W.S362.arcForward_pos`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9306/9377] Built ThLean.W.S376.Centre (5.5s)
+✔ [9307/9377] Built ThLean.W.S370S.CodeLists (4.5s)
+✔ [9308/9377] Built ThLean.BP.S5.Exports (4.5s)
+⚠ [9309/9377] Built ThLean.W.S369S.ListGraph (5.5s)
+warning: ThLean/W/S369S/ListGraph.lean:51:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.consecutiveEdges_ofFn`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/ListGraph.lean:64:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.path_list`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/ListGraph.lean:87:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.pathInterior_nodup`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/ListGraph.lean:96:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.mem_pathInterior`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/ListGraph.lean:125:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.consecutiveEdges_get`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9310/9377] Built ThLean.W.S370S.Sizing (4.8s)
+warning: ThLean/W/S370S/Sizing.lean:10:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.cycleVertices_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Sizing.lean:14:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.cycleOccurrences_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Sizing.lean:18:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.pathVertices_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Sizing.lean:22:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.pathOccurrences_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Sizing.lean:26:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.touches_cycle_edge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Sizing.lean:31:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.touches_path_edge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9311/9377] Built ThLean.W.S538S.FiniteMean (4.6s)
+✔ [9312/9377] Built ThLean.W.S379.S3_73 (5.0s)
+⚠ [9313/9377] Built ThLean.W.S539.S5_30 (5.1s)
+warning: ThLean/W/S539/S5_30.lean:81:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S539/S5_30.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9314/9377] Built ThLean.W.S339.Poisson (7.2s)
+warning: ThLean/W/S339/Poisson.lean:101:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [heq]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S339/Poisson.lean:104:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [heq, p]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S339/Poisson.lean:122:6: Unused tactic linter: `change listGraph w (s(v, v)) = G (s(v, v))` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S339/Poisson.lean:146:52: Variable name `hrate` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hrate
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ThLean/W/S339/Poisson.lean:192:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S339/Poisson.lean:282:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ThLean/W/S339/Poisson.lean:294:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9315/9377] Built ThLean.W.S536.Main (5.2s)
+✔ [9316/9377] Built ThLean.W.S537.S5_41 (5.2s)
+⚠ [9317/9377] Built ThLean.W.S370S.Realize (6.0s)
+warning: ThLean/W/S370S/Realize.lean:65:43: This simp argument is unused:
+  List.getElem_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [xs, i₁, cyclePairs, pathPairs, i.isLt, show i.val < n₁ + n₂ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Realize.lean:66:8: This simp argument is unused:
+  show i.val < n₁ + n₂ by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [xs, i₁, cyclePairs, pathPairs, List.getElem_append, i.isLt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Realize.lean:73:43: This simp argument is unused:
+  List.getElem_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [xs, i₂, cyclePairs, pathPairs, show n₁ + i.val < n₁ + n₂ by omega, show ¬n₁ + i.val < n₁ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Realize.lean:74:8: This simp argument is unused:
+  show n₁ + i.val < n₁ + n₂ by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [xs, i₂, cyclePairs, pathPairs, List.getElem_append, show ¬n₁ + i.val < n₁ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Realize.lean:74:40: This simp argument is unused:
+  show ¬n₁ + i.val < n₁ by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [xs, i₂, cyclePairs, pathPairs, List.getElem_append, show n₁ + i.val < n₁ + n₂ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9318/9377] Built ThLean.W.S380.S3_75 (7.8s)
+✔ [9319/9377] Built ThLean.W.S534.S5_37 (6.6s)
+✔ [9320/9377] Built ThLean.BP.S3.Adapters (3.9s)
+✔ [9321/9377] Built ThLean.W.S364S.WalkConnector (3.9s)
+✔ [9322/9377] Built ThLean.W.S532.S5_35 (7.2s)
+✔ [9323/9377] Built ThLean.W.S541S.RootKernel (3.0s)
+⚠ [9324/9377] Built ThLean.W.S362.CycleSplit (3.7s)
+warning: ThLean/W/S362/CycleSplit.lean:54:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hd0d, hkb]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [9325/9377] Built ThLean.W.S375.Centre (9.6s)
+⚠ [9326/9377] Built ThLean.W.S370S.DecodeLists (4.0s)
+warning: ThLean/W/S370S/DecodeLists.lean:15:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.listEmbedding_at`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/DecodeLists.lean:31:10: This simp argument is unused:
+  List.getElem_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj, show ¬pre.length + i < pre.length by omega, show pre.length + i < pre.length + xs.length by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/DecodeLists.lean:32:6: This simp argument is unused:
+  show ¬pre.length + i < pre.length by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.getElem_append, hj, show pre.length + i < pre.length + xs.length by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/DecodeLists.lean:33:6: This simp argument is unused:
+  show pre.length + i < pre.length + xs.length by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.getElem_append, hj, show ¬pre.length + i < pre.length by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/DecodeLists.lean:35:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.ofFn_split_head`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/DecodeLists.lean:45:0: automatically included section variable(s) unused in theorem `ThLean.W.S370S.ofFn_split_ends`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9327/9377] Built ThLean.W.S538S.TerminalBound (3.0s)
+⚠ [9328/9377] Built ThLean.W.S390S.Discrete (3.0s)
+warning: ThLean/W/S390S/Discrete.lean:15:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S390S/Discrete.lean:25:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S390S/Discrete.lean:32:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S390S/Discrete.lean:37:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9329/9377] Built ThLean.W.S533.Main (9.2s)
+✔ [9330/9377] Built ThLean.W.S340S.Partition (4.3s)
+⚠ [9331/9377] Built ThLean.W.S339.Mean (4.5s)
+warning: ThLean/W/S339/Mean.lean:25:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9332/9377] Built ThLean.W.S544.Occupation (9.8s)
+warning: ThLean/W/S544/Occupation.lean:38:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S544/Occupation.lean:88:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S544/Occupation.lean:94:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9333/9377] Built ThLean.W.S370S.Shared (4.2s)
+warning: ThLean/W/S370S/Shared.lean:60:12: This simp argument is unused:
+  show i.val + 1 ≠ 0 by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Shared.lean:60:39: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [show i.val + 1 ≠ 0 by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S370S/Shared.lean:64:25: This simp argument is unused:
+  ← List.append_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ite_true]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9334/9377] Built ThLean.W.S363.S3_60 (11s)
+warning: ThLean/W/S363/S3_60.lean:18:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/S3_60.lean:47:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/S3_60.lean:56:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [rot, last0, n0]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S363/S3_60.lean:59:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [d0, n0]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S363/S3_60.lean:64:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S363/S3_60.lean:391:33: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [k, idxE]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S363/S3_60.lean:159:10: This simp argument is unused:
+  Nat.add_mod
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.mod_eq_of_lt lo.isLt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S363/S3_60.lean:162:32: This simp argument is unused:
+  Fin.add_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [idx0, finCycle_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S363/S3_60.lean:190:14: This simp argument is unused:
+  Nat.add_mod
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.mod_eq_of_lt hsublt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S363/S3_60.lean:102:6: Unused tactic linter: `change d0.vertex ix ∈ cycleVertices c` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S363/S3_60.lean:109:6: Unused tactic linter: `change d0.vertex iy ∈ cycleVertices c` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S363/S3_60.lean:170:8: Unused tactic linter: `change d0.vertex (finCycle hi k) ∈ cycleVertices c` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ThLean/W/S363/S3_60.lean:345:4: Try this: intro o ho hoc
+
+Note: This linter can be disabled with `set_option linter.tacticAnalysis.introMerge false`
+⚠ [9335/9377] Built ThLean.W.S370S.Joined (4.8s)
+warning: ThLean/W/S370S/Joined.lean:12:8: automatically included section variable(s) unused in theorem `_private.ThLean.W.S370S.Joined.0.ThLean.W.S370S.image_inter_singleton`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S370S/Joined.lean:104:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ThLean/W/S370S/Joined.lean:100:12: This simp argument is unused:
+  show i.val + 1 ≠ 0 by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [show i.val + 1 ≠ j₃ by omega, ← Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9336/9377] Built ThLean.W.S385.S3_26b (3.7s)
+✔ [9337/9377] Built ThLean.W.S386.S3_27b (3.8s)
+✔ [9338/9377] Built ThLean.W.S381.Adapters (3.9s)
+✔ [9339/9377] Built ThLean.W.S382.S3_02c (4.0s)
+✔ [9340/9377] Built ThLean.W.S384.DisjointHazard (4.0s)
+✔ [9341/9377] Built ThLean.W.S388.S3_01b (4.2s)
+⚠ [9342/9377] Built ThLean.BP.S3.Exports (4.4s)
+warning: ThLean/BP/S3/Exports.lean:19:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/BP/S3/Exports.lean:25:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/BP/S3/Exports.lean:129:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/BP/S3/Exports.lean:127:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9343/9377] Built ThLean.W.S364S.Connector (4.4s)
+✔ [9344/9377] Built ThLean.W.S387.S3_28b (4.7s)
+✔ [9345/9377] Built ThLean.W.S383.Hazard (4.8s)
+⚠ [9346/9377] Built ThLean.W.S389.S3_36b (4.8s)
+warning: ThLean/W/S389/S3_36b.lean:14:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S389/S3_36b.lean:43:45: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [div_eq_mul_inv, mul_assoc, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S389/S3_36b.lean:112:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S389/S3_36b.lean:117:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S389/S3_36b.lean:121:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ThLean/W/S389/S3_36b.lean:139:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9347/9377] Built ThLean.W.S391.SplitRoot (4.0s)
+✔ [9348/9377] Built ThLean.W.S538S.S5_42A (3.6s)
+✔ [9349/9377] Built ThLean.W.S370S.DecodeShared (4.2s)
+⚠ [9350/9377] Built ThLean.W.S390S.Lists (3.9s)
+warning: ThLean/W/S390S/Lists.lean:45:8: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.cast_pow, div_eq_mul_inv, ENNReal.inv_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9351/9377] Built ThLean.W.S535.S5_38 (13s)
+⚠ [9352/9377] Built ThLean.W.S370S.DecodeJoined (4.6s)
+warning: ThLean/W/S370S/DecodeJoined.lean:104:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9353/9377] Built ThLean.W.S340S.Words (4.0s)
+warning: ThLean/W/S340S/Words.lean:71:58: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S340S/Words.lean:75:74: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9354/9377] Built ThLean.W.SA49.Quantiles (39s)
+⚠ [9355/9377] Built ThLean.W.BR07.ProjectiveConsistency (3.5s)
+warning: ThLean/W/BR07/ProjectiveConsistency.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9356/9377] Built ThLean.W.S364S.S3_61 (3.3s)
+✔ [9357/9377] Built ThLean.W.S541S.Occupation (7.1s)
+⚠ [9358/9377] Built ThLean.W.S340S.Masses (6.1s)
+warning: ThLean/W/S340S/Masses.lean:29:39: `Equiv.apply_eq_iff_eq_symm_apply` has been deprecated: Use `Equiv.eq_symm_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u_1} {β : Sort u_2} (e : α ≃ β) {x : β} {y : α}, y = e.symm x ↔ e y = x
+instead of
+  ∀ {α : Sort u} {β : Sort v} {x : α} {y : β} (f : α ≃ β), f x = y ↔ x = f.symm y
+warning: ThLean/W/S340S/Masses.lean:33:46: `Equiv.apply_eq_iff_eq_symm_apply` has been deprecated: Use `Equiv.eq_symm_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u_1} {β : Sort u_2} (e : α ≃ β) {x : β} {y : α}, y = e.symm x ↔ e y = x
+instead of
+  ∀ {α : Sort u} {β : Sort v} {x : α} {y : β} (f : α ≃ β), f x = y ↔ x = f.symm y
+warning: ThLean/W/S340S/Masses.lean:29:20: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cellMass, Equiv.apply_eq_iff_eq_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S340S/Masses.lean:41:28: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hw (r.symm j) e he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S340S/Masses.lean:132:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9359/9377] Built ThLean.W.S391.S3_38c (4.0s)
+⚠ [9360/9377] Built ThLean.W.S369S.TripleLists (11s)
+warning: ThLean/W/S369S/TripleLists.lean:25:82: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_union, List.mem_toFinset, List.mem_append, List.mem_cons, List.not_mem_nil, or_false,
+    thetaLabels]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S369S/TripleLists.lean:43:8: automatically included section variable(s) unused in theorem `ThLean.W.S369S.branch_ofFn`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:50:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.branch_injective`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:67:8: automatically included section variable(s) unused in theorem `ThLean.W.S369S.branch_start`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:70:8: automatically included section variable(s) unused in theorem `ThLean.W.S369S.branch_end`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:76:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.thetaLabels_branches`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:86:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.thetaLabels_separate`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/TripleLists.lean:204:30: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.mem_cons] at hp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S369S/TripleLists.lean:207:59: This simp argument is unused:
+  branch_end
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [px, py, pz, tuplePath, PathFrom, branch_start]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9361/9377] Built ThLean.W.S390S.SplitGraph (4.5s)
+warning: ThLean/W/S390S/SplitGraph.lean:30:39: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S390S/SplitGraph.lean:35:27: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [mem_leftBlock, Sum.isLeft_inr, Bool.false_eq_true] at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S390S/SplitGraph.lean:41:39: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S390S/SplitGraph.lean:46:27: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [mem_rightBlock, Sum.isRight_inl, Bool.false_eq_true] at h
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ThLean/W/S390S/SplitGraph.lean:116:65: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ThLean/W/S390S/SplitGraph.lean:127:22: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h, hp', listGraph, Ne.symm h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:127:51: This simp argument is unused:
+  Ne.symm h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h, hp', List.filter_cons, listGraph]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:196:28: This simp argument is unused:
+  List.count_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.eq_iff, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:196:45: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.count_cons, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:201:28: This simp argument is unused:
+  List.count_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym2.eq_iff, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:201:45: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.count_cons, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:209:18: This simp argument is unused:
+  List.count_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [Sym2.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ThLean/W/S390S/SplitGraph.lean:209:35: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [List.count_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9362/9377] Built ThLean.W.S370S.Dumbbell (3.3s)
+✔ [9363/9377] Built ThLean.W.SA48.SA_Q26 (43s)
+⚠ [9364/9377] Built ThLean.W.S369S.CodeLists (3.3s)
+warning: ThLean/W/S369S/CodeLists.lean:10:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.range_blocks`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThLean/W/S369S/CodeLists.lean:19:0: automatically included section variable(s) unused in theorem `ThLean.W.S369S.range_codeLabel`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9365/9377] Built ThLean.W.S369S.DecodeLists (3.5s)
+⚠ [9366/9377] Built ThLean.W.S340S.Atoms (4.5s)
+warning: ThLean/W/S340S/Atoms.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9367/9377] Built ThLean.W.S390S.Atoms (3.7s)
+warning: ThLean/W/S390S/Atoms.lean:121:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9368/9377] Built ThLean.W.S369S.S3_66 (3.1s)
+⚠ [9369/9377] Built ThLean.W.S390S.PoissonSplit (3.3s)
+warning: ThLean/W/S390S/PoissonSplit.lean:19:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9370/9377] Built ThLean.W.S333.S3_32 (46s)
+✔ [9371/9377] Built ThLean.W.S340S.S3_37a (3.3s)
+✔ [9372/9377] Built ThLean.Final.Imports (2.9s)
+✔ [9373/9377] Built ThLean.Final.Main (3.7s)
+✔ [9374/9377] Built Solution (2.9s)
+✔ [9376/9377] Built ThLean (2.9s)
+Build completed successfully (9377 jobs).
+
+real	2m16.124s
+user	48m52.476s
+sys	10m0.819s

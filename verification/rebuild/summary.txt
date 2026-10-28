@@ -1,0 +1,16 @@
+start 2026-10-28T11:31:29Z
+project objects before: 0
+toolchain: leanprover/lean4:v4.35.0-rc2; lean: Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+cache-get exit 0
+build exit 0
+Build completed successfully (9377 jobs).
+real	2m16.124s
+project modules compiled: 444
+axioms exit 0: 'ThresholdChallenge.main' depends on axioms: [propext, Classical.choice, Quot.sound] 
+comparator exit 0
+con-ron kernel accepts the solution
+nanoda kernel accepts the solution
+Lean default kernel accepts the solution
+Your solution is okay!
+VERDICT: comparator PASS ; accepted= True
+DONE 2026-10-28T11:37:39Z
