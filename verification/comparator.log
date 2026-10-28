@@ -1,0 +1,16 @@
+Running con-ron kernel on solution
+con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-ron: parse done: 57480 fold records — 57472 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=2.004s (parse 2.004s)
+con-ron: install 0/57480 basis t=2.004s
+con-ron: install 50000/57480 thm HasDerivAt.cpow_const t=14.905s
+con-ron: install done: 57480/57480 declarations installed, 56483 checks pending t=20.897s (install 18.893s)
+con-ron: check 50000/56483 definition ThLean.W.S545.canonicalTupleFintype t=30.464s
+con-ron: check done: 56483/56483 t=34.085s (check 13.188s)
+con-ron: done: parse 2.004s, install 18.893s, check 13.188s, 8 workers t=34.085s
+con-ron: accepted 57450 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

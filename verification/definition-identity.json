@@ -1,0 +1,8 @@
+{
+  "frozen_declarations_without_main": 19,
+  "companion_declarations": 19,
+  "different_names": [],
+  "different_type_or_value": [],
+  "identical": true,
+  "criterion": "Exact name, kind, universe parameters, raw type expression, and raw value expression; includes generated declarations."
+}
