@@ -64,7 +64,8 @@ theorem rho_zero_rate (q n : ℕ) (hq : 1 ≤ q) (_hn : 1 ≤ n) :
   · intro m hm
     simp [poissonWeight, hm]
 
-/-- The SA_I13b leaf with its sole unproved input isolated as an endpoint node. -/
+/-- SA_I13b from the interpolation endpoint identities `SA_I13bEndpointsStatement`;
+the zero-rate and one-vertex laws are proved here. -/
 theorem SA_I13bStatement_of_endpoints
     (hendpoints : ThLean.Contrib.SA28.SA_I13bEndpointsStatement) :
     ThLean.BP.SA.SA_I13bStatement := by

@@ -1,7 +1,10 @@
 # q-colorability threshold: Lean formalization (Palomar package)
 
 Lean 4 formalization of the two headline theorems of P. M. Aronow and Patrick Lopatto, *Existence of the
-q-Colorability Threshold for Sparse Random Graphs* (frozen draft of 2026-10-27):
+q-Colorability Threshold for Sparse Random Graphs*. The Lean statement was written from the frozen draft of
+2026-10-27. Theorems 1.1 and 1.2 of the manuscript included below have the same mathematical content; that version
+writes ε for η, says explicitly that c and d are fixed reals ≥ 0, and explicitly takes n₀ to be an integer with
+n₀ ≥ 2q (`Challenge.lean` requires n₀ ≥ max 3 (2q)):
 
 - **Theorem 1.1.** For every integer q ≥ 3 there is α_q ∈ [1/2, γ_q], γ_q = log q / log(q/(q−1)), such that
   P(G(n, ⌊cn⌋) is q-colorable) → 1 for 0 ≤ c < α_q and → 0 for c > α_q, and

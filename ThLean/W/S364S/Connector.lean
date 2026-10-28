@@ -23,7 +23,7 @@ theorem endpoints_mem_cycle {K : MGraph V} (c : OccurrenceCycle K)
   · exact ⟨hi, hj⟩
   · exact ⟨hj, hi⟩
 
-/-- Two vertex-disjoint cycles in a connected occurrence graph admit a positive-length
+/-- Two vertex-disjoint cycles in a connected occurrence graph are joined by a positive-length
 connecting path that meets each cycle only at its endpoint and uses no cycle occurrence. -/
 theorem S3_61ConnectorStatement_holds :
     ThLean.Contrib.S364.S3_61ConnectorStatement.{u} := by

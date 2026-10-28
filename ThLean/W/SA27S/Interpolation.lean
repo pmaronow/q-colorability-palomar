@@ -9,7 +9,8 @@ attribute [local instance] Classical.propDecidable
 namespace ThLean.W.SA27S
 open ThresholdFoundations ThLean.BP.SA
 
-/-- Close the count-histogram expansion left open in the SA27 attempt. -/
+/-- The interpolation factorial series expands over counts of individual tagged endpoint marks,
+with signed Poisson weights. -/
 theorem markedInterpolationExpansion (h10 : SA_I10Statement) (h11a : SA_I11aStatement) :
     ThLean.Contrib.SA27.MarkedInterpolationExpansionStatement h10 h11a := by
   intro q n₁ n₂ hq hn₁ hn₂ μ

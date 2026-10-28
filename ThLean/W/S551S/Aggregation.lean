@@ -15,8 +15,7 @@ private def cellFunEquiv (V : Type) (D j : ℕ) :
   left_inv x := by funext i; simp
   right_inv p := by cases p; simp
 
-/-- Forgetting the first coordinate of uniform cell labels preserves uniform means.
-This is the finite projection from the earlier S551 attempt. -/
+/-- Forgetting the first coordinate of uniform cell labels preserves uniform means. -/
 private lemma cellProjection_uniformMean (V : Type) [Fintype V] (D j : ℕ)
     (hD : 0 < D) (g : (Fin j → V) → ℝ) :
     uniformMean (fun x : Fin j → Fin D × V => g (fun i => (x i).2)) = uniformMean g := by
