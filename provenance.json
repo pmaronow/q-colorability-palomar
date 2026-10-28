@@ -1,0 +1,12 @@
+{
+  "source_worktree": "/home/ubuntu/th/wt/RELM",
+  "frozen_challenge_sha256": "037fe846ca2426d2d0f87527ce9618ce6a510099013691f8cd5c649093294856",
+  "companion_rule": "verbatim frozen source with the final theorem and its docstring removed",
+  "companion_sha256": "28a24fb7bc6cadee4ecdedff69adb8490949f71aad21ecf6469d4f7e7709d78f",
+  "release_path": "/home/ubuntu/th/scratch/RELM/release",
+  "clean_path": "/home/ubuntu/th/scratch/RELM/release-clean",
+  "modified_project_files": [
+    "ThLean/Defs/Bridge.lean",
+    "ThLean/Final/Imports.lean"
+  ]
+}
