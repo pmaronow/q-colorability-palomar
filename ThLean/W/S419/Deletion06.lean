@@ -1,5 +1,13 @@
 import ThLean.BP.S4.Deletion
 
+/-!
+The finite-average helpers `uniformMean_congr`
+match implementation patterns in OpenAI's math library (Apache-2.0).
+Local versions use project-specific averaging definitions and namespaces.
+Their source credits and licence scope are listed in NOTICE; the licence
+text is in LICENSES/Apache-2.0.txt.
+-/
+
 noncomputable section
 open scoped BigOperators
 attribute [local instance] Classical.propDecidable

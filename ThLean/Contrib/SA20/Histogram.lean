@@ -7,8 +7,8 @@ attribute [local instance] Classical.propDecidable
 namespace ThLean.Contrib.SA20
 open ThresholdFoundations
 
-/-- Finite weighted histogram coefficient identity. This is the remaining
-combinatorial step in the joint marked-Poisson count formula. -/
+/-- Weighted counts of ordered mark sequences with a fixed histogram equal
+the multinomial coefficient times the product of mark weights. -/
 def CountHistogramStatement : Prop :=
   ∀ (D : Type) [Fintype D] [DecidableEq D]
     (ν : D → ℝ) (k : ℕ) (z : D → ℕ),

@@ -7,10 +7,8 @@ attribute [local instance] Classical.propDecidable
 namespace ThLean.Contrib.SA27
 open ThresholdFoundations ThLean.BP.SA
 
-/-- The remaining marked-count expansion in the frozen interpolation bridge.
-Given support invariance and the signed marked-Poisson count factorization,
-the frozen factorial series is the series over counts of the individual
-tagged endpoint marks. -/
+/-- Expansion of the interpolation factorial series over counts of individual
+tagged endpoint marks, with signed Poisson weights. -/
 def MarkedInterpolationExpansionStatement
     (_h10 : SA_I10Statement) (_h11a : SA_I11aStatement) : Prop :=
   ∀ q n₁ n₂ : ℕ, 1 ≤ q → 1 ≤ n₁ → 1 ≤ n₂ → ∀ μ : Fin 3 → ℝ,

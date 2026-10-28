@@ -9,7 +9,7 @@ attribute [local instance] Classical.propDecidable
 namespace ThLean.W.S529S
 open ThresholdFoundations ThLean.BP.S5
 
-/-- The averaging and integration step left open in the earlier attempt. -/
+/-- Integrate the fixed-set discrepancy bound and average over uniform identified sets. -/
 theorem early_integral_assembly_of_deps
     (h20 : S5_20Statement) (h21 : S5_21Statement) (h22 : S5_22Statement)
     (h24 : S5_24Statement) (h25 : S5_25Statement) :
@@ -104,7 +104,8 @@ theorem early_integral_assembly_of_deps
       uniformMean_mono (fun Z => (hfixed Z).2)
     _ = _ := by rw [uniformMean_add, uniformMean_const]
 
-/-- The original leaf, with only its listed sibling leaves as premises. -/
+/-- The early-time identification estimate follows from the Poisson comparison,
+tail bounds, and averaged integral estimate. -/
 theorem S5_26AStatement_of_deps
     (h20 : S5_20Statement) (h21 : S5_21Statement)
     (h22 : S5_22Statement) (h23 : S5_23Statement)

@@ -77,13 +77,13 @@ theorem countMean_partition {A B V : Type} [Fintype A] [Fintype B] [Fintype V]
       change (∏ p, poissonWeight r (c p)) * f (assemble e GB GA c) = _
       rw [assemble_formula]
 
-/-- Closes the count-factorization residual from the earlier attempt. -/
+/-- Independent Poisson edge counts factor over the two vertex blocks and their crossing pairs. -/
 theorem countMeanPartitionFactorization_holds :
     ThLean.Contrib.S549.S549_CountMeanPartitionFactorizationStatement := by
   intro V _ A B _ _ e _ _ r hr f hf
   exact countMean_partition e r hr f hf
 
-/-- The original leaf, assuming only its histogram-law sibling. -/
+/-- The partitioned count law and the histogram law give the Poisson splitting identity. -/
 theorem S5_09AStatement_of_deps (h08b : S5_08BStatement) : S5_09AStatement :=
   ThLean.W.S549.S5_09AStatement_of_08B_and_count_factorization h08b
     countMeanPartitionFactorization_holds

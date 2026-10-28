@@ -1,0 +1,119 @@
+Licence scope
+
+The MIT License in LICENSE applies to the original project Lean sources
+and scripts. Copyright (c) 2026 P. M. Aronow and Patrick Lopatto.
+The manuscript PDF and LaTeX sources are outside that grant.
+Third-party material retains its applicable licence.
+
+OpenAI reference implementations
+
+The following elementary helper implementations match code patterns in
+OpenAI's math library, which was consulted during development. They are
+credited conservatively to that library and treated as Apache-2.0 material.
+This treatment is limited to the listed helpers, rather than their entire
+containing files. It does not assert that similarity proves historical copying.
+The Apache License, Version 2.0, is included in LICENSES/Apache-2.0.txt.
+Local formulations use project-specific averaging definitions and namespaces,
+helper renamings, and an ENNReal-valued congruence generalization.
+
+Repository: https://github.com/openai/math
+Revision: 7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a
+Source paths below are relative to that repository at that revision.
+
+ThLean/BP/S4/Deletion.lean
+  mean_mul_left
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_const_mul (lines 48-51)
+
+ThLean/W/S318/Hazard.lean
+  uniformMeanENN_congr
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_congr (lines 20-24)
+
+ThLean/W/S403/FiniteVariance.lean
+  uniformMean_sub_const_sq
+    Reference: lean/OAI/Probability/SATVariance/FiniteVariance.lean
+      favg_sq_sub_const (lines 18-22)
+
+ThLean/W/S416/S4_RED_04A.lean
+  uniformMean_mul_left
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_const_mul (lines 48-51)
+
+ThLean/W/S419/Deletion06.lean
+  uniformMean_congr
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_congr (lines 20-24)
+
+ThLean/W/S424/RED10B.lean
+  uniformMean_mul_left
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_const_mul (lines 48-51)
+
+ThLean/W/S434S/Normalization.lean
+  uniformMean_sub
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_sub (lines 28-30)
+
+ThLean/W/S529S/Averages.lean
+  uniformMean_add
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_add (lines 35-37)
+  uniformMean_comm
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_comm (lines 77-83)
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_comm (lines 36-40)
+
+ThLean/W/S538S/FiniteMean.lean
+  uniformMean_nonneg
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_nonneg (lines 58-60)
+
+ThLean/W/S541S/Probability.lean
+  uniformMean_mono
+    Reference: lean/OAI/Probability/ThorpCompatibility/UniformAverages.lean
+      uniformMean_mono (lines 12-14)
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_mono (lines 16-18)
+  uniformMean_nonneg
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_nonneg (lines 213-215)
+
+ThLean/W/S559S/Averages.lean
+  uniformMean_mul_left
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_mul (lines 208-211)
+    Reference: lean/OAI/Probability/RandomSAT/FiniteMean.lean
+      uniformMean_const_mul (lines 48-51)
+
+ThLean/W/SA28S/Coefficients.lean
+  mean_const
+    Reference: lean/OAI/Probability/SATVariance/MarkovReplacement.lean
+      favg_const (lines 20-22)
+
+Other consulted sources
+
+OpenAI's probability library also supplied reference material for variance,
+Poisson calculus, and interpolation. In particular,
+lean/OAI/Probability/SATComputability/PoissonCountProducts.lean was consulted
+for the Poisson aggregation development in ThLean/W/S551S/.
+
+Anthropic's formal-math repository was also consulted:
+https://github.com/anthropics/formal-math
+Revision: 16a5ce41304fcdaea4e0be7c132e1c361dc26da5
+The referenced projects are licensed under Apache-2.0 and carry the notice
+"Copyright 2026 Anthropic, PBC". This acknowledges reference material;
+it does not designate any retained declaration as copied Anthropic code.
+
+Dependencies and tools
+
+Mathlib is an Apache-2.0 dependency:
+https://github.com/leanprover-community/mathlib4
+Pinned revision: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+Licence: https://github.com/leanprover-community/mathlib4/blob/065356127b1dc0016f66b7283ce0ce2c4055aa55/LICENSE
+Mathlib and its dependencies are fetched by Lake during dependency setup;
+their source trees are not vendored in this repository.
+
+The Lean toolchain and external Comparator/kernel tools retain their own
+licences. The project MIT grant does not relicense those dependencies or tools.

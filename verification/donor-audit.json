@@ -1,0 +1,906 @@
+{
+  "scope": "Static donor-source comparison for the 444 retained Lean files; no Lean, Lake, Comparator, or kernel run.",
+  "method": "Compare declaration names, comment/whitespace-normalized token runs, and runs under consistent identifier renaming; manually inspect complete helper bodies and catalogue-directed variance, Poisson and interpolation implementations.",
+  "openai": {
+    "donor_commit": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+    "source_inventory_files": 163097,
+    "unique_donor_files": 163063,
+    "files_scanned": 163063,
+    "all_unique_donor_files_scanned": true,
+    "project_files": 444,
+    "project_tokens": 608089,
+    "donor_tokens": 409583940,
+    "raw_seed_tokens": 35,
+    "alpha_seed_tokens": 65,
+    "candidate_matches": 7,
+    "raw_candidates": 5,
+    "alpha_candidates": 2,
+    "name_hits": 3979,
+    "overlaps_suppressed_after_top100_per_donor_file": 0,
+    "elapsed_seconds": 406.0,
+    "limits": "Candidate discovery only; exact names and alpha-normalized overlap are not conclusions of derivation. Common syntax/tactics and independent standard proofs require manual dismissal. Shorter/discontinuous adaptations can evade token seeds.",
+    "repository": "https://github.com/openai/math",
+    "retrieval_repository": "openai/math",
+    "retrieval_commit": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+    "retrieval_archive_url": "https://codeload.github.com/openai/math/tar.gz/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+    "retrieval_archive_sha256": "ae4b79beca0436d63b5544bd2b1e021252e484bbcbffe16f60998ed013501f56",
+    "retrieval_archive_bytes": 896064593,
+    "retrieval_elapsed_seconds": 128.5,
+    "retrieval_archive_members": 180343,
+    "retrieval_retrieved_files": 163104,
+    "retrieval_lean_files": 163097,
+    "retrieval_lean_bytes": 1784897914
+  },
+  "openai_focused_comparison": {
+    "scope": "All explicit catalogue OpenAI paths plus full named probability/finite-variance/graph-threshold families",
+    "project_files": 444,
+    "focused_donor_files": 747,
+    "raw_seed_tokens": 20,
+    "alpha_seed_tokens": 35,
+    "candidates": 249,
+    "raw_candidates": 79,
+    "alpha_candidates": 170,
+    "overlaps_suppressed_after_top100_per_donor_file": 0,
+    "elapsed_seconds": 6.6
+  },
+  "anthropic": {
+    "repository": "https://github.com/anthropics/formal-math",
+    "commit": "16a5ce41304fcdaea4e0be7c132e1c361dc26da5",
+    "archive_sha256": "1da67a2aff7f59a1b1489d1b18ff1079671dc70c11d9dfa93c39988fafa421ac",
+    "catalogue_pin_matches": true,
+    "project_baseline_files": 551,
+    "retained_project_files": 444,
+    "donor_files": 1812,
+    "project_tokens": 692561,
+    "donor_tokens": 3701664,
+    "retained_name_hit_pairs": 63,
+    "retained_raw_runs_ge25": 4,
+    "max_raw_tokens": 30,
+    "retained_alpha_runs_ge35": 931,
+    "max_alpha_tokens": 68,
+    "material_copied_or_adapted_blocks_identified": [],
+    "finding": "No substantive Anthropic derivation identified by this static source comparison; not a proof of absence of arbitrary transformed copying.",
+    "manual_review": "All raw matches, leading alpha matches, comparable map_range_eq_ofFn name/statement, and catalogue variance donors reviewed; independent QA agrees.",
+    "license": "Apache-2.0",
+    "copyright": "2026 Anthropic, PBC",
+    "transitive_notices": "zeta23 FromPNTPlus and 3sum-apsp PrimesInWindow have additional upstream notices; none identified as retained-code source here.",
+    "builds_run": false,
+    "source_consultation": "Documented by recovered campaign catalogue; distinct from actual retained-code derivation.",
+    "evidence_sha256": {
+      "compare.py": "66db86a53a89cd5959e4176e8bb691d97c98e1fb076e7a08d17ba0555a58142d",
+      "lean_tokens.py": "e6961a881112049ed67ff682ce3a37ad512707cd4b436655c632007403e54207",
+      "comparison.json": "1d2e1def5bc0833f2f9d3a45490109608f1d11deee8008b4f834d999d61203cd",
+      "name-review.json": "e443e82430ad751944e800950ddf182eee491835870ba4cfa212c71b6ce099ef",
+      "alpha-proof-body-candidates.json": "04968ce2943f49e15df19c88d3cf4eb4ec723d39063036d5e4ceabcd78cebe94",
+      "project-manifest.json": "48e85608cac95e0bb30fe04dff76f30bd5999b00f45e4e050150f13fe66ddfe7",
+      "retained-source-manifest.json": "7477fb6268e0071796bb1ef96557b8f3278331455c45a5aa8c7a3077ba957272",
+      "REPORT.md": "4354ef87b2f123ca5d1cf26a4e53f33bc8b3c52f8438d2bcd7ab66d0afb0a45d"
+    }
+  },
+  "source_consultation": {
+    "repositories": [
+      "https://github.com/openai/math",
+      "https://github.com/anthropics/formal-math"
+    ],
+    "specific_recorded_read": {
+      "local_development": "ThLean/W/S551S/",
+      "donor_repository": "openai/math",
+      "donor_commit": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "donor_path": "lean/OAI/Probability/SATComputability/PoissonCountProducts.lean"
+    },
+    "implementation_reports_reviewed": 300,
+    "interpretation": "Consultation is established; absence of an admission of copying is not used as proof of independence."
+  },
+  "credited_helper_count": 14,
+  "credited_helper_file_count": 12,
+  "credited_helper_patterns": [
+    {
+      "project": "ThLean/W/S529S/Averages.lean",
+      "project_declaration": "uniformMean_comm",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_comm",
+      "donor_lines": [
+        77,
+        83
+      ],
+      "project_body_tokens": 14,
+      "donor_body_tokens": 14,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        44,
+        50
+      ],
+      "project_lines": [
+        52,
+        58
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S529S/Averages.lean",
+      "project_declaration": "uniformMean_comm",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_comm",
+      "donor_lines": [
+        36,
+        40
+      ],
+      "project_body_tokens": 14,
+      "donor_body_tokens": 14,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        44,
+        50
+      ],
+      "project_lines": [
+        52,
+        58
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S541S/Probability.lean",
+      "project_declaration": "uniformMean_mono",
+      "donor": "lean/OAI/Probability/ThorpCompatibility/UniformAverages.lean",
+      "donor_declaration": "uniformMean_mono",
+      "donor_lines": [
+        12,
+        14
+      ],
+      "project_body_tokens": 16,
+      "donor_body_tokens": 16,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        18,
+        20
+      ],
+      "project_lines": [
+        26,
+        28
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S541S/Probability.lean",
+      "project_declaration": "uniformMean_mono",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_mono",
+      "donor_lines": [
+        16,
+        18
+      ],
+      "project_body_tokens": 16,
+      "donor_body_tokens": 16,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        18,
+        20
+      ],
+      "project_lines": [
+        26,
+        28
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S529S/Averages.lean",
+      "project_declaration": "uniformMean_add",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_add",
+      "donor_lines": [
+        35,
+        37
+      ],
+      "project_body_tokens": 9,
+      "donor_body_tokens": 9,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        27,
+        29
+      ],
+      "project_lines": [
+        35,
+        37
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S559S/Averages.lean",
+      "project_declaration": "uniformMean_mul_left",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_mul",
+      "donor_lines": [
+        208,
+        211
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        40,
+        43
+      ],
+      "project_lines": [
+        48,
+        51
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/BP/S4/Deletion.lean",
+      "project_declaration": "mean_mul_left",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_const_mul",
+      "donor_lines": [
+        48,
+        51
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        149,
+        152
+      ],
+      "project_lines": [
+        157,
+        160
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S416/S4_RED_04A.lean",
+      "project_declaration": "uniformMean_mul_left",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_const_mul",
+      "donor_lines": [
+        48,
+        51
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        214,
+        217
+      ],
+      "project_lines": [
+        222,
+        225
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S424/RED10B.lean",
+      "project_declaration": "uniformMean_mul_left",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_const_mul",
+      "donor_lines": [
+        48,
+        51
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        10,
+        13
+      ],
+      "project_lines": [
+        18,
+        21
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S559S/Averages.lean",
+      "project_declaration": "uniformMean_mul_left",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_const_mul",
+      "donor_lines": [
+        48,
+        51
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": true,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        40,
+        43
+      ],
+      "project_lines": [
+        48,
+        51
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S434S/Normalization.lean",
+      "project_declaration": "uniformMean_sub",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_sub",
+      "donor_lines": [
+        28,
+        30
+      ],
+      "project_body_tokens": 10,
+      "donor_body_tokens": 10,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        29,
+        31
+      ],
+      "project_lines": [
+        37,
+        39
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S318/Hazard.lean",
+      "project_declaration": "uniformMeanENN_congr",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_congr",
+      "donor_lines": [
+        20,
+        24
+      ],
+      "project_body_tokens": 16,
+      "donor_body_tokens": 16,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        29,
+        34
+      ],
+      "project_lines": [
+        37,
+        42
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S419/Deletion06.lean",
+      "project_declaration": "uniformMean_congr",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_congr",
+      "donor_lines": [
+        20,
+        24
+      ],
+      "project_body_tokens": 16,
+      "donor_body_tokens": 16,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        12,
+        16
+      ],
+      "project_lines": [
+        20,
+        24
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/SA28S/Coefficients.lean",
+      "project_declaration": "mean_const",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_const",
+      "donor_lines": [
+        20,
+        22
+      ],
+      "project_body_tokens": 7,
+      "donor_body_tokens": 7,
+      "body_exact_tokens_equal": false,
+      "body_shape_equal": true,
+      "comparison_project_lines": [
+        15,
+        17
+      ],
+      "project_lines": [
+        23,
+        25
+      ],
+      "classification": "Complete elementary helper implementation matches literally or after renaming; credited conservatively, without asserting historical copying."
+    },
+    {
+      "project": "ThLean/W/S403/FiniteVariance.lean",
+      "project_declaration": "uniformMean_sub_const_sq",
+      "donor": "lean/OAI/Probability/SATVariance/FiniteVariance.lean",
+      "donor_declaration": "favg_sq_sub_const",
+      "donor_lines": [
+        18,
+        22
+      ],
+      "classification": "Matching complete square-expansion helper pattern, independently reviewed; averaging/helper names and arithmetic parentheses differ.",
+      "comparison_project_lines": [
+        86,
+        94
+      ],
+      "project_lines": [
+        94,
+        102
+      ]
+    },
+    {
+      "project": "ThLean/W/S541S/Probability.lean",
+      "project_declaration": "uniformMean_nonneg",
+      "donor": "lean/OAI/Probability/SATVariance/MarkovReplacement.lean",
+      "donor_declaration": "favg_nonneg",
+      "donor_lines": [
+        213,
+        215
+      ],
+      "classification": "Complete one-line finite-mean nonnegativity proof matches; generic helper credited conservatively.",
+      "comparison_project_lines": [
+        22,
+        24
+      ],
+      "project_lines": [
+        30,
+        32
+      ]
+    },
+    {
+      "project": "ThLean/W/S538S/FiniteMean.lean",
+      "project_declaration": "uniformMean_nonneg",
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_declaration": "uniformMean_nonneg",
+      "donor_lines": [
+        58,
+        60
+      ],
+      "classification": "Complete proof matches modulo bound-variable names and redundant parentheses.",
+      "comparison_project_lines": [
+        10,
+        12
+      ],
+      "project_lines": [
+        18,
+        20
+      ]
+    }
+  ],
+  "all_whole_corpus_openai_block_candidates": [
+    {
+      "project": "ThLean/W/S529S/Averages.lean",
+      "project_lines": [
+        53,
+        60
+      ],
+      "donor": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_lines": [
+        78,
+        85
+      ],
+      "tokens": 47,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S403/FiniteVariance.lean",
+      "project_lines": [
+        94,
+        98
+      ],
+      "donor": "lean/OAI/Probability/SATVariance/FiniteVariance.lean",
+      "donor_lines": [
+        18,
+        20
+      ],
+      "tokens": 80,
+      "mode": "alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S370S/Lists.lean",
+      "project_lines": [
+        71,
+        75
+      ],
+      "donor": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/DifferencePairs.lean",
+      "donor_lines": [
+        150,
+        155
+      ],
+      "tokens": 47,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S529S/Averages.lean",
+      "project_lines": [
+        35,
+        39
+      ],
+      "donor": "lean/OAI/Combinatorics/Sidorenko/Discriminant.lean",
+      "donor_lines": [
+        675,
+        679
+      ],
+      "tokens": 37,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S329/Lifetime.lean",
+      "project_lines": [
+        163,
+        165
+      ],
+      "donor": "lean/OAI/Computability/BinPacking/Machines/GraphPackingPreparation.lean",
+      "donor_lines": [
+        111,
+        124
+      ],
+      "tokens": 77,
+      "mode": "alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S532/S5_35.lean",
+      "project_lines": [
+        71,
+        72
+      ],
+      "donor": "lean/OAI/Geometry/LatticeCovering/Isotropy.lean",
+      "donor_lines": [
+        39,
+        40
+      ],
+      "tokens": 36,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S537/S5_41.lean",
+      "project_lines": [
+        26,
+        28
+      ],
+      "donor": "lean/OAI/Geometry/LatticeCovering/Isotropy.lean",
+      "donor_lines": [
+        39,
+        40
+      ],
+      "tokens": 36,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    }
+  ],
+  "all_retained_anthropic_exact_block_candidates": [
+    {
+      "project": "ThLean/W/S535/S5_38.lean",
+      "project_lines": [
+        70,
+        72
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Sec4/Corollary26.lean",
+      "donor_lines": [
+        491,
+        492
+      ],
+      "tokens": 30,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S367/S3_63b.lean",
+      "project_lines": [
+        374,
+        374
+      ],
+      "donor": "eth/proof/consequences/CircuitLowerBound/Tab/Table.lean",
+      "donor_lines": [
+        219,
+        219
+      ],
+      "tokens": 25,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S367/S3_63b.lean",
+      "project_lines": [
+        374,
+        374
+      ],
+      "donor": "eth/proof/rates/ClauseBound/ParityChecks/ArithOL.lean",
+      "donor_lines": [
+        261,
+        261
+      ],
+      "tokens": 25,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/S367/S3_63b.lean",
+      "project_lines": [
+        374,
+        374
+      ],
+      "donor": "eth/proof/variables/VariableBound/Top/ArithNeed.lean",
+      "donor_lines": [
+        52,
+        52
+      ],
+      "tokens": 25,
+      "mode": "raw",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    }
+  ],
+  "strongest_retained_anthropic_renamed_candidates": [
+    {
+      "project": "ThLean/W/SA48/SA_Q26.lean",
+      "project_lines": [
+        14,
+        23
+      ],
+      "donor": "eth/proof/variables/VariableBound/Count/Correct.lean",
+      "donor_lines": [
+        161,
+        163
+      ],
+      "tokens": 68,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/SA49/Quantiles.lean",
+      "project_lines": [
+        34,
+        43
+      ],
+      "donor": "eth/proof/variables/VariableBound/Count/Correct.lean",
+      "donor_lines": [
+        161,
+        163
+      ],
+      "tokens": 66,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/Final/Main.lean",
+      "project_lines": [
+        19,
+        28
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Statements/PaperStatements.lean",
+      "donor_lines": [
+        26,
+        39
+      ],
+      "tokens": 64,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/Final/Main.lean",
+      "project_lines": [
+        19,
+        28
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Statements/PaperStatements.lean",
+      "donor_lines": [
+        30,
+        41
+      ],
+      "tokens": 64,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/Final/Main.lean",
+      "project_lines": [
+        19,
+        28
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Statements/PaperStatements.lean",
+      "donor_lines": [
+        31,
+        42
+      ],
+      "tokens": 64,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/Final/Main.lean",
+      "project_lines": [
+        19,
+        28
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Statements/PaperStatements.lean",
+      "donor_lines": [
+        32,
+        43
+      ],
+      "tokens": 64,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/Final/Main.lean",
+      "project_lines": [
+        19,
+        28
+      ],
+      "donor": "3sum-apsp/ThreeSumApsp/Statements/PaperStatements.lean",
+      "donor_lines": [
+        33,
+        44
+      ],
+      "tokens": 64,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/SA48/SA_Q26.lean",
+      "project_lines": [
+        13,
+        23
+      ],
+      "donor": "eth/proof/maintheorem/MainRoute/General.lean",
+      "donor_lines": [
+        36,
+        38
+      ],
+      "tokens": 61,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/W/SA49/Quantiles.lean",
+      "project_lines": [
+        33,
+        43
+      ],
+      "donor": "eth/proof/maintheorem/MainRoute/General.lean",
+      "donor_lines": [
+        36,
+        38
+      ],
+      "tokens": 61,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    },
+    {
+      "project": "ThLean/BP/S6/Descent.lean",
+      "project_lines": [
+        96,
+        100
+      ],
+      "donor": "eth/proof/maintheorem/MainRoute/General.lean",
+      "donor_lines": [
+        36,
+        38
+      ],
+      "tokens": 58,
+      "mode": "identifier_alpha",
+      "interpretation": "Candidate similarity; not evidence of derivation by itself."
+    }
+  ],
+  "additional_weak_helper_candidates": [
+    {
+      "project_path": "ThLean/W/S390S/Atoms.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 21,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "alpha",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 21
+    },
+    {
+      "project_path": "ThLean/W/S403/FiniteVariance.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 64,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 56
+    },
+    {
+      "project_path": "ThLean/W/S405/FiniteOmission.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 17,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 17
+    },
+    {
+      "project_path": "ThLean/W/S432/S4Bridge01A.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 13,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 13
+    },
+    {
+      "project_path": "ThLean/W/S434S/Normalization.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 18,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 10
+    },
+    {
+      "project_path": "ThLean/W/S553/S5_11.lean",
+      "project_name": "uniformMean_equiv",
+      "project_line": 59,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 59
+    },
+    {
+      "project_path": "ThLean/W/S602/Foundation.lean",
+      "project_name": "uniformMean_comp_equiv",
+      "project_line": 11,
+      "donor_path": "lean/OAI/Probability/RandomSAT/FiniteMean.lean",
+      "donor_name": "uniformMean_equiv",
+      "donor_line": 66,
+      "basis": "raw",
+      "classification": "Short equivalent-mean pattern using different Mathlib wrappers; weak generic similarity, not an identified complete copied implementation.",
+      "recommended_for_conservative_carveout": false,
+      "comparison_project_line": 11
+    }
+  ],
+  "license_treatment": {
+    "original_project_lean_and_scripts": "MIT",
+    "enumerated_matching_helper_material": "Apache-2.0; conservatively credited to OpenAI math in NOTICE and source comments",
+    "anthropic": "Reference-source acknowledgement; no particular retained declaration designated as copied Anthropic code",
+    "dependency_mathlib": "Apache-2.0; fetched dependency, not vendored",
+    "manuscript": "Excluded from the code licence grant"
+  },
+  "limits": [
+    "Similarity of standard short helper proofs does not establish historical copying or mathematical priority.",
+    "Finite token seeds can miss short, discontinuous, or extensively rewritten adaptations; catalogue-directed manual comparisons supplement the scans.",
+    "No claim of exhaustive proof of independence is made."
+  ],
+  "evidence_sha256": {
+    "openai/comparison-summary.json": "e8466d33561bc9a8c2d15ce084d6bb9e91115b427f414e7c394180d3d29b20f0",
+    "openai/matches.jsonl": "cebe19d0a62ae750df5fb5680870ecbcca6b92f96e06fdea324867cd40f9d7be",
+    "openai/focused-summary.json": "d1ad218ffbbced7256d6d654014bace538fd4ee10e7fc7ab51cf18bafaff4116",
+    "openai/focused-matches.jsonl": "fc20fa23e7b05d5aaa152dce3269717891a96715ff0e7b8b009c45e6452c3080",
+    "anthropic/comparison.json": "1d2e1def5bc0833f2f9d3a45490109608f1d11deee8008b4f834d999d61203cd",
+    "qa/complete-helper-candidates.json": "09d77c5ff22e477317f6611d7dc8f28f474ddca906fb6ddee7688b9f1ec46a30",
+    "openai/verdict.json": "398409d914c357fe9ddc48b03051ded6447118adafbeff2c31b6f03ca4cf48ae",
+    "openai/focused-classified.json": "172dc67ca9bb612eb8573b4257c621e2d4b81aedf023f358fa97b06933b015fd"
+  }
+}

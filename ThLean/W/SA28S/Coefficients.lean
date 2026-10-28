@@ -1,5 +1,13 @@
 import ThLean.W.SA28S.Graph
 
+/-!
+The finite-average helpers `mean_const`
+match implementation patterns in OpenAI's math library (Apache-2.0).
+Local versions use project-specific averaging definitions and namespaces.
+Their source credits and licence scope are listed in NOTICE; the licence
+text is in LICENSES/Apache-2.0.txt.
+-/
+
 noncomputable section
 open scoped BigOperators
 attribute [local instance] Classical.propDecidable

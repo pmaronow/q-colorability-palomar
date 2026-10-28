@@ -1,6 +1,14 @@
 import ThLean.W.S523S.Kernels
 import ThLean.W.S523S.Measurability
 
+/-!
+The finite-average helpers `uniformMean_add`, `uniformMean_comm`
+match implementation patterns in OpenAI's math library (Apache-2.0).
+Local versions use project-specific averaging definitions and namespaces.
+Their source credits and licence scope are listed in NOTICE; the licence
+text is in LICENSES/Apache-2.0.txt.
+-/
+
 noncomputable section
 open MeasureTheory
 open scoped BigOperators Topology

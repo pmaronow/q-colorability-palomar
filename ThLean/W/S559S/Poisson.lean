@@ -48,7 +48,7 @@ lemma normalized_partner_graphMean (h12 : S5_12Statement)
   exact (h08 (Option V) hK t ht _ hf).trans
     (hnorm.trans (h08 (Option V) hK t ht _ hk).symm)
 
-/-- The missing hazard clause, obtained using only the allowed sibling leaves. -/
+/-- The root-increment mean equals the augmented-graph hazard after Poisson mixing. -/
 lemma mean_increment_hazard_of_deps (h13 : S5_13Statement)
     (h15A : S5_15AStatement) (h12 : S5_12Statement)
     (h08 : S5_08BStatement) (hE01 : S5_E01Statement)

@@ -7,7 +7,8 @@ open scoped BigOperators Topology ENNReal
 namespace ThLean.Contrib.S529
 open ThLean.BP.S5 ThresholdFoundations
 
-/-- The remaining averaging and integration step in the early-time split. -/
+/-- Integrating and averaging the early-time discrepancy bound splits it into
+internal-edge, long-list, and added-root contributions. -/
 def S5_26AEarlyIntegralAssemblyStatement : Prop :=
   ∀ q N D k : ℕ, 3 ≤ q → lowSizeOnset q ≤ N → 1 ≤ D → 4 * D ≤ N →
   Real.exp 1 * D * lowMeanBound q < (k : ℝ) →

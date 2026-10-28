@@ -6,8 +6,8 @@ open scoped BigOperators Topology ENNReal
 namespace ThLean.Contrib.S559
 open ThresholdFoundations ThLean.BP.S5
 
-/-- Residual S5-15B hazard identity: Poisson mixing the normalized root
-increments gives the mean frozen-pair hazard of the augmented graph law. -/
+/-- Poisson mixing of normalized root increments gives the mean frozen-pair
+hazard under the augmented graph law. -/
 def S5_15BHazardStatement : Prop :=
   ∀ (V : Type) [Fintype V] (q : ℕ), 3 ≤ q → 2 ≤ Fintype.card V →
   ∀ rate s : ℝ, 0 < rate → 0 ≤ s →

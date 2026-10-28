@@ -72,7 +72,8 @@ private theorem indicator_mono {P Q : Prop} (h : P → Q) : indicator P ≤ indi
   · norm_num
   · exact le_rfl
 
-/-- The only unresolved part is the standalone terminal-mass normalization node. -/
+/-- Terminal-mass normalization and monotonicity of indicators and weights give
+the interval terminal-probability bridge. -/
 theorem S4_BRIDGE_01CStatement_from_normalization
     (hNorm : S4_BRIDGE_01CNormalizationStatement) : S4_BRIDGE_01CStatement := by
   intro q n hq hn L U hLU
