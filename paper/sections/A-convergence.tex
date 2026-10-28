@@ -1,0 +1,433 @@
+\chapter{Convergence of the threshold location}\label[appendix]{app:conv}
+
+In this appendix, we prove \cref{thm:red-convergence}, and we first recall its statement. The parameter $\Lambda > \gamma_q + 1$ is fixed as in \cref{sec:pre-process}, and $\eta_0 = e^{-2\Lambda}/8$. Let $(\delta_n)_{n \ge 1}$ be a nonincreasing sequence with values in $(0, 1]$ such that
+\begin{equation}\label{eq:conv-summable}
+\sum_{k \ge 1} \delta_{\lfloor e^k \rfloor} < \infty,
+\end{equation}
+and suppose that for every $\eta \in (0, \eta_0]$ there exist $K'(\eta) > 0$ and an integer $n_1(\eta)$ such that
+\begin{equation}\label{eq:conv-window}
+w_n(\eta) \le K'(\eta) n \delta_n \qquad \text{for all } n \ge n_1(\eta).
+\end{equation}
+\Cref{thm:red-convergence} asserts that, under these hypotheses, there exists $\alpha_q \in [1/2, \gamma_q]$ with the following properties. For every $\eta \in (0, \eta_0]$, we have $L_n(\eta)/n \to \alpha_q$ and $U_n(\eta)/n \to \alpha_q$ as $n \to \infty$. For every real $c \ge 0$, the probabilities $\Pp(H > \lfloor cn \rfloor)$ and $\Pp(G(n, \lfloor cn \rfloor) \text{ is colorable})$ tend to $1$ if $c < \alpha_q$ and to $0$ if $c > \alpha_q$. For every real $d \ge 0$, the probability $\Pp(G(n, d/n) \text{ is colorable})$ tends to $1$ if $d < 2\alpha_q$ and to $0$ if $d > 2\alpha_q$.
+
+The method adapts the proof of the corresponding statement for random $k$-SAT in \cite[Section~5]{openai2026limiting}. Its main input is a product inequality for colorability probabilities at different system sizes, which is the coloring case of the interpolation of Bayati, Gamarnik, and Tetali \cite[Theorem~5 and Proposition~2]{bayati2013combinatorial}, written for a Poisson number of edges as in \cite[Lemma~5.2]{openai2026limiting}. Translated to quantiles, it shows that the normalized lower quantile $L_n(\eta)/n$ at size $N_1 + N_2$ is at least the smaller of its values at sizes $N_1$ and $N_2$, up to an error. A balanced binary tree of block sizes then shows that such comparisons in minimum form imply convergence, as in \cite[Lemma~5.4]{openai2026limiting}. In \cite{openai2026limiting}, the comparisons concern normalized expectations and have polynomially small errors. Our window bound concerns quantiles and gives only errors of order $\delta_n$. We compare quantiles using errors that are summable on geometric scales, as in the classical theory of nearly subadditive sequences \cite[Theorem~23]{debruijn1952some} and in \cite[arXiv:1006.3786v1, Section~4.3, Lemma~8 and Remark~3]{abbe2014concentration}. This summability cannot be dropped from the tree argument (see \cref{rem:conv-necessity}). In the last step, we use the window bound at every small quantile level. All quantiles then share one limit, and the zero-one laws follow without the sharp-threshold theorem of Achlioptas and Friedgut \cite{achlioptas1999sharp} (see \cref{rem:red-af}).
+
+In \cref{sec:conv-interp}, we prove the product inequality for a Poisson model with loops, and in \cref{sec:conv-quantile} we relate this model to the quantiles of $V$. \Cref{sec:conv-superadd} combines the two to compare the normalized lower quantiles at different sizes, and \cref{sec:conv-tree} shows that these comparisons imply convergence. \Cref{sec:conv-transfer} relates the edge process to $G(n, m)$ and $G(n, p)$, and we complete the proof in \cref{sec:conv-proof}.
+
+\section{The product inequality}\label{sec:conv-interp}
+
+In this appendix, we also use multigraphs with loops. For a finite set $S$, we define a \emph{multigraph with loops on $S$} to be a finite multiset of sets $\{x, y\}$ with $x, y \in S$, allowing $x = y$. We call its elements, counted with multiplicity, \emph{occurrences}, and an occurrence $\{x, x\}$ a \emph{loop}. We define its colorings and colorability by the same inequality as in \cref{def:pre-multigraph}, and let $\Col(G)$ denote its set of colorings. For $x, y \in S$, we define $G + \{x, y\}$ to add one occurrence, including when $x = y$. For $S' \subset S$, we define $G[S']$ by retaining the occurrences with both endpoints in $S'$. In particular, a multigraph with loops that contains a loop is not colorable, and a colorable multigraph with loops is a multigraph in the sense of \cref{def:pre-multigraph}. When $|S| \ge 2$, its frozen classes are defined by \cref{def:pre-frozen}; this includes every graph whose frozen classes are used in the interpolation proof below.
+
+\begin{definition}\label{def:conv-poisson}
+Let $n \ge 1$ be an integer and $c \ge 0$ a real number. Let $(u_i, v_i)_{i \ge 1}$ be independent random elements of $[n] \times [n]$ with the uniform law, and let $I$ be an independent random variable with the $\Pois(cn)$ law. We let $A_n(c)$ denote the multigraph with loops on $[n]$ whose occurrences are $\{u_i, v_i\}$ for $1 \le i \le I$, and we set
+\begin{equation}\label{eq:conv-rho}
+\rho_n(c) = \Pp\big(A_n(c) \text{ is colorable}\big).
+\end{equation}
+\end{definition}
+
+For $n = 1$, every occurrence of $A_1(c)$ is a loop, so that
+\begin{equation}\label{eq:conv-rho1}
+\rho_1(c) = \Pp(I = 0) = e^{-c}.
+\end{equation}
+
+\begin{lemma}\label{lem:conv-interp}
+For all integers $N_1, N_2 \ge 1$ and all real $c \ge 0$, we have
+\begin{equation}\label{eq:conv-product}
+\rho_{N_1 + N_2}(c) \ge \rho_{N_1}(c) \rho_{N_2}(c).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Both sides of \eqref{eq:conv-product} equal $1$ when $c = 0$. We may assume that $c > 0$. Let $N = N_1 + N_2$, $S_1 = [N_1]$, and $S_2 = [N] \setminus [N_1]$. Let $(\omega_i)_{i \ge 1}$ and $(\omega_i^{(j)})_{i \ge 1}$, $j = 1, 2$, be three independent sequences of independent random elements. We give the entries of the first sequence the uniform law on $[N] \times [N]$ and those of sequence $j$ the uniform law on $S_j \times S_j$.
+
+For $\boldsymbol\mu = (\mu_0, \mu_1, \mu_2)$ with $\mu_0, \mu_1, \mu_2 \ge 0$, let $I_0$, $I_1$, and $I_2$ be independent random variables with the $\Pois(\mu_0)$, $\Pois(\mu_1)$, and $\Pois(\mu_2)$ laws, independent of these sequences. We let $A^*(\boldsymbol\mu)$ denote the multigraph with loops on $[N]$ whose occurrences are the sets $\{x, y\}$ for the elements $(x, y)$ of the lists $(\omega_i)_{i \le I_0}$, $(\omega^{(1)}_i)_{i \le I_1}$, and $(\omega^{(2)}_i)_{i \le I_2}$, and we set
+\[
+\bar\chi(\boldsymbol\mu) = \Pp\big(A^*(\boldsymbol\mu) \text{ is colorable}\big).
+\]
+For $\upsilon \in [0, c]$, we define the interpolating multigraph and its colorability probability by
+\begin{equation}\label{eq:conv-interpolation}
+A^{(\upsilon)} = A^*\big(N\upsilon, N_1 (c - \upsilon), N_2 (c - \upsilon)\big), \qquad \chi(\upsilon) = \bar\chi\big(N\upsilon, N_1 (c - \upsilon), N_2 (c - \upsilon)\big).
+\end{equation}
+The occurrences contributed by $(\omega_i)$ have mean number $N\upsilon$, and those contributed by $(\omega_i^{(j)})$ have mean number $N_j(c - \upsilon)$ for $j = 1, 2$.
+
+We first identify the values of $\chi$ at the endpoints. The multigraph $A^{(0)}$ has no occurrence joining $S_1$ and $S_2$, so it is colorable if and only if $A^{(0)}[S_1]$ and $A^{(0)}[S_2]$ are colorable. These two multigraphs are independent, and after relabeling $S_2$ as $[N_2]$, they have the laws of $A_{N_1}(c)$ and $A_{N_2}(c)$. The multigraph $A^{(c)}$ has the law of $A_N(c)$. Therefore
+\[
+\chi(0) = \rho_{N_1}(c) \rho_{N_2}(c), \qquad \chi(c) = \rho_N(c),
+\]
+and it suffices to show that $\chi$ is nondecreasing on $[0, c]$.
+
+Next, we compute the partial derivatives of $\bar\chi$. For $k = (k_0, k_1, k_2)$ with nonnegative integer entries, let $a_k$ be the probability that the multigraph with loops formed by $(\omega_i)_{i \le k_0}$, $(\omega^{(1)}_i)_{i \le k_1}$, and $(\omega^{(2)}_i)_{i \le k_2}$ is colorable. Then
+\[
+\bar\chi(\boldsymbol\mu) = \sum_{k} \pi_{\mu_0}(k_0) \pi_{\mu_1}(k_1) \pi_{\mu_2}(k_2) a_k = e^{-\mu_0 - \mu_1 - \mu_2} \sum_{k} \frac{\mu_0^{k_0} \mu_1^{k_1} \mu_2^{k_2}}{k_0! \, k_1! \, k_2!} a_k.
+\]
+Since $|a_k| \le 1$, the last series converges absolutely on $\R^3$. We extend $\bar\chi$ to $\R^3$ by the right side of the preceding display. This extension is smooth, and its partial derivatives may be computed term by term.
+
+Let $(x, y)$ be a uniformly random element of $[N] \times [N]$, independent of $A^*(\boldsymbol\mu)$. The derivative of $\mu_0 \mapsto \pi_{\mu_0}(k_0)$ is $\pi_{\mu_0}(k_0 - 1) - \pi_{\mu_0}(k_0)$. Using this and shifting the index $k_0$ in the terms with $\pi_{\mu_0}(k_0 - 1)$, we obtain
+\[
+\begin{aligned}
+\partial_{\mu_0} \bar\chi(\boldsymbol\mu) &= \sum_{k} \pi_{\mu_0}(k_0) \pi_{\mu_1}(k_1) \pi_{\mu_2}(k_2) \big(a_{(k_0 + 1, k_1, k_2)} - a_k\big)\\
+&= -\Pp\big(A^*(\boldsymbol\mu) \text{ is colorable}, \ A^*(\boldsymbol\mu) + \{x, y\} \text{ is not colorable}\big),
+\end{aligned}
+\]
+In the second step, we used that adding an occurrence can only destroy colorability. Repeating this computation for $\mu_1$ and $\mu_2$, we find the analogous formulas, with $(x, y)$ uniform on $S_j \times S_j$. (This is the perturbation formula for Poisson processes \cite[Theorem~19.1]{last2018lectures} in the case that we need.)
+
+We now evaluate these probabilities. Let $A$ be a colorable multigraph with loops on $[N]$. Then $A$ has no loops and is a multigraph on $[N]$. We claim that for $x, y \in [N]$, the multigraph with loops $A + \{x, y\}$ is not colorable if and only if $x \sim _A y$. Indeed, for $x = y$, the multigraph $A + \{x, x\}$ contains a loop, and $x \sim _A x$ holds since $A$ is colorable. For $x \neq y$, the claim is \cref{lem:pre-frozen}(a). Let $C_1, \dots, C_k$ denote the frozen classes of $A$. It follows that the conditional probability that $A + \{x, y\}$ is not colorable is
+\[
+\begin{aligned}
+&\sum_{i = 1}^k \Big(\frac{|C_i|}{N}\Big)^2 &&\text{if } (x, y) \text{ is uniform on } [N] \times [N], \\
+&\sum_{i = 1}^k \Big(\frac{|C_i \cap S_j|}{N_j}\Big)^2 &&\text{if } (x, y) \text{ is uniform on } S_j \times S_j,
+\end{aligned}
+\]
+where the sums run over these $k$ classes.
+
+On the event that $A^{(\upsilon)}$ is colorable, let $C_1, \dots, C_k$ now denote its frozen classes. We define the integrand below to be zero otherwise. Applying the chain rule to \eqref{eq:conv-interpolation} and inserting these formulas, we obtain
+\begin{equation}\label{eq:conv-derivative}
+\begin{aligned}
+\chi'(\upsilon) &= N \partial_{\mu_0} \bar\chi - N_1 \partial_{\mu_1} \bar\chi - N_2 \partial_{\mu_2} \bar\chi\\
+&= \E\bigg[\ind\{A^{(\upsilon)} \text{ is colorable}\} \sum_{i = 1}^k \bigg(\frac{|C_i \cap S_1|^2}{N_1} + \frac{|C_i \cap S_2|^2}{N_2} - \frac{|C_i|^2}{N}\bigg)\bigg],
+\end{aligned}
+\end{equation}
+where the partial derivatives are evaluated at $(N\upsilon, N_1 (c - \upsilon), N_2 (c - \upsilon))$. For integers $a, b \ge 0$, we have
+\begin{equation}\label{eq:conv-square}
+\frac{a^2}{N_1} + \frac{b^2}{N_2} - \frac{(a + b)^2}{N_1 + N_2} = \frac{(N_2 a - N_1 b)^2}{N_1 N_2 (N_1 + N_2)} \ge 0,
+\end{equation}
+as one checks by multiplying both sides by $N_1 N_2 (N_1 + N_2)$. Applying \eqref{eq:conv-square} with $a = |C_i \cap S_1|$ and $b = |C_i \cap S_2|$ in \eqref{eq:conv-derivative}, we find that $\chi'(\upsilon) \ge 0$ for all $\upsilon \in [0, c]$. Hence
+\[
+\rho_N(c) = \chi(c) \ge \chi(0) = \rho_{N_1}(c) \rho_{N_2}(c). \qedhere
+\]
+\end{proof}
+
+System-splitting interpolation was used by Guerra and Toninelli to prove thermodynamic limits for mean-field spin glasses \cite[Section~3, Theorems~1--2]{guerra2002thermodynamic}. Franz and Leone \cite[Section~III and appendices]{franz2003replicaa} and Panchenko and Talagrand \cite[Sections~1--2]{panchenko2004bounds} developed free-energy bounds for diluted models under their stated interaction and arity hypotheses. For the coloring problem, Bayati, Gamarnik, and Tetali compare the colorability probability of the global model with a given number of edges with that of the two parts \cite[Theorem~5]{bayati2013combinatorial}, and their proof of \cite[Proposition~2]{bayati2013combinatorial} uses, as above, the classes of vertices that receive the same color in every coloring. Averaging their comparison over a Poisson number of edges gives \eqref{eq:conv-product}. The Poisson form and its proof by differentiation in the means are those of \cite[Lemma~5.2]{openai2026limiting} for $k$-SAT, where the sign of the derivative comes from the convexity of $x \mapsto x^k$. Here it comes from \eqref{eq:conv-square}.
+
+\section{The Poisson model and the quantiles}\label{sec:conv-quantile}
+
+We now relate $\rho_n(c)$ to the hitting time $H$ of the edge process on $[n]$. The proof uses standard concentration bounds for Poisson random variables. For integers $n \ge 1$, we set
+\begin{equation}\label{eq:conv-Delta}
+\Delta_n = \lceil \sqrt n \log n \rceil.
+\end{equation}
+
+\begin{lemma}\label{lem:conv-quantile}
+\begin{enumerate}[label=(\alph*)]
+\item For all integers $n \ge 2q$ and all real $c \ge 0$, we have
+\begin{equation}\label{eq:conv-rho-H}
+\rho_n(c) = e^{-c} \sum_{j \ge 0} \pi_{c(n - 1)}(j) \Pp(H > j).
+\end{equation}
+\item Let $\eta \in (0, 1/2]$. For all large $n$ and all $c \in (0, \Lambda]$, the following holds. If $c(n - 1) \le L_n(\eta) - \Delta_n$, then
+\begin{equation}\label{eq:conv-below}
+\rho_n(c) \ge e^{-\Lambda} (1 - \eta) \big(1 - e^{-(\log n)^2/(2\Lambda)}\big),
+\end{equation}
+and if $c(n - 1) \ge U_n(\eta) + \Delta_n$, then
+\begin{equation}\label{eq:conv-above}
+\rho_n(c) \le \eta + e^{-(\log n)^2/(2\Lambda)}.
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We begin with (a). Each occurrence of $A_n(c)$ is a loop with probability $1/n$. We apply \cref{lem:pre-split}(a) with $E = [n] \times [n]$, $\nu$ the uniform law, $\mu = cn$, and the partition of $E$ into the diagonal $\{(x, x) : x \in [n]\}$ and its complement. It shows that the number of loops of $A_n(c)$ has the $\Pois(c)$ law, and that, independently, the elements $(u_i, v_i)$ with $u_i \neq v_i$ form a list of $\Pois(c(n - 1))$ independent uniformly random elements of $\{(x, y) \in [n]^2 : x \neq y\}$. For such a uniformly random element $(x, y)$, the set $\{x, y\}$ is a uniformly random pair of $[n]$.
+
+Conditionally on the number $j$ of occurrences that are not loops, the multigraph formed by these occurrences has the law of $G_j$. The multigraph with loops $A_n(c)$ is colorable if and only if it has no loop and this multigraph is colorable. We have
+\[
+\rho_n(c) = e^{-c} \sum_{j \ge 0} \pi_{c(n - 1)}(j) \Pp(G_j \text{ is colorable}),
+\]
+which is \eqref{eq:conv-rho-H}.
+
+We now prove (b). We set $\mu = c(n - 1)$. Let $J$ be a random variable with the $\Pois(\mu)$ law. We write $L = L_n(\eta)$ and $U = U_n(\eta)$. Suppose first that $\mu \le L - \Delta_n$. Recall from \cref{lem:pre-quantile} that $\Pp(H > j) > 1 - \eta$ for all $j \le L$. Inserting this into \eqref{eq:conv-rho-H}, we find
+\[
+\rho_n(c) \ge e^{-c} (1 - \eta) \sum_{j \le L} \pi_\mu(j) = e^{-c} (1 - \eta) \Pp(J \le L) \ge e^{-\Lambda} (1 - \eta) \big(1 - \Pp(J \ge \mu + \Delta_n)\big),
+\]
+where we used $c \le \Lambda$ and the inclusion $\{J > L\} \subset \{J \ge \mu + \Delta_n\}$. Further, we have $\mu + \Delta_n \le L \le M \le \Lambda n$ and $\Delta_n^2 \ge n (\log n)^2$, so \cref{lem:pre-tails}(c) gives
+\[
+\Pp(J \ge \mu + \Delta_n) \le \exp\Big(-\frac{\Delta_n^2}{2(\mu + \Delta_n)}\Big) \le \exp\Big(-\frac{n (\log n)^2}{2\Lambda n}\Big) = e^{-(\log n)^2/(2\Lambda)}.
+\]
+This proves \eqref{eq:conv-below}.
+
+Suppose now that $\mu \ge U + \Delta_n$. By \cref{lem:pre-centre}(a), we have $U + 1 \le M$ for all large $n$. For such $n$, \cref{lem:pre-quantile} and the monotonicity of $\Pp(H > j)$ in $j$ give $\Pp(H > j) < \eta$ for all $j \ge U + 1$. We bound $\Pp(H > j)$ by $1$ for $j \le U$ and by $\eta$ for $j > U$ in \eqref{eq:conv-rho-H}, and we use $e^{-c} \le 1$. Since $0 < \mu \le \Lambda n$, \cref{lem:pre-tails}(c) then gives
+\[
+\rho_n(c) \le \Pp(J \le U) + \eta \le \Pp(J \le \mu - \Delta_n) + \eta \le \exp\Big(-\frac{\Delta_n^2}{2\mu}\Big) + \eta \le e^{-(\log n)^2/(2\Lambda)} + \eta,
+\]
+which is \eqref{eq:conv-above}. The only condition on $n$ that we used is $U + 1 \le M$, which does not involve $c$.
+\end{proof}
+
+\section{Comparison of the quantiles at different sizes}\label{sec:conv-superadd}
+
+In this section, we fix $\eta \in (0, \eta_0]$ and assume \eqref{eq:conv-window} at this level. We write $K' = K'(\eta)$ and $n_1 = n_1(\eta)$. For each integer $n \ge 2q$, we set $\xi_n = L_n(\eta)/n$. Recall from \cref{lem:pre-quantile} that $L_n(\eta) \le M$, so that $0 \le \xi_n \le \Lambda$. We extend the sequence $(\delta_n)$ to real arguments by $\delta(u) = \delta_{\lfloor u \rfloor}$ for $u \ge 1$, and we define
+\begin{equation}\label{eq:conv-g}
+g(u) = K' \delta(u) + (\Lambda + 6) \frac{\log u}{\sqrt u}, \qquad u \ge 1.
+\end{equation}
+
+\begin{lemma}\label{lem:conv-superadd}
+There exists an integer $n_0 \ge 2q$ such that for all integers $N_1, N_2 \ge n_0$, we have
+\begin{equation}\label{eq:conv-superadd}
+\xi_{N_1 + N_2} \ge \min(\xi_{N_1}, \xi_{N_2}) - g\big(\min(N_1, N_2)\big), \qquad \xi_{N_1 + 1} \ge \xi_{N_1} - g(N_1).
+\end{equation}
+\end{lemma}
+
+The integer $n_0$ depends on $q$, $\Lambda$, $\eta$, $K'$, $n_1$, and the sequence $(\delta_n)$.
+
+\begin{proof}
+We first choose $n_0$. For each integer $v \ge 1$, we have $\Delta_v \le \sqrt v\log v + 1$, and hence
+\begin{equation}\label{eq:conv-Delta-bound}
+\frac{\Delta_v}{v} \le \frac{\log v}{\sqrt v} + \frac 1v,
+\end{equation}
+where the right side is nonincreasing in $v \ge e^2$. Let $\vartheta_n = e^{-(\log n)^2/(2\Lambda)}$. Using \cref{lem:pre-centre}(b) with $c_0 = 1/4$, the bound \eqref{eq:conv-Delta-bound}, and the fact that $\vartheta_n \to 0$, we may choose $n_0 \ge \max(2q, n_1, e^2)$ such that the conclusion of \cref{lem:conv-quantile}(b) holds at every size $n \ge n_0$, and such that
+\begin{equation}\label{eq:conv-s0}
+\xi_n > \frac 14, \qquad \frac{2\Delta_n}{n} < \frac 14, \qquad \vartheta_n \le \min\Big(\eta, \frac 18\Big) \qquad \text{for all } n \ge n_0.
+\end{equation}
+
+We begin with the first inequality in \eqref{eq:conv-superadd}. Let $N_1, N_2 \ge n_0$, let $N = N_1 + N_2$ and $N_{\min} = \min(N_1, N_2)$, and set
+\[
+c = \min\Big(\xi_{N_1} - \frac{2\Delta_{N_1}}{N_1}, \ \xi_{N_2} - \frac{2\Delta_{N_2}}{N_2}\Big).
+\]
+The bounds \eqref{eq:conv-s0} give $c > 0$, and we have $c \le \xi_{N_1} \le \Lambda$. For $j = 1, 2$, we also have
+\[
+c (N_j - 1) \le c N_j \le L_{N_j}(\eta) - 2\Delta_{N_j} \le L_{N_j}(\eta) - \Delta_{N_j}.
+\]
+Therefore \eqref{eq:conv-below} applies at size $N_j$, and together with $\eta \le \eta_0 \le 1/8$ and \eqref{eq:conv-s0} it gives
+\[
+\rho_{N_j}(c) \ge e^{-\Lambda} (1 - \eta)(1 - \vartheta_{N_j}) \ge e^{-\Lambda} \Big(\frac 78\Big)^2.
+\]
+By \cref{lem:conv-interp}, we obtain
+\begin{equation}\label{eq:conv-product-lower}
+\rho_N(c) \ge \rho_{N_1}(c) \rho_{N_2}(c) \ge e^{-2\Lambda} \Big(\frac 78\Big)^4 > \frac{e^{-2\Lambda}}{2}.
+\end{equation}
+
+However, recall that $\eta_0 = e^{-2\Lambda}/8$. Together with \eqref{eq:conv-s0}, this gives
+\[
+\eta + \vartheta_N \le 2\eta \le 2\eta_0 = \frac{e^{-2\Lambda}}{4}.
+\]
+Suppose that $c(N - 1) \ge U_N(\eta) + \Delta_N$. Then \eqref{eq:conv-above} at size $N \ge n_0$ would give $\rho_N(c) \le e^{-2\Lambda}/4$, which contradicts \eqref{eq:conv-product-lower}. Hence $c(N - 1) < U_N(\eta) + \Delta_N$. Since $N \ge n_1$, the hypothesis \eqref{eq:conv-window} gives
+\[
+U_N(\eta) = L_N(\eta) + w_N(\eta) \le N \xi_N + K' N \delta_N,
+\]
+and dividing by $N$, we find
+\begin{equation}\label{eq:conv-xiN}
+\xi_N > c - \frac cN - K' \delta_N - \frac{\Delta_N}{N} \ge c - \frac{\Lambda}{N} - K' \delta_N - \frac{\Delta_N}{N}.
+\end{equation}
+
+We now express the errors through $N_{\min}$. We have $N_1, N_2 \ge N_{\min} \ge e^2$, and the right side of \eqref{eq:conv-Delta-bound} is nonincreasing on $[e^2, \infty)$, so
+\[
+c \ge \min(\xi_{N_1}, \xi_{N_2}) - 2 \frac{\log N_{\min}}{\sqrt{N_{\min}}} - \frac{2}{N_{\min}}.
+\]
+Similarly, using $N \ge N_{\min}$, we have $\Delta_N/N \le (\log N_{\min})/\sqrt{N_{\min}} + 1/N_{\min}$ and $\Lambda/N \le \Lambda/N_{\min}$, and $\delta_N \le \delta(N_{\min})$ since $(\delta_n)$ is nonincreasing. Inserting these bounds into \eqref{eq:conv-xiN}, we obtain
+\[
+\xi_N \ge \min(\xi_{N_1}, \xi_{N_2}) - K' \delta(N_{\min}) - 3 \frac{\log N_{\min}}{\sqrt{N_{\min}}} - \frac{\Lambda + 3}{N_{\min}} \ge \min(\xi_{N_1}, \xi_{N_2}) - g(N_{\min}),
+\]
+where in the last step we used $1/N_{\min} \le (\log N_{\min})/\sqrt{N_{\min}}$ for $N_{\min} \ge e$. This is the first inequality in \eqref{eq:conv-superadd}.
+
+For the second inequality, let $N_1 \ge n_0$ and $c = \xi_{N_1} - 2\Delta_{N_1}/N_1$, so that $0 < c \le \Lambda$ as before. Using \cref{lem:conv-interp} with $N_2 = 1$, the identity \eqref{eq:conv-rho1}, and \eqref{eq:conv-below} at size $N_1$, we have
+\[
+\rho_{N_1 + 1}(c) \ge \rho_{N_1}(c) e^{-c} \ge e^{-2\Lambda} \Big(\frac 78\Big)^2 > \frac{e^{-2\Lambda}}{2}.
+\]
+The argument above, at size $N_1 + 1 \ge n_0$ in place of $N$, shows that $c N_1 < U_{N_1 + 1}(\eta) + \Delta_{N_1 + 1}$, and that
+\[
+\begin{aligned}
+\xi_{N_1 + 1} &\ge c - \frac{\Lambda}{N_1 + 1} - K' \delta_{N_1 + 1} - \frac{\Delta_{N_1 + 1}}{N_1 + 1}\\
+&\ge \xi_{N_1} - K' \delta(N_1) - 3 \frac{\log N_1}{\sqrt{N_1}} - \frac{\Lambda + 3}{N_1} \ge \xi_{N_1} - g(N_1).
+\end{aligned}
+\]
+This completes the proof.
+\end{proof}
+
+The use of the one-vertex model \eqref{eq:conv-rho1} for the comparison of adjacent sizes follows \cite[Section~5.3]{openai2026limiting}. This comparison cannot be omitted, since \cref{rem:conv-necessity} gives a sequence that satisfies the first inequality in \eqref{eq:conv-superadd} with $g = 0$ but does not converge.
+
+\section{A balanced tree of blocks}\label{sec:conv-tree}
+
+We now prove a general convergence lemma from the two inequalities in \eqref{eq:conv-superadd}. The proof applies those inequalities along a binary tree. The next statement specifies the condition on the error function.
+
+\begin{lemma}\label{lem:conv-tree}
+Let $u_0 \ge 1$, and let $g \colon [1, \infty) \to (0, \infty)$ be a function that is nonincreasing on $[u_0, \infty)$ and satisfies $\sum_{k \ge 1} g(e^k) < \infty$. Let $n_0 \ge 1$ be an integer, and let $(\xi_n)_{n \ge n_0}$ be a bounded sequence of real numbers such that the two inequalities in \eqref{eq:conv-superadd} hold for all integers $N_1, N_2 \ge n_0$. Then $(\xi_n)$ converges.
+\end{lemma}
+
+\begin{proof}
+We first record the consequences of the summability of $g$. Let $u_1 = e^{\lceil \log u_0 \rceil}$. For every integer $k$ with $e^k \ge u_1$, the monotonicity of $g$ gives
+\[
+\int_{e^k}^{e^{k + 1}} g(v) \frac{\dd v}{v} \le g(e^k),
+\]
+and summing over these $k$, we find
+\begin{equation}\label{eq:conv-integral}
+\int_{u_1}^\infty g(v) \frac{\dd v}{v} < \infty.
+\end{equation}
+For $u \ge 2u_1$, the monotonicity of $g$ also gives
+\[
+g(u) \log 2 \le \int_{u/2}^{u} g(v) \frac{\dd v}{v},
+\]
+so \eqref{eq:conv-integral} implies that $g(u) \to 0$ as $u \to \infty$.
+
+For real $\ell \ge 4u_0$, we define the path-error sum
+\begin{equation}\label{eq:conv-pathsum}
+\mathcal R(\ell) = \sum_{i \ge 1} g\Big(\frac \ell4 \Big(\frac 43\Big)^i\Big).
+\end{equation}
+For every $i \ge 1$, all points of the interval between $(\ell/4)(4/3)^{i - 1}$ and $(\ell/4)(4/3)^i$ are at least $u_0$, so the monotonicity of $g$ gives
+\[
+g\Big(\frac \ell4 \Big(\frac 43\Big)^i\Big) \log \frac 43 \le \int_{(\ell/4)(4/3)^{i - 1}}^{(\ell/4)(4/3)^i} g(v) \frac{\dd v}{v}.
+\]
+Summing over $i$, we obtain
+\[
+\mathcal R(\ell) \log \frac 43 \le \int_{\ell/4}^\infty g(v) \frac{\dd v}{v},
+\]
+and by \eqref{eq:conv-integral} the right side tends to zero as $\ell \to \infty$.
+
+Next, we construct the tree. Fix an integer $\ell \ge \max(n_0, 4u_0, 2)$, which we call the block size, and let $n \ge \ell^2$. We write $n = k\ell + j$ with $k = \lfloor n/\ell \rfloor$ and $0 \le j < \ell$. Since $k \ge \ell > j$, we can write $n$ as the sum of $j$ blocks of size $\ell + 1$ and $k - j$ blocks of size $\ell$.
+
+We construct a rooted binary tree whose leaves correspond to the $k$ blocks. For each node $\nu$, we define $k_\nu$ to be the number of blocks below $\nu$, and $N_\nu$ to be the sum of their sizes. At every node with $k_\nu \ge 2$, we split those blocks into two children containing $\lceil k_\nu/2\rceil$ and $\lfloor k_\nu/2\rfloor$ blocks (see \cref{fig:conv-tree}). Thus the root has size $n$, every leaf has size $\ell$ or $\ell + 1$, and the size of an internal node is the sum of the sizes of its two children. We let $\operatorname{ht}(\nu)$ denote the height of $\nu$, the largest number of edges on a path in the tree from $\nu$ down to a leaf.
+
+\begin{figure}[t]
+\centering
+\input{figures/conv-tree}
+\caption{The tree of the proof of \cref{lem:conv-tree} for $k = 5$ blocks; internal nodes are labeled by their numbers $k_\nu$ of blocks, and leaves by their sizes. Each internal node with $k_\nu$ blocks below it has children with $\lceil k_\nu/2 \rceil$ and $\lfloor k_\nu/2 \rfloor$ blocks, and the leaves are blocks of size $\ell$ or $\ell + 1$. Along every path from a leaf up to the root, the sizes grow by a factor of at least $4/3$ at each step, so the errors in \eqref{eq:conv-superadd} accumulated along the path are bounded by the path-error sum $\mathcal R(\ell)$.}
+\label{fig:conv-tree}
+\end{figure}
+
+We claim that the children $\nu_1$ and $\nu_2$ of every internal node $\nu$ satisfy
+\begin{equation}\label{eq:conv-children}
+\frac{N_\nu}{4} \le N_{\nu_i} \le \frac{3 N_\nu}{4}, \qquad i = 1, 2.
+\end{equation}
+Indeed, each child has at least $\lfloor k_\nu/2 \rfloor \ge 1$ and at most $\lceil k_\nu/2 \rceil \le 2 \lfloor k_\nu/2 \rfloor$ blocks, and each block has size between $\ell$ and $\ell + 1 \le 3\ell/2$, so that
+\[
+\frac{N_{\nu_1}}{N_{\nu_2}} \le \frac{\lceil k_\nu/2 \rceil (\ell + 1)}{\lfloor k_\nu/2 \rfloor \ell} \le 2 \cdot \frac 32 = 3,
+\]
+and the same bound holds for $N_{\nu_2}/N_{\nu_1}$. Together with $N_{\nu_1} + N_{\nu_2} = N_\nu$, this gives \eqref{eq:conv-children}.
+
+Now let $\nu = \nu_0, \nu_1, \dots, \nu_{\operatorname{ht}(\nu)}$ be a path of maximum length from $\nu$ down to a leaf. Using \eqref{eq:conv-children}, we have $N_{\nu_{i - 1}} \ge (4/3) N_{\nu_i}$ for all $i$, which implies that
+\begin{equation}\label{eq:conv-growth}
+N_\nu \ge \Big(\frac 43\Big)^{\operatorname{ht}(\nu)} \ell.
+\end{equation}
+
+We now show by induction on the height that every node $\nu$ satisfies
+\begin{equation}\label{eq:conv-induction}
+\xi_{N_\nu} \ge \xi_\ell - g(\ell) - \sum_{i = 1}^{\operatorname{ht}(\nu)} g\Big(\frac \ell4 \Big(\frac 43\Big)^i\Big).
+\end{equation}
+A node of height $0$ is a leaf of size $\ell$ or $\ell + 1$. The second inequality in \eqref{eq:conv-superadd}, applied with $N_1 = \ell \ge n_0$, gives $\xi_{\ell + 1} \ge \xi_\ell - g(\ell)$, which proves \eqref{eq:conv-induction} for leaves.
+
+Now let $\nu$ be an internal node with children $\nu_1$ and $\nu_2$, and assume that \eqref{eq:conv-induction} holds for $\nu_1$ and $\nu_2$. Their heights are at most $\operatorname{ht}(\nu) - 1$, and their sizes are at least $\ell \ge n_0$. Using the first inequality in \eqref{eq:conv-superadd} and the induction hypothesis, we obtain
+\[
+\begin{aligned}
+\xi_{N_\nu} &\ge \min(\xi_{N_{\nu_1}}, \xi_{N_{\nu_2}}) - g\big(\min(N_{\nu_1}, N_{\nu_2})\big)\\
+&\ge \xi_\ell - g(\ell) - \sum_{i = 1}^{\operatorname{ht}(\nu) - 1} g\Big(\frac \ell4 \Big(\frac 43\Big)^i\Big) - g\big(\min(N_{\nu_1}, N_{\nu_2})\big).
+\end{aligned}
+\]
+The bounds \eqref{eq:conv-children} and \eqref{eq:conv-growth} give
+\[
+\min(N_{\nu_1}, N_{\nu_2}) \ge \frac{N_\nu}{4} \ge \frac \ell4 \Big(\frac 43\Big)^{\operatorname{ht}(\nu)} \ge u_0,
+\]
+and since $g$ is nonincreasing on $[u_0, \infty)$, the last term in the previous display is at least $-g((\ell/4)(4/3)^{\operatorname{ht}(\nu)})$. This completes the induction.
+
+Applying \eqref{eq:conv-induction} at the root, we obtain $\xi_n \ge \xi_\ell - g(\ell) - \mathcal R(\ell)$ for all $n \ge \ell^2$. Taking the limit inferior as $n \to \infty$, we find
+\[
+\liminf_{n \to \infty} \xi_n \ge \xi_\ell - g(\ell) - \mathcal R(\ell)
+\]
+for every integer $\ell \ge \max(n_0, 4u_0, 2)$. We have shown that $g(\ell) \to 0$ and $\mathcal R(\ell) \to 0$, and taking the limit superior as $\ell \to \infty$ gives $\liminf_n \xi_n \ge \limsup_\ell \xi_\ell$. The sequence is bounded, so it converges.
+\end{proof}
+
+The minimum form of the size comparison and the tree with blocks of sizes $\ell$ and $\ell + 1$ are as in \cite[Lemma~5.4]{openai2026limiting}, which assumes polynomially small errors. For the classical additive form of near-superadditivity, sufficient conditions of this summable type go back to de Bruijn and Erd\H{o}s \cite[Theorem~23]{debruijn1952some}; see also \cite[arXiv:1006.3786v1, Section~4.3, Lemma~8 and Remark~3]{abbe2014concentration}. A minimum inequality is weaker than the additive one, and these classical results do not apply directly.
+
+\begin{remark}\label{rem:conv-necessity}
+The summability assumption in \cref{lem:conv-tree} and the adjacent-size inequality in \eqref{eq:conv-superadd} cannot be dropped from this convergence argument. First, let $\tilde\delta \colon [1, \infty) \to (0, \infty)$ be nonincreasing with $\int_1^\infty \tilde\delta(v) \dd v/v = \infty$ and, for $t \ge 1$, define $\tilde F(t) = \int_1^t \tilde\delta(v) \dd v/v$. For integers $n \ge 1$, we set $y_n = 1 + \sin(\tilde F(n))/2$. For $3 \le N_1 \le N_2$, we have
+\[
+|y_{N_1 + N_2} - y_{N_2}| \le \frac 12 \int_{N_2}^{N_1 + N_2} \tilde\delta(v) \frac{\dd v}{v} \le \frac{\log 2}{2} \tilde\delta(N_2) \le \frac{\log 2}{2} \tilde\delta(N_1),
+\]
+and $|y_{N_1 + 1} - y_{N_1}| \le \tilde\delta(N_1)/(2N_1) \le \tilde\delta(N_1)$. Thus $(y_n)$ satisfies the two inequalities in \eqref{eq:conv-superadd} with $g = \tilde\delta$ and $n_0 = 3$. However, $\tilde F(n) \to \infty$ and $\tilde F(n + 1) - \tilde F(n) \le \tilde\delta(1)/n \to 0$, so the values $\tilde F(n)$ come arbitrarily close to all large real numbers, and therefore $\limsup_n y_n = 3/2$ and $\liminf_n y_n = 1/2$. For nonincreasing $\tilde\delta$, the divergence of $\int_1^\infty \tilde\delta(v) \dd v/v$ is equivalent to $\sum_k \tilde\delta(e^k) = \infty$, and this includes $\tilde\delta(v) = 1/\log(e v)$. Thus, in this argument, a window of order $n/\log n$ would not suffice. The example concerns the tree argument only; it does not show that the quantiles of $V$ fail to converge under a weaker window bound. For the classical additive form, the necessity of the corresponding summability condition is \cite[arXiv:1810.11723v1, Theorem~6]{furedi2020nearly}.
+
+Second, we define $\tilde b_n = \ind\{n\text{ is even}\}$ for integers $n \ge 1$. Then $\tilde b_{N_1 + N_2} \ge \min(\tilde b_{N_1}, \tilde b_{N_2})$ for all $N_1, N_2 \ge 1$, since $N_1 + N_2$ is even whenever $N_1$ and $N_2$ are even. Thus $(\tilde b_n)$ satisfies the first inequality in \eqref{eq:conv-superadd} for every $g \ge 0$, but does not converge. It violates the second inequality for every $g$ that tends to zero.
+\end{remark}
+
+\section{Transfer to the uniform and binomial random graphs}\label{sec:conv-transfer}
+
+Recall that, for integers $n \ge 1$ and $0 \le m \le \binom{n}{2}$, we let $G(n, m)$ denote the uniformly random simple graph on $[n]$ with $m$ edges. For $p \in [0, 1]$, we let $G(n, p)$ denote the random simple graph on $[n]$ in which each pair is an edge independently with probability $p$.
+
+\begin{lemma}\label{lem:conv-transfer}
+\begin{enumerate}[label=(\alph*)]
+\item For all large $n$ and all integers $0 \le m \le \Lambda n$, we have
+\begin{equation}\label{eq:conv-transfer-a}
+\begin{aligned}
+\Pp\big(G(n, m) \text{ is not colorable}\big) &\le e^{2\Lambda^2 + 1} \Pp(H \le m), \\
+\Pp\big(G(n, m) \text{ is colorable}\big) &\le e^{2\Lambda^2 + 1} \Pp(H > m).
+\end{aligned}
+\end{equation}
+\item For all integers $n \ge 2$, the probability $\Pp(G(n, m) \text{ is colorable})$ is nonincreasing in $m \in \{0, \dots, \binom{n}{2}\}$. Further, for all integers $0 \le m \le \binom{n}{2}$ and all $p \in [0, 1]$, if $X$ has the $\Bin(\binom{n}{2}, p)$ law, then
+\begin{equation}\label{eq:conv-transfer-b}
+\begin{aligned}
+\Pp\big(G(n, p) \text{ is colorable}\big) &\ge \Pp\big(G(n, m) \text{ is colorable}\big) \Pp(X \le m), \\
+\Pp\big(G(n, p) \text{ is colorable}\big) &\le \Pp\big(G(n, m) \text{ is colorable}\big) + \Pp(X < m).
+\end{aligned}
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We begin with (a). Conditioning on a simplicity event of probability bounded away from zero is a standard transfer from nonsimple to simple random graphs; see \cite[Section~2, paragraph on nonsimple graphs]{bayati2013combinatorial}. Let $b = \binom{n}{2}$, and let $\mathcal D_m$ denote the event that the pairs $e_1, \dots, e_m$ are distinct. For all large $n$ and all $m \le \Lambda n$, we have $m/b \le 2\Lambda/(n - 1) \le 1/2$. Using $\log(1 - x) \ge -x - x^2$ for $x \in [0, 1/2]$, we obtain
+\[
+\begin{aligned}
+\Pp(\mathcal D_m) &= \prod_{i = 1}^{m - 1} \Big(1 - \frac{i}{b}\Big) \\
+&\ge \exp\Big(-\sum_{i = 1}^{m - 1} \frac{i}{b} - \sum_{i = 1}^{m - 1} \frac{i^2}{b^2}\Big) \\
+&\ge \exp\Big(-\frac{m^2}{2b} - \frac{m^3}{b^2}\Big) \\
+&\ge e^{-2\Lambda^2 - 1},
+\end{aligned}
+\]
+where in the last step we used $m^2/(2b) = m^2/(n(n - 1)) \le 2\Lambda^2$ and $m^3/b^2 \le 4\Lambda^3 n/(n - 1)^2 \le 1$ for all large $n$.
+
+Conditionally on $\mathcal D_m$, the sequence $(e_1, \dots, e_m)$ is uniformly distributed on the sequences of $m$ distinct pairs of $[n]$. Therefore the set $\{e_1, \dots, e_m\}$ has the law of the edge set of $G(n, m)$. The colorability of $G_m$ is determined by the set of its distinct pairs. If $\mathcal B$ denotes the event that $G_m$ is not colorable, we have
+\[
+\Pp\big(G(n, m) \text{ is not colorable}\big) = \Pp(\mathcal B \mid \mathcal D_m) \le \frac{\Pp(\mathcal B)}{\Pp(\mathcal D_m)} \le e^{2\Lambda^2 + 1} \Pp(H \le m),
+\]
+and the second bound in \eqref{eq:conv-transfer-a} follows in the same way from the complement of $\mathcal B$.
+
+We now prove (b). Let $m < \binom{n}{2}$. Adding to $G(n, m)$ a uniformly random pair of $[n]$ that is not an edge of $G(n, m)$ gives a graph with the law of $G(n, m + 1)$. A graph that contains a non-colorable graph is not colorable, which gives the monotonicity.
+
+For this proof, we let $X$ denote the number of edges of $G(n, p)$. Then $X$ has the $\Bin(\binom n2, p)$ law. Conditionally on $X$, the graph $G(n, p)$ has the law of $G(n, X)$ \cite[Lemma~1.1]{frieze2016introduction}, so
+\[
+\Pp\big(G(n, p) \text{ is colorable}\big) = \sum_{j = 0}^{\binom{n}{2}} \Pp(X = j) \Pp\big(G(n, j) \text{ is colorable}\big).
+\]
+Bounding the terms with $j \ge m$ by $\Pp(X = j) \Pp(G(n, m) \text{ is colorable})$ and the terms with $j < m$ by $\Pp(X = j)$ gives the second inequality in \eqref{eq:conv-transfer-b}. Dropping the terms with $j > m$ and bounding the others from below by $\Pp(X = j) \Pp(G(n, m) \text{ is colorable})$ gives the first.
+\end{proof}
+
+\section{Proof of \texorpdfstring{\cref{thm:red-convergence}}{the convergence theorem}}\label{sec:conv-proof}
+
+We assume the hypotheses recalled at the beginning of this appendix, and we proceed in four steps.
+
+\emph{Step 1 (one level).} Fix $\eta \in (0, \eta_0]$, and let $\xi_n$ and $g$ be as in \cref{sec:conv-superadd}. The function $g$ is positive, since $K' > 0$ and $\delta_n > 0$. It is nonincreasing on $[e^2, \infty)$, because $\delta(u)$ is nonincreasing in $u$ and $(\log u)/\sqrt u$ is nonincreasing for $u \ge e^2$. Further, by \eqref{eq:conv-summable}, we have
+\[
+\sum_{k \ge 1} g(e^k) = K' \sum_{k \ge 1} \delta_{\lfloor e^k \rfloor} + (\Lambda + 6) \sum_{k \ge 1} k e^{-k/2} < \infty.
+\]
+The sequence $(\xi_n)_{n \ge 2q}$ takes values in $[0, \Lambda]$. By \cref{lem:conv-superadd}, it satisfies the two inequalities in \eqref{eq:conv-superadd} for all $N_1, N_2 \ge n_0$. Therefore \cref{lem:conv-tree} with $u_0 = e^2$ shows that $(\xi_n)$ converges. We let $\alpha(\eta)$ denote its limit.
+
+\Cref{lem:pre-centre} implies that $c_0 \le \alpha(\eta) \le c_1$ for all $c_0 < 1/2$ and all $c_1 > \gamma_q$, and we conclude that $\alpha(\eta) \in [1/2, \gamma_q]$. The summability \eqref{eq:conv-summable} implies $\delta_{\lfloor e^k \rfloor} \to 0$, and since $(\delta_n)$ is nonincreasing, we have $\delta_n \to 0$. Using \eqref{eq:conv-window}, we conclude that $U_n(\eta)/n = L_n(\eta)/n + w_n(\eta)/n$ also converges to $\alpha(\eta)$.
+
+\emph{Step 2 (all levels share the limit).} Let $0 < \eta_- < \eta_+ \le \eta_0$. Every $m$ with $\Pp(V \le m) \ge \eta_+$ also satisfies $\Pp(V \le m) \ge \eta_-$, which implies that $L_n(\eta_-) \le L_n(\eta_+)$. Further, as in the proof of \cref{lem:pre-quantile}, we have
+\[
+\Pp\big(V \ge L_n(\eta_+)\big) = 1 - \Pp\big(V \le L_n(\eta_+) - 1\big) > 1 - \eta_+ \ge \eta_-,
+\]
+and $L_n(\eta_+) \le M$, so $L_n(\eta_+)$ belongs to the set that defines $U_n(\eta_-)$. Hence
+\[
+\frac{L_n(\eta_-)}{n} \le \frac{L_n(\eta_+)}{n} \le \frac{U_n(\eta_-)}{n} \qquad \text{for all } n \ge 2q.
+\]
+By Step 1, the outer terms converge to $\alpha(\eta_-)$. It follows that $\alpha(\eta_+) = \alpha(\eta_-)$. We denote the common value by $\alpha_q$. Together with Step 1, this shows that $L_n(\eta)/n \to \alpha_q$ and $U_n(\eta)/n \to \alpha_q$ for every $\eta \in (0, \eta_0]$, and that $\alpha_q \in [1/2, \gamma_q]$.
+
+\emph{Step 3 (the edge process).} Let $0 \le c < \alpha_q$, and let $\eta \in (0, \eta_0]$. Since $L_n(\eta)/n \to \alpha_q > c$, we have $\lfloor cn \rfloor \le L_n(\eta)$ for all large $n$, and for such $n$ \cref{lem:pre-quantile} gives $\Pp(H > \lfloor cn \rfloor) > 1 - \eta$. Therefore $\liminf_n \Pp(H > \lfloor cn \rfloor) \ge 1 - \eta$, and letting $\eta \to 0$, we conclude that $\Pp(H > \lfloor cn \rfloor) \to 1$.
+
+Now let $c > \alpha_q$, and assume first that $c < \Lambda$. The convergence $U_n(\eta)/n \to \alpha_q < c$ implies that $U_n(\eta) < \lfloor cn \rfloor \le M$ for all large $n$, and for such $n$ \cref{lem:pre-quantile} gives $\Pp(H > \lfloor cn \rfloor) < \eta$. Letting first $n \to \infty$ and then $\eta \to 0$, we conclude that $\Pp(H > \lfloor cn \rfloor) \to 0$. For $c \ge \Lambda$, we choose $c' \in (\alpha_q, \Lambda)$ and recall that $\Pp(H > m)$ is nonincreasing in $m$, so that $\Pp(H > \lfloor cn \rfloor) \le \Pp(H > \lfloor c' n \rfloor) \to 0$.
+
+\emph{Step 4 (the uniform and binomial random graphs).} Let $0 \le c < \alpha_q$. Since $\alpha_q \le \gamma_q < \Lambda$, we have $\lfloor cn \rfloor \le \Lambda n$, and \cref{lem:conv-transfer}(a) and Step 3 give
+\[
+\Pp\big(G(n, \lfloor cn \rfloor) \text{ is not colorable}\big) \le e^{2\Lambda^2 + 1} \Pp\big(H \le \lfloor cn \rfloor\big) \to 0.
+\]
+For $\alpha_q < c < \Lambda$, we use the second bound in \eqref{eq:conv-transfer-a} and Step 3 to obtain $\Pp(G(n, \lfloor cn \rfloor) \text{ is colorable}) \to 0$. For $c \ge \Lambda$, we choose $c' \in (\alpha_q, \Lambda)$. For all large $n$, we have $\lfloor cn \rfloor \le \binom{n}{2}$, and the monotonicity in \cref{lem:conv-transfer}(b) reduces this case to the previous one.
+
+Now let $d \ge 0$ and let $n$ be so large that $d/n \le 1$. Let $X$ have the $\Bin(\binom{n}{2}, d/n)$ law. Then $\E X = d(n - 1)/2$ and $\Var X \le d(n - 1)/2$.
+
+Suppose first that $d < 2\alpha_q$. We choose $c \in (d/2, \alpha_q)$ and set $m = \lfloor cn \rfloor$. Then $m + 1 - \E X \ge (c - d/2) n > 0$, and Chebyshev's inequality gives
+\[
+\Pp(X > m) \le \Pp\big(X - \E X \ge (c - d/2) n\big) \le \frac{d n}{2 (c - d/2)^2 n^2} \to 0.
+\]
+The first inequality in \eqref{eq:conv-transfer-b} and the first part of this step then give
+\[
+\Pp\big(G(n, d/n) \text{ is colorable}\big) \ge \Pp\big(G(n, m) \text{ is colorable}\big) \Pp(X \le m) \to 1.
+\]
+Suppose now that $d > 2\alpha_q$. We choose $c \in (\alpha_q, d/2)$ and set $m = \lfloor cn \rfloor$. Then $\E X - m \ge (d/2 - c) n - d/2$, which grows linearly in $n$, and Chebyshev's inequality gives $\Pp(X < m) \to 0$. The second inequality in \eqref{eq:conv-transfer-b} then gives
+\[
+\Pp\big(G(n, d/n) \text{ is colorable}\big) \le \Pp\big(G(n, m) \text{ is colorable}\big) + \Pp(X < m) \to 0.
+\]
+This completes the proof of \cref{thm:red-convergence}.
+
+We note that $\alpha_q$ is determined by $q$ alone. Indeed, by Step 3, it is the unique number such that $\Pp(H > \lfloor cn \rfloor)$ tends to $1$ for $c < \alpha_q$ and to $0$ for $c > \alpha_q$, and these probabilities do not involve $\Lambda$, $\eta$, or the sequence $(\delta_n)$. In particular, if the hypotheses of \cref{thm:red-convergence} hold for two values of $\Lambda$, they give the same $\alpha_q$.

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[
+  level distance=13mm,
+  every node/.style={font=\small},
+  inner/.style={draw, circle, minimum size=7mm, inner sep=0pt},
+  leaf/.style={draw, rectangle, minimum width=9mm, minimum height=6mm, inner sep=1pt},
+  level 1/.style={sibling distance=52mm},
+  level 2/.style={sibling distance=26mm},
+  level 3/.style={sibling distance=14mm}]
+\node[inner] (root) {$5$}
+  child {node[inner] {$3$}
+    child {node[inner] {$2$}
+      child {node[leaf] {$\ell + 1$}}
+      child {node[leaf] {$\ell + 1$}}}
+    child {node[leaf] {$\ell$}}}
+  child {node[inner] {$2$}
+    child {node[leaf] {$\ell$}}
+    child {node[leaf] {$\ell$}}};
+\node[right=3mm of root, align=left, font=\footnotesize] {size $n = 5\ell + 2$};
+\end{tikzpicture}

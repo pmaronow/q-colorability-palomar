@@ -1,0 +1,552 @@
+\begin{thebibliography}{63}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abbe and Montanari(2014)]{abbe2014concentration}
+Emmanuel Abbe and Andrea Montanari.
+\newblock On the concentration of the number of solutions of random
+  satisfiability formulas.
+\newblock \emph{Random Structures \& Algorithms}, 45\penalty0 (3):\penalty0
+  362--382, 2014.
+\newblock \doi{10.1002/rsa.20501}.
+\newblock URL \url{https://doi.org/10.1002/rsa.20501}.
+\newblock Published online April 12, 2013.
+
+\bibitem[Achlioptas and Friedgut(1999)]{achlioptas1999sharp}
+Dimitris Achlioptas and Ehud Friedgut.
+\newblock A sharp threshold for {$k$}-colorability.
+\newblock \emph{Random Structures \& Algorithms}, 14\penalty0 (1):\penalty0
+  63--70, 1999.
+\newblock \doi{10.1002/(SICI)1098-2418(1999010)14:1<63::AID-RSA3>3.0.CO;2-7}.
+\newblock URL \url{https://cgi.di.uoa.gr/~optas/papers/k-col-threshold.pdf}.
+
+\bibitem[Achlioptas and Molloy(1997)]{achlioptas1997analysis}
+Dimitris Achlioptas and Michael Molloy.
+\newblock The analysis of a list-coloring algorithm on a random graph.
+\newblock In \emph{Proceedings of the 38th Annual Symposium on Foundations of
+  Computer Science}, pages 204--212. IEEE, 1997.
+\newblock \doi{10.1109/SFCS.1997.646109}.
+\newblock URL \url{https://cgi.di.uoa.gr/~optas/papers/list-coloring.pdf}.
+
+\bibitem[Achlioptas and Moore(2003)]{achlioptas2003almost}
+Dimitris Achlioptas and Cristopher Moore.
+\newblock Almost all graphs with average degree 4 are 3-colorable.
+\newblock \emph{Journal of Computer and System Sciences}, 67\penalty0
+  (2):\penalty0 441--471, 2003.
+\newblock \doi{10.1016/S0022-0000(03)00120-X}.
+\newblock URL \url{https://sites.santafe.edu/~moore/pubs/3coloring-jcss}.
+
+\bibitem[Achlioptas and Naor(2005)]{achlioptas2005two}
+Dimitris Achlioptas and Assaf Naor.
+\newblock The two possible values of the chromatic number of a random graph.
+\newblock \emph{Annals of Mathematics}, 162\penalty0 (3):\penalty0 1335--1351,
+  2005.
+\newblock \doi{10.4007/annals.2005.162.1335}.
+\newblock URL
+  \url{https://annals.math.princeton.edu/wp-content/uploads/annals-v162-n3-p05.pdf}.
+
+\bibitem[Achlioptas and Ricci-Tersenghi(2009)]{achlioptas2009random}
+Dimitris Achlioptas and Federico Ricci-Tersenghi.
+\newblock Random formulas have frozen variables.
+\newblock \emph{SIAM Journal on Computing}, 39\penalty0 (1):\penalty0 260--280,
+  2009.
+\newblock \doi{10.1137/070680382}.
+\newblock URL \url{https://doi.org/10.1137/070680382}.
+\newblock Conference predecessor: On the solution-space geometry of random
+  constraint satisfaction problems, STOC 2006, pp. 130--139.
+
+\bibitem[Aldous(1991)]{aldous1991threshold}
+David~J. Aldous.
+\newblock Threshold limits for cover times.
+\newblock \emph{Journal of Theoretical Probability}, 4\penalty0 (1):\penalty0
+  197--211, 1991.
+\newblock \doi{10.1007/BF01047002}.
+\newblock URL \url{https://doi.org/10.1007/BF01047002}.
+
+\bibitem[Ayre et~al.(2022)Ayre, Coja-Oghlan, and Greenhill]{ayre2022lower}
+Peter Ayre, Amin Coja-Oghlan, and Catherine Greenhill.
+\newblock Lower bounds on the chromatic number of random graphs.
+\newblock \emph{Combinatorica}, 42:\penalty0 617--658, 2022.
+\newblock \doi{10.1007/s00493-021-4236-z}.
+\newblock URL \url{https://doi.org/10.1007/s00493-021-4236-z}.
+\newblock Published online October 26, 2021.
+
+\bibitem[Bapst et~al.(2016)Bapst, Coja-Oghlan, Hetterich, Ra{\ss}mann, and
+  Vilenchik]{bapst2016condensation}
+Victor Bapst, Amin Coja-Oghlan, Samuel Hetterich, Felicia Ra{\ss}mann, and Dan
+  Vilenchik.
+\newblock The condensation phase transition in random graph coloring.
+\newblock \emph{Communications in Mathematical Physics}, 341:\penalty0
+  543--606, 2016.
+\newblock \doi{10.1007/s00220-015-2464-z}.
+\newblock URL \url{https://doi.org/10.1007/s00220-015-2464-z}.
+
+\bibitem[Bayati et~al.(2013)Bayati, Gamarnik, and
+  Tetali]{bayati2013combinatorial}
+Mohsen Bayati, David Gamarnik, and Prasad Tetali.
+\newblock Combinatorial approach to the interpolation method and scaling limits
+  in sparse random graphs.
+\newblock \emph{The Annals of Probability}, 41\penalty0 (6):\penalty0
+  4080--4115, 2013.
+\newblock \doi{10.1214/12-AOP816}.
+\newblock URL \url{https://doi.org/10.1214/12-AOP816}.
+
+\bibitem[Bollob{\'a}s et~al.(2001)Bollob{\'a}s, Borgs, Chayes, Kim, and
+  Wilson]{bollobas2001scaling}
+B{\'e}la Bollob{\'a}s, Christian Borgs, Jennifer~T. Chayes, Jeong~Han Kim, and
+  David~B. Wilson.
+\newblock The scaling window of the {2-SAT} transition.
+\newblock \emph{Random Structures \& Algorithms}, 18\penalty0 (3):\penalty0
+  201--256, 2001.
+\newblock \doi{10.1002/rsa.1006}.
+\newblock URL \url{https://doi.org/10.1002/rsa.1006}.
+
+\bibitem[Boucheron et~al.(2005)Boucheron, Bousquet, Lugosi, and
+  Massart]{boucheron2005moment}
+St{\'e}phane Boucheron, Olivier Bousquet, G{\'a}bor Lugosi, and Pascal Massart.
+\newblock Moment inequalities for functions of independent random variables.
+\newblock \emph{The Annals of Probability}, 33\penalty0 (2):\penalty0 514--560,
+  2005.
+\newblock \doi{10.1214/009117904000000856}.
+\newblock URL \url{https://doi.org/10.1214/009117904000000856}.
+
+\bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and
+  Massart]{boucheron2013concentration}
+St{\'e}phane Boucheron, G{\'a}bor Lugosi, and Pascal Massart.
+\newblock \emph{Concentration inequalities: a nonasymptotic theory of
+  independence}.
+\newblock Oxford University Press, 2013.
+\newblock ISBN 9780199535255.
+\newblock \doi{10.1093/acprof:oso/9780199535255.001.0001}.
+\newblock URL \url{https://doi.org/10.1093/acprof:oso/9780199535255.001.0001}.
+
+\bibitem[Bourgain and Kalai(1997)]{bourgain1997influences}
+Jean Bourgain and Gil Kalai.
+\newblock Influences of variables and threshold intervals under group
+  symmetries.
+\newblock \emph{Geometric and Functional Analysis}, 7\penalty0 (3):\penalty0
+  438--461, 1997.
+\newblock \doi{10.1007/s000390050015}.
+\newblock URL \url{https://doi.org/10.1007/s000390050015}.
+
+\bibitem[Bourgain and Kalai(1999)]{bourgain1999threshold}
+Jean Bourgain and Gil Kalai.
+\newblock Threshold intervals under group symmetries.
+\newblock In Keith~M. Ball and Vitali Milman, editors, \emph{Convex Geometric
+  Analysis}, volume~34 of \emph{Mathematical Sciences Research Institute
+  Publications}, pages 59--64. Cambridge University Press, 1999.
+\newblock \doi{10.1017/9781009701761.006}.
+\newblock URL
+  \url{https://library.slmath.org/books/Book34/files/bourkalai.pdf}.
+\newblock Author manuscript dated 1998, pp. 59--63; print edition 1999.
+
+\bibitem[Carenini(2026{\natexlab{a}})]{carenini2026polynomial}
+Gaia Carenini.
+\newblock A polynomial scaling window for random {$k$}-{SAT} and a proof of the
+  satisfiability conjecture.
+\newblock Technical Report TR26--229, Electronic Colloquium on Computational
+  Complexity, October 2026{\natexlab{a}}.
+\newblock URL \url{https://eccc.weizmann.ac.il/report/2026/229/}.
+\newblock Preprint; October 5, 2026 report.
+
+\bibitem[Carenini(2026{\natexlab{b}})]{carenini2026scaling}
+Gaia Carenini.
+\newblock The scaling window of random {$k$}-{SAT}.
+\newblock Technical Report TR26--145, Electronic Colloquium on Computational
+  Complexity, August 2026{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2609.26222v1}.
+\newblock Preprint, arXiv version 1, August 11, 2026; also ECCC TR26-145,
+  published August 16, 2026.
+
+\bibitem[Chv{\'a}tal(1991)]{chvatal1991almost}
+V{\'a}{\v s}ek Chv{\'a}tal.
+\newblock Almost all graphs with {$1.44n$} edges are 3-colorable.
+\newblock \emph{Random Structures \& Algorithms}, 2\penalty0 (1):\penalty0
+  11--28, 1991.
+\newblock \doi{10.1002/rsa.3240020103}.
+\newblock URL \url{https://doi.org/10.1002/rsa.3240020103}.
+
+\bibitem[Chv{\'a}tal and Reed(1992)]{chvatal1992mick}
+V{\'a}{\v s}ek Chv{\'a}tal and Bruce Reed.
+\newblock Mick gets some (the odds are on his side).
+\newblock In \emph{Proceedings of the 33rd Annual Symposium on Foundations of
+  Computer Science}, pages 620--627. IEEE, 1992.
+\newblock \doi{10.1109/SFCS.1992.267789}.
+\newblock URL \url{https://doi.org/10.1109/SFCS.1992.267789}.
+
+\bibitem[Coja-Oghlan(2013)]{cojaoghlan2013upper}
+Amin Coja-Oghlan.
+\newblock Upper-bounding the {$k$}-colorability threshold by counting covers.
+\newblock \emph{The Electronic Journal of Combinatorics}, 20\penalty0
+  (3):\penalty0 P32, 2013.
+\newblock \doi{10.37236/3337}.
+\newblock URL \url{https://doi.org/10.37236/3337}.
+
+\bibitem[Coja-Oghlan and Vilenchik(2016)]{cojaoghlan2016chromatica}
+Amin Coja-Oghlan and Dan Vilenchik.
+\newblock The chromatic number of random graphs for most average degrees.
+\newblock \emph{International Mathematics Research Notices}, 2016\penalty0
+  (19):\penalty0 5801--5859, 2016.
+\newblock \doi{10.1093/imrn/rnv333}.
+\newblock URL \url{https://doi.org/10.1093/imrn/rnv333}.
+\newblock Extended abstract: Chasing the $k$-colorability threshold, FOCS 2013,
+  pp. 380--389.
+
+\bibitem[Coja-Oghlan et~al.(2016)Coja-Oghlan, Efthymiou, and
+  Hetterich]{cojaoghlan2016chromaticb}
+Amin Coja-Oghlan, Charilaos Efthymiou, and Samuel Hetterich.
+\newblock On the chromatic number of random regular graphs.
+\newblock \emph{Journal of Combinatorial Theory, Series B}, 116:\penalty0
+  367--439, 2016.
+\newblock \doi{10.1016/j.jctb.2015.09.006}.
+\newblock URL \url{https://doi.org/10.1016/j.jctb.2015.09.006}.
+
+\bibitem[Coja-Oghlan et~al.(2018)Coja-Oghlan, Krzakala, Perkins, and
+  Zdeborov{\'a}]{cojaoghlan2018information}
+Amin Coja-Oghlan, Florent Krzakala, Will Perkins, and Lenka Zdeborov{\'a}.
+\newblock Information-theoretic thresholds from the cavity method.
+\newblock \emph{Advances in Mathematics}, 333:\penalty0 694--795, 2018.
+\newblock \doi{10.1016/j.aim.2018.05.029}.
+\newblock URL \url{https://doi.org/10.1016/j.aim.2018.05.029}.
+
+\bibitem[Culberson and Gent(2001)]{culberson2001frozen}
+Joseph Culberson and Ian Gent.
+\newblock Frozen development in graph coloring.
+\newblock \emph{Theoretical Computer Science}, 265\penalty0 (1--2):\penalty0
+  227--264, 2001.
+\newblock \doi{10.1016/S0304-3975(01)00164-5}.
+\newblock URL \url{https://doi.org/10.1016/S0304-3975(01)00164-5}.
+
+\bibitem[de~Bruijn and Erd{\H o}s(1952)]{debruijn1952some}
+N.~G. de~Bruijn and Paul Erd{\H o}s.
+\newblock Some linear and some quadratic recursion formulas. {II}.
+\newblock \emph{Proceedings of the Koninklijke Nederlandse Akademie van
+  Wetenschappen, Series A}, 55:\penalty0 152--163, 1952.
+\newblock \doi{10.1016/S1385-7258(52)50021-0}.
+\newblock URL \url{https://doi.org/10.1016/S1385-7258(52)50021-0}.
+\newblock Also Indagationes Mathematicae 14 (1952), 152--163; Theorems 22--23.
+
+\bibitem[Ding et~al.(2022)Ding, Sly, and Sun]{ding2022proof}
+Jian Ding, Allan Sly, and Nike Sun.
+\newblock Proof of the satisfiability conjecture for large {$k$}.
+\newblock \emph{Annals of Mathematics}, 196\penalty0 (1):\penalty0 1--388,
+  2022.
+\newblock \doi{10.4007/annals.2022.196.1.1}.
+\newblock URL \url{https://doi.org/10.4007/annals.2022.196.1.1}.
+
+\bibitem[Dubois and Mandler(2002{\natexlab{a}})]{dubois2002noncolourability}
+Olivier Dubois and Jacques Mandler.
+\newblock On the non-3-colourability of random graphs, 2002{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/math/0209087v1}.
+\newblock Preprint, version 1, September 9, 2002.
+
+\bibitem[Dubois and Mandler(2002{\natexlab{b}})]{dubois2002xorsat}
+Olivier Dubois and Jacques Mandler.
+\newblock The 3-{XORSAT} threshold.
+\newblock \emph{Comptes Rendus Math{\'e}matique}, 335\penalty0 (11):\penalty0
+  963--966, 2002{\natexlab{b}}.
+\newblock \doi{10.1016/S1631-073X(02)02563-3}.
+\newblock URL \url{https://doi.org/10.1016/S1631-073X(02)02563-3}.
+
+\bibitem[Efron and Stein(1981)]{efron1981jackknife}
+Bradley Efron and Charles Stein.
+\newblock The jackknife estimate of variance.
+\newblock \emph{The Annals of Statistics}, 9\penalty0 (3):\penalty0 586--596,
+  1981.
+\newblock \doi{10.1214/aos/1176345462}.
+\newblock URL \url{https://doi.org/10.1214/aos/1176345462}.
+
+\bibitem[Erd{\H o}s and R{\'e}nyi(1960)]{erdos1960evolution}
+Paul Erd{\H o}s and Alfr{\'e}d R{\'e}nyi.
+\newblock On the evolution of random graphs.
+\newblock \emph{A Magyar Tudom{\'a}nyos Akad{\'e}mia Matematikai Kutat{\'o}
+  Int{\'e}zet{\'e}nek K{\"o}zlem{\'e}nyei}, 5:\penalty0 17--61, 1960.
+\newblock URL \url{https://users.renyi.hu/~p_erdos/1960-10.pdf}.
+
+\bibitem[Franz and Leone(2003)]{franz2003replicaa}
+Silvio Franz and Michele Leone.
+\newblock Replica bounds for optimization problems and diluted spin systems.
+\newblock \emph{Journal of Statistical Physics}, 111\penalty0 (3--4):\penalty0
+  535--564, 2003.
+\newblock \doi{10.1023/A:1022885828956}.
+\newblock URL \url{https://doi.org/10.1023/A:1022885828956}.
+
+\bibitem[Friedgut(1999)]{friedgut1999sharp}
+Ehud Friedgut.
+\newblock Sharp thresholds of graph properties, and the {$k$}-{SAT} problem.
+\newblock \emph{Journal of the American Mathematical Society}, 12\penalty0
+  (4):\penalty0 1017--1054, 1999.
+\newblock \doi{10.1090/S0894-0347-99-00305-7}.
+\newblock URL \url{https://doi.org/10.1090/S0894-0347-99-00305-7}.
+\newblock With an appendix by Jean Bourgain.
+
+\bibitem[Friedgut and Kalai(1996)]{friedgut1996every}
+Ehud Friedgut and Gil Kalai.
+\newblock Every monotone graph property has a sharp threshold.
+\newblock \emph{Proceedings of the American Mathematical Society}, 124\penalty0
+  (10):\penalty0 2993--3002, 1996.
+\newblock \doi{10.1090/S0002-9939-96-03732-X}.
+\newblock URL \url{https://doi.org/10.1090/S0002-9939-96-03732-X}.
+
+\bibitem[Frieze and Karo{\'n}ski(2016)]{frieze2016introduction}
+Alan Frieze and Micha{\l} Karo{\'n}ski.
+\newblock \emph{Introduction to random graphs}.
+\newblock Cambridge University Press, 2016.
+\newblock ISBN 9781107118508.
+\newblock \doi{10.1017/CBO9781316339831}.
+\newblock URL \url{https://doi.org/10.1017/CBO9781316339831}.
+
+\bibitem[F{\"u}redi and Ruzsa(2020)]{furedi2020nearly}
+Zolt{\'a}n F{\"u}redi and Imre~Z. Ruzsa.
+\newblock Nearly subadditive sequences.
+\newblock \emph{Acta Mathematica Hungarica}, 161\penalty0 (2):\penalty0
+  401--411, 2020.
+\newblock \doi{10.1007/s10474-020-01071-0}.
+\newblock URL \url{https://doi.org/10.1007/s10474-020-01071-0}.
+
+\bibitem[Goerdt(1996)]{goerdt1996threshold}
+Andreas Goerdt.
+\newblock A threshold for unsatisfiability.
+\newblock \emph{Journal of Computer and System Sciences}, 53\penalty0
+  (3):\penalty0 469--486, 1996.
+\newblock \doi{10.1006/jcss.1996.0081}.
+\newblock URL \url{https://doi.org/10.1006/jcss.1996.0081}.
+
+\bibitem[Grimmett(2018)]{grimmett2018probability}
+Geoffrey Grimmett.
+\newblock \emph{Probability on Graphs: Random Processes on Graphs and
+  Lattices}, volume~8 of \emph{Institute of Mathematical Statistics Textbooks}.
+\newblock Cambridge University Press, Cambridge, second edition, 2018.
+\newblock \doi{10.1017/9781108528986}.
+\newblock URL \url{https://doi.org/10.1017/9781108528986}.
+
+\bibitem[Guerra and Toninelli(2002)]{guerra2002thermodynamic}
+Francesco Guerra and Fabio~Lucio Toninelli.
+\newblock The thermodynamic limit in mean field spin glass models.
+\newblock \emph{Communications in Mathematical Physics}, 230\penalty0
+  (1):\penalty0 71--79, 2002.
+\newblock \doi{10.1007/s00220-002-0699-y}.
+\newblock URL \url{https://doi.org/10.1007/s00220-002-0699-y}.
+
+\bibitem[Hajek(1982)]{hajek1982hitting}
+Bruce Hajek.
+\newblock Hitting-time and occupation-time bounds implied by drift analysis
+  with applications.
+\newblock \emph{Advances in Applied Probability}, 14\penalty0 (3):\penalty0
+  502--525, 1982.
+\newblock \doi{10.2307/1426671}.
+\newblock URL \url{https://doi.org/10.2307/1426671}.
+
+\bibitem[Janson et~al.(2000)Janson, {\L}uczak, and
+  Ruci{\'n}ski]{janson2000random}
+Svante Janson, Tomasz {\L}uczak, and Andrzej Ruci{\'n}ski.
+\newblock \emph{Random graphs}.
+\newblock John Wiley \& Sons, 2000.
+\newblock ISBN 9780471175414.
+\newblock \doi{10.1002/9781118032718}.
+\newblock URL \url{https://doi.org/10.1002/9781118032718}.
+
+\bibitem[Kaporis et~al.(2000)Kaporis, Kirousis, and Stamatiou]{kaporis2000note}
+Alexis~C. Kaporis, Lefteris~M. Kirousis, and Yannis~C. Stamatiou.
+\newblock A note on the non-colorability threshold of a random graph.
+\newblock \emph{The Electronic Journal of Combinatorics}, 7\penalty0
+  (1):\penalty0 R29, 2000.
+\newblock \doi{10.37236/1507}.
+\newblock URL \url{https://doi.org/10.37236/1507}.
+
+\bibitem[Krzakala et~al.(2004)Krzakala, Pagnani, and
+  Weigt]{krzakala2004threshold}
+Florent Krzakala, Andrea Pagnani, and Martin Weigt.
+\newblock Threshold values, stability analysis, and high-{$q$} asymptotics for
+  the coloring problem on random graphs.
+\newblock \emph{Physical Review E}, 70:\penalty0 046705, 2004.
+\newblock \doi{10.1103/PhysRevE.70.046705}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevE.70.046705}.
+
+\bibitem[Krzakala et~al.(2007)Krzakala, Montanari, Ricci-Tersenghi, Semerjian,
+  and Zdeborov{\'a}]{krzakala2007gibbs}
+Florent Krzakala, Andrea Montanari, Federico Ricci-Tersenghi, Guilhem
+  Semerjian, and Lenka Zdeborov{\'a}.
+\newblock {Gibbs} states and the set of solutions of random constraint
+  satisfaction problems.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 104\penalty0
+  (25):\penalty0 10318--10323, 2007.
+\newblock \doi{10.1073/pnas.0703685104}.
+\newblock URL \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC1965511/}.
+
+\bibitem[Last and Penrose(2018)]{last2018lectures}
+G{\"u}nter Last and Mathew Penrose.
+\newblock \emph{Lectures on the {Poisson} process}, volume~7 of \emph{Institute
+  of Mathematical Statistics Textbooks}.
+\newblock Cambridge University Press, 2018.
+\newblock ISBN 9781107088016.
+\newblock \doi{10.1017/9781316104477}.
+\newblock URL \url{https://doi.org/10.1017/9781316104477}.
+\newblock First published 2018; Cambridge online publication October 26, 2017.
+
+\bibitem[Mecke(1967)]{mecke1967stationare}
+Joseph Mecke.
+\newblock Station{\"a}re zuf{\"a}llige {Ma{\ss}e} auf lokalkompakten {Abelschen
+  Gruppen}.
+\newblock \emph{Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte
+  Gebiete}, 9\penalty0 (1):\penalty0 36--58, 1967.
+\newblock \doi{10.1007/BF00535466}.
+\newblock URL \url{https://doi.org/10.1007/BF00535466}.
+
+\bibitem[Molloy(2018)]{molloy2018freezing}
+Michael Molloy.
+\newblock The freezing threshold for {$k$}-colourings of a random graph.
+\newblock \emph{Journal of the ACM}, 65\penalty0 (2):\penalty0 7:1--7:62, 2018.
+\newblock \doi{10.1145/3034781}.
+\newblock URL
+  \url{https://www.cs.toronto.edu/~molloy/webpapers/frozencol15.pdf}.
+\newblock A shorter version appeared in STOC 2012, pp. 921--930.
+
+\bibitem[Monasson and Zecchina(1996)]{monasson1996entropy}
+R{\'e}mi Monasson and Riccardo Zecchina.
+\newblock Entropy of the {$K$}-satisfiability problem.
+\newblock \emph{Physical Review Letters}, 76\penalty0 (21):\penalty0
+  3881--3885, 1996.
+\newblock \doi{10.1103/PhysRevLett.76.3881}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevLett.76.3881}.
+
+\bibitem[Monasson et~al.(1999)Monasson, Zecchina, Kirkpatrick, Selman, and
+  Troyansky]{monasson1999determining}
+R{\'e}mi Monasson, Riccardo Zecchina, Scott Kirkpatrick, Bart Selman, and
+  Lidror Troyansky.
+\newblock Determining computational complexity from characteristic `phase
+  transitions'.
+\newblock \emph{Nature}, 400:\penalty0 133--137, 1999.
+\newblock \doi{10.1038/22055}.
+\newblock URL \url{https://doi.org/10.1038/22055}.
+
+\bibitem[Mulet et~al.(2002)Mulet, Pagnani, Weigt, and
+  Zecchina]{mulet2002coloring}
+Roberto Mulet, Andrea Pagnani, Martin Weigt, and Riccardo Zecchina.
+\newblock Coloring random graphs.
+\newblock \emph{Physical Review Letters}, 89:\penalty0 268701, 2002.
+\newblock \doi{10.1103/PhysRevLett.89.268701}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevLett.89.268701}.
+
+\bibitem[{OpenAI}(2026{\natexlab{a}})]{openai2026graphthreshold}
+{OpenAI}.
+\newblock A sharp threshold bound for monotone graph properties.
+\newblock OpenAI Math Release preprint, September 2026{\natexlab{a}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026/paper.pdf}.
+\newblock Unrefereed preprint; manuscript dated September 25, 2026; repository
+  version 7ef5c0c.
+
+\bibitem[{OpenAI}(2026{\natexlab{b}})]{openai2026limiting}
+{OpenAI}.
+\newblock A limiting satisfiability threshold for every fixed clause size.
+\newblock OpenAI Math Release preprint, September 2026{\natexlab{b}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-Limiting-Satisfiability-Threshold-for-Every-Fixed-Clause-Size-September-25-2026/article.pdf}.
+\newblock Unrefereed preprint; manuscript dated September 25, 2026; repository
+  version fd4aeeb.
+
+\bibitem[{OpenAI}(2026{\natexlab{c}})]{openai2026linear}
+{OpenAI}.
+\newblock Linear variance of the random {3-SAT} hitting time.
+\newblock OpenAI Math Release preprint, October 2026{\natexlab{c}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026/linear-variance-of-the-random-3-sat-hitting-time.pdf}.
+\newblock Unrefereed preprint; manuscript dated October 5, 2026; repository
+  version fd4aeeb.
+
+\bibitem[{OpenAI}(2026{\natexlab{d}})]{openai2026variance}
+{OpenAI}.
+\newblock Variance of the random {$k$}-{SAT} hitting time.
+\newblock OpenAI Math Release preprint, September 2026{\natexlab{d}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026/article.pdf}.
+\newblock Unrefereed preprint; manuscript dated September 27, 2026; repository
+  version fd4aeeb.
+
+\bibitem[Panchenko and Talagrand(2004)]{panchenko2004bounds}
+Dmitry Panchenko and Michel Talagrand.
+\newblock Bounds for diluted mean-fields spin glass models.
+\newblock \emph{Probability Theory and Related Fields}, 130\penalty0
+  (3):\penalty0 319--336, 2004.
+\newblock \doi{10.1007/s00440-004-0342-2}.
+\newblock URL \url{https://doi.org/10.1007/s00440-004-0342-2}.
+
+\bibitem[Perkins(2025)]{perkins2025searching}
+Will Perkins.
+\newblock Searching for (sharp) thresholds in random structures: where are we
+  now?
+\newblock \emph{Bulletin of the American Mathematical Society}, 62\penalty0
+  (1):\penalty0 113--143, 2025.
+\newblock \doi{10.1090/bull/1857}.
+\newblock URL \url{https://doi.org/10.1090/bull/1857}.
+\newblock Online publication October 30, 2024.
+
+\bibitem[Pittel and Sorkin(2016)]{pittel2016satisfiability}
+Boris Pittel and Gregory~B. Sorkin.
+\newblock The satisfiability threshold for {$k$}-{XORSAT}.
+\newblock \emph{Combinatorics, Probability and Computing}, 25\penalty0
+  (2):\penalty0 236--268, 2016.
+\newblock \doi{10.1017/S0963548315000097}.
+\newblock URL \url{https://doi.org/10.1017/S0963548315000097}.
+
+\bibitem[Pittel and Yeum(2010)]{pittel2010frequently}
+Boris Pittel and Ji-A Yeum.
+\newblock How frequently is a system of 2-linear {Boolean} equations solvable?
+\newblock \emph{The Electronic Journal of Combinatorics}, 17\penalty0
+  (1):\penalty0 R92, 2010.
+\newblock \doi{10.37236/364}.
+\newblock URL \url{https://doi.org/10.37236/364}.
+
+\bibitem[Read(1968)]{read1968introduction}
+Ronald~C. Read.
+\newblock An introduction to chromatic polynomials.
+\newblock \emph{Journal of Combinatorial Theory}, 4\penalty0 (1):\penalty0
+  52--71, 1968.
+\newblock \doi{10.1016/S0021-9800(68)80087-0}.
+\newblock URL \url{https://doi.org/10.1016/S0021-9800(68)80087-0}.
+
+\bibitem[Russo(1982)]{russo1982approximate}
+Lucio Russo.
+\newblock An approximate zero-one law.
+\newblock \emph{Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte
+  Gebiete}, 61\penalty0 (1):\penalty0 129--139, 1982.
+\newblock \doi{10.1007/BF00537230}.
+\newblock URL \url{https://doi.org/10.1007/BF00537230}.
+
+\bibitem[Semerjian(2008)]{semerjian2008freezing}
+Guilhem Semerjian.
+\newblock On the freezing of variables in random constraint satisfaction
+  problems.
+\newblock \emph{Journal of Statistical Physics}, 130\penalty0 (2):\penalty0
+  251--293, 2008.
+\newblock \doi{10.1007/s10955-007-9417-7}.
+\newblock URL \url{https://doi.org/10.1007/s10955-007-9417-7}.
+
+\bibitem[Steele(1986)]{steele1986efron}
+J.~Michael Steele.
+\newblock An {Efron--Stein} inequality for nonsymmetric statistics.
+\newblock \emph{The Annals of Statistics}, 14\penalty0 (2):\penalty0 753--758,
+  1986.
+\newblock \doi{10.1214/aos/1176349952}.
+\newblock URL \url{https://doi.org/10.1214/aos/1176349952}.
+
+\bibitem[Wilson(2002)]{wilson2002critical}
+David~B. Wilson.
+\newblock On the critical exponents of random {$k$}-{SAT}.
+\newblock \emph{Random Structures \& Algorithms}, 21\penalty0 (2):\penalty0
+  182--195, 2002.
+\newblock \doi{10.1002/rsa.10050}.
+\newblock URL \url{https://doi.org/10.1002/rsa.10050}.
+
+\bibitem[Zdeborov{\'a} and Krzakala(2007)]{zdeborova2007phase}
+Lenka Zdeborov{\'a} and Florent Krzakala.
+\newblock Phase transitions in the coloring of random graphs.
+\newblock \emph{Physical Review E}, 76:\penalty0 031131, 2007.
+\newblock \doi{10.1103/PhysRevE.76.031131}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevE.76.031131}.
+
+\end{thebibliography}

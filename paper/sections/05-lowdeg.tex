@@ -1,0 +1,440 @@
+\chapter{Final edges at a vertex of low degree}\label{sec:low}
+
+In this section, we prove \cref{thm:low-main}. It bounds the probability that the final edge $e_H$ has an endpoint of degree at most $D_n$ in $\Gamma$ and that $r(\Gamma)$ exceeds a prescribed positive level. At the level $x_n$, it gives \eqref{eq:red-low-target}, which implies the first hypothesis of \cref{prop:red-split}; this is \cref{cor:low}. The heuristics are explained in \cref{sec:overview}.
+
+The proof has a structural part and a probabilistic part. For a multigraph $G$ and a vertex $a$, we call any list of the other endpoints of its occurrences at $a$, with one entry per occurrence, a \emph{neighbor list of $a$ in $G$}. The structural result, \cref{lem:low-frozen}(iii), shows that if $a$ lies in a frozen pair of $G$, then every coloring of the multigraph obtained by removing $a$ uses at least two colors on this list. This is the only step of the window estimates that uses $q \ge 3$, and \cref{rem:low-q2} shows that it fails for $q = 2$. (The other use of $q \ge 3$ in the paper is \cref{lem:pre-centre}(b), which is used in \cref{app:conv}.)
+
+Let $B$ be a colorable multigraph, and let $\mathbf x$ be a nonempty list of its vertices. Then every coloring of $B$ uses at least two colors on $\mathbf x$ exactly when the multigraph obtained by identifying its set of entries is not colorable. This is the classical correspondence between the colorings of an identification and the colorings that are constant on the identified set; for two nonadjacent vertices, Read uses it in the proof of \cite[Section~3, Theorem~1]{read1968introduction} to split the chromatic polynomial. Further, Poisson splitting at a vertex of degree at most $D_n$ makes its neighbor list a short list of independent uniform vertices, independent of the rest of the graph. We therefore compare the hitting time of non-colorability of an edge process with the hitting time of non-colorability after a few random vertices are identified. This comparison, \cref{prop:low-identify}, is the main estimate of this section. In its proof, we compare the vertex obtained by identification with the vertex added to an edge process by the construction of \cref{lem:low-added}. In \cref{sec:low-main}, we combine these results with the bound on frozen classes of \cref{lem:pre-classmass} to prove \cref{thm:low-main}.
+
+\section{Frozen pairs and neighbor lists}\label{sec:low-frozen}
+
+We first fix notation for lists and identifications. Let $S$ be a finite set. Recall from \cref{sec:pre-poisson} that a list of elements of $S$ is a finite sequence of elements of $S$, possibly with repeated entries. We denote a list of length $k$ by $\mathbf x = (\mathbf x(1), \dots, \mathbf x(k))$. For $0 \le i \le k$, we let $\mathbf x_{[i]} = (\mathbf x(1), \dots, \mathbf x(i))$ denote its prefix of length $i$; the prefix $\mathbf x_{[0]}$ is the empty list. We use the same notation for infinite sequences.
+
+For a map $\sigma \colon S \to [q]$, we let $\sigma(\mathbf x) = \{\sigma(\mathbf x(i)) : 1 \le i \le k\}$ denote the set of colors on $\mathbf x$. We say that $\sigma$ is constant on $\mathbf x$ if $|\sigma(\mathbf x)| \le 1$, and that $\sigma$ is constant on a set $Z \subset S$ if it takes a single value on $Z$. In particular, every map is constant on the empty list.
+
+For a vertex $o \notin S$, we let $\operatorname{star}(o, \mathbf x)$ denote the multigraph on $S \cup \{o\}$ with the $k$ occurrences $\{o, \mathbf x(1)\}, \dots, \{o, \mathbf x(k)\}$. For a multigraph $B$ on $S$, we let $B + \operatorname{star}(o, \mathbf x)$ denote the multigraph on $S \cup \{o\}$ whose occurrences are those of $B$ and those of $\operatorname{star}(o, \mathbf x)$.
+
+\begin{definition}\label{def:low-nm}
+Let $B$ be a colorable multigraph on a finite set $S$. We say that a list $\mathbf x$ of elements of $S$ is \emph{never monochromatic} in $B$ if no coloring of $B$ is constant on $\mathbf x$, that is, if $|\sigma(\mathbf x)| \ge 2$ for every $\sigma \in \Col(B)$.
+\end{definition}
+
+Identifying a set of vertices that contains a pair occurring in a multigraph produces a loop, so we allow loops in the following definition.
+
+\begin{definition}\label{def:low-identification}
+Let $B$ be a multigraph on a finite set $S$, let $Z \subset S$ be nonempty, and let $o \notin S$. Let $\iota_Z \colon S \to (S \setminus Z) \cup \{o\}$ be the map with $\iota_Z(v) = o$ for $v \in Z$ and $\iota_Z(v) = v$ for $v \notin Z$. We define the \emph{identification} $B/Z$ to be the multiset that contains, for each occurrence $\{u, v\}$ of $B$, one occurrence $\{\iota_Z(u), \iota_Z(v)\}$. For a finite set $T$, we define a \emph{multigraph with loops on $T$} to be a finite multiset of sets $\{u, v\}$ with $u, v \in T$, allowing $u = v$. We call an occurrence $\{u, u\}$ a \emph{loop}. We call a map $\sigma'\colon T \to [q]$ a \emph{coloring} of such a multigraph if $\sigma'(u) \ne \sigma'(v)$ for every occurrence $\{u, v\}$. We let $\Col$ denote its set of colorings, and call it \emph{colorable} if that set is nonempty. We view $B/Z$ as a multigraph with loops on $(S \setminus Z) \cup \{o\}$.
+\end{definition}
+
+The identification $B/Z$ keeps all multiplicities. An occurrence of $B$ with exactly one endpoint in $Z$ becomes an occurrence at $o$, and an occurrence that is a pair of $Z$ becomes a loop. A multigraph with a loop is not colorable, and a loopless $B/Z$ is a multigraph on $(S \setminus Z) \cup \{o\}$ in the sense of \cref{def:pre-multigraph}. (The same convention for loops is used in \cref{app:conv}.)
+
+The following lemma collects the facts about frozen pairs and identifications that we need. Part (iv) is the correspondence mentioned at the start of this section. The argument for part (iii) recolors a single vertex and is elementary, but its conclusion requires $q \ge 3$.
+
+\begin{lemma}\label{lem:low-frozen}
+Let $S$ be a finite set, let $G$ be a multigraph on $S$, and let $a \in S$. Let $B = G[S \setminus \{a\}]$ be the multigraph of the occurrences of $G$ that do not contain $a$, and let $\mathbf x$ be a list of the other endpoints of the occurrences of $G$ at $a$, with one entry for each occurrence, in an arbitrary order. We let $k$ denote the length of $\mathbf x$. Then $k = \deg_G(a)$ and $G = B + \operatorname{star}(a, \mathbf x)$.
+\begin{enumerate}[label=(\roman*)]
+\item Let $\sigma'\colon S \to [q]$, and let $\sigma$ denote its restriction to $S \setminus \{a\}$. Then $\sigma'$ is a coloring of $G$ if and only if $\sigma$ is a coloring of $B$ and $\sigma'(a) \notin \sigma(\mathbf x)$.
+\item Suppose that $G$ is colorable, and let $b \in S \setminus \{a\}$. Then $a \sim_G b$ if and only if $B + \operatorname{star}(a, (\mathbf x(1), \dots, \mathbf x(k), b))$ is not colorable.
+\item Suppose that $a \sim_G b$ for some $b \in S \setminus \{a\}$. Then $B$ is colorable, and $|\sigma(\mathbf x)| \ge q - 1$ for every coloring $\sigma$ of $B$. In particular, if $q \ge 3$, then $\mathbf x$ is never monochromatic in $B$.
+\item Let $F$ be a colorable multigraph on $S$, and let $Z \subset S$ be nonempty. Then $F/Z$ is colorable if and only if some coloring of $F$ is constant on $Z$. In particular, a nonempty list of elements of $S$ whose set of entries is $Z$ is never monochromatic in $F$ if and only if $F/Z$ is not colorable.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (i), note that an occurrence of $G$ either does not contain $a$, in which case it is an occurrence of $B$, or it has the form $\{a, \mathbf x(i)\}$ for some $i$. Therefore $\sigma'$ gives distinct colors to the endpoints of all occurrences of $G$ if and only if $\sigma \in \Col(B)$ and $\sigma'(a) \ne \sigma(\mathbf x(i))$ for all $i$.
+
+To prove (ii), observe that
+\begin{equation*}
+B + \operatorname{star}\bigl(a, (\mathbf x(1), \dots, \mathbf x(k), b)\bigr) = G + \{a, b\}.
+\end{equation*}
+Since $G$ is colorable and $a \ne b$, \cref{lem:pre-frozen}(a) shows that $G + \{a, b\}$ is not colorable if and only if $a \sim_G b$.
+
+For (iii), recall that $a \sim_G b$ requires $G$ to be colorable. By (i), $B$ is then colorable.
+
+Suppose, for contradiction, that some coloring $\sigma$ of $B$ satisfies $|\sigma(\mathbf x)| \le q - 2$. Then there exist two colors $a' \ne b'$ outside $\sigma(\mathbf x)$. We define $\sigma'$ and $\sigma''$ to agree with $\sigma$ on $S \setminus \{a\}$ and to satisfy $\sigma'(a) = a'$ and $\sigma''(a) = b'$. By (i), both maps are colorings of $G$.
+
+Using $b \ne a$ and $a \sim_G b$, we find
+\begin{equation*}
+a' = \sigma'(a) = \sigma'(b) = \sigma(b) = \sigma''(b) = \sigma''(a) = b',
+\end{equation*}
+a contradiction. We conclude that $|\sigma(\mathbf x)| \ge q - 1$ for all $\sigma \in \Col(B)$. For $q \ge 3$, this gives $|\sigma(\mathbf x)| \ge 2$, and $\mathbf x$ is never monochromatic in $B$.
+
+For (iv), suppose first that $\sigma'$ is a coloring of $F/Z$. Then $F/Z$ has no loop, and for all occurrences $\{u, v\}$ of $F$, the pair $\{\iota_Z(u), \iota_Z(v)\}$ is an occurrence of $F/Z$. This shows that $\sigma' \circ \iota_Z$ is a coloring of $F$ that is constant on $Z$.
+
+Conversely, let $\sigma$ be a coloring of $F$ that takes the value $a'$ on $Z$. Then no occurrence of $F$ is a pair of $Z$, and $F/Z$ has no loop. We define $\sigma'(o) = a'$ and $\sigma'(v) = \sigma(v)$ for $v \in S \setminus Z$. Then $\sigma = \sigma'\circ\iota_Z$. For all occurrences $\{u, v\}$ of $F$, we have
+\begin{equation*}
+\sigma'(\iota_Z(u)) = \sigma(u) \ne \sigma(v) = \sigma'(\iota_Z(v)),
+\end{equation*}
+so $\sigma'$ is a coloring of $F/Z$. The last statement of (iv) follows, since a map is constant on a list if and only if it is constant on the set of entries of the list.
+\end{proof}
+
+The proof of (iv) shows that $\sigma' \mapsto \sigma' \circ \iota_Z$ is a bijection from $\Col(F/Z)$ onto the set of colorings of $F$ that are constant on $Z$. Its first half applies to every multigraph $F$ on $S$, colorable or not, and shows that $F$ is colorable whenever $F/Z$ is colorable.
+
+\begin{remark}\label{rem:low-q2}
+The assumption $q \ge 3$ in the last statement of \cref{lem:low-frozen}(iii) cannot be removed. Suppose that $q = 2$. Let $S$ be a finite set containing distinct vertices $a, v, b$, and define $G$ on $S$ to have the occurrences $\{a, v\}$ and $\{v, b\}$. We set $\mathbf x = (v)$ and $B = G[S \setminus \{a\}]$. Every coloring of $G$ gives $a$ and $b$ the color that differs from the color of $v$, so $a \sim_G b$. However, $\mathbf x$ has length one, and every coloring of $B$ is constant on it. More generally, for $q = 2$, the restriction of a coloring of a colorable $G$ to $S \setminus \{a\}$ is a coloring of $B$ that gives the same color to all neighbors of $a$. Thus, for $q = 2$, the conclusion of (iii) fails for every vertex $a$ of positive degree in every colorable $G$. The first assertion of (iii) remains true for $q = 2$, but it only says that $\mathbf x$ uses at least one color. The argument of \cref{thm:low-main} therefore fails for $q = 2$ at the step where it uses \cref{lem:low-frozen}(iii).
+\end{remark}
+
+\section{Identification of random vertices}\label{sec:low-identify}
+
+Let $N \ge 2q$ be an integer. Let $(B_m)_{m \ge 0}$ be the time-$m$ graphs of an edge process on $[N]$, as in \cref{def:pre-process}. We let $H^{(N)} = \min\{m \ge 0 : B_m \text{ is not colorable}\}$ denote its hitting time of non-colorability. By \cref{def:pre-lifetime}, the variable $H^{(N)}$ has the law of $T_G$ for the empty multigraph $G$ on $[N]$, and \cref{lem:pre-lifetime}(a) implies that $\E H^{(N)} \le A_q N$. In particular, $H^{(N)}$ is almost surely finite.
+
+For $D \in \{1, \dots, N\}$, we let $Z$ be a uniform random $D$-subset of $[N]$, independent of $(B_m)$. We fix a vertex $o \notin [N]$, and we define
+\begin{equation*}
+H_Z = \min\{m \ge 0 : B_m/Z \text{ is not colorable}\}.
+\end{equation*}
+Since $B_m \subset B_{m + 1}$, we have $B_m/Z \subset B_{m + 1}/Z$, so $B_m/Z$ is not colorable for all $m \ge H_Z$. The remark after the proof of \cref{lem:low-frozen} implies that the multigraph $B_m/Z$ is not colorable whenever $B_m$ is not colorable. Thus $H_Z \le H^{(N)}$. We conclude that, almost surely,
+\begin{equation}\label{eq:low-advance}
+H^{(N)} - H_Z = \sum_{m \ge 0} \ind\{B_m \text{ is colorable and } B_m/Z \text{ is not colorable}\}.
+\end{equation}
+We set
+\begin{equation}\label{eq:low-constants}
+z_0 = 4q \log q + 1, \qquad C_q = 2 e^{z_0}, \qquad N_q = \lceil 4q \log q \rceil + 1.
+\end{equation}
+Then $N_q > 2q$.
+
+We first treat a vertex that is added to an edge process in the same way as the other vertices. In the proof of \cref{prop:low-identify}, the vertex obtained by identification will be compared with such a vertex.
+
+\begin{lemma}\label{lem:low-added}
+Let $V'$ be a finite set with $N' \ge 2$ elements, let $o \notin V'$, and let $\lambda > 0$. For $t \ge 0$, let $F(t)$ denote the Poissonized process on $V' \cup \{o\}$ at time $t$, and set $\lambda' = \lambda \binom{N' + 1}{2}$. Let $s \ge 0$, and let $B'$ be a random multigraph on $V'$ whose numbers of occurrences on the pairs of $V'$ are independent with the $\Pois(\lambda s)$ law. Let $\mathbf x = (\mathbf x(1), \mathbf x(2), \dots)$ be a sequence of independent uniform elements of $V'$, and let $J$ have the $\Pois(\lambda N' s)$ law, with $B'$, $\mathbf x$, and $J$ independent. We define
+\begin{equation*}
+I_\star = \min\bigl\{i \ge 0 : B' + \operatorname{star}(o, \mathbf x_{[i]}) \text{ is not colorable}\bigr\}, \qquad B'' = B' + \operatorname{star}(o, \mathbf x_{[J]}),
+\end{equation*}
+with $I_\star = \infty$ if there is no such $i$. Then $B''$ has the law of $F(\lambda' s)$, and
+\begin{equation}\label{eq:low-added}
+\Pp(B' \text{ is colorable}, \ I_\star \le J) \le (e^{\lambda N' s} - 1) \E \kappa\bigl(F(\lambda' s)\bigr).
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:low-added-integral}
+\int_0^\infty \E \kappa\bigl(F(\lambda' s)\bigr) \dd s \le \frac{1}{\lambda'}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We begin with the law of $B''$. The numbers of occurrences of $B''$ on the pairs $\{o, v\}$, $v \in V'$, are the numbers of entries of $\mathbf x_{[J]}$ equal to $v$. Applying \cref{lem:pre-split}(a) with the partition of $V'$ into single vertices, we see that these numbers are independent with the $\Pois(\lambda s)$ law. They are also independent of $B'$.
+
+The numbers of occurrences of $B''$ on the $\binom{N' + 1}{2}$ pairs of $V' \cup \{o\}$ are independent with the $\Pois(\lambda s)$ law. Applying \cref{lem:pre-split}(a) with the partition of the pairs of $V' \cup \{o\}$ into single pairs, we see that the numbers of occurrences of $F(\lambda' s)$ on these pairs have the same joint law. Since a multigraph is determined by these numbers, $B''$ has the law of $F(\lambda' s)$.
+
+Next, we prove \eqref{eq:low-added}. We set $\hat z = \lambda N's$. We have $I_\star \ge 1$ on the event that $B'$ is colorable. Since $J$ is independent of $(B', \mathbf x)$ and $I_\star$ is a function of $(B', \mathbf x)$, \cref{lem:pre-tails}(d) gives
+\begin{equation}\label{eq:low-shift}
+\begin{split}
+\Pp(B' \text{ is colorable}, \ I_\star \le J) &= \sum_{i \ge 1} \Pp(B' \text{ is colorable}, \ I_\star = i) \Pp(J \ge i) \\
+&\le (e^{\hat z} - 1) \sum_{i \ge 1} \Pp(B' \text{ is colorable}, \ I_\star = i) \pi_{\hat z}(i - 1).
+\end{split}
+\end{equation}
+
+We now identify the last sum in \eqref{eq:low-shift}. Using once more that $J$ is independent of $(B', \mathbf x)$, we see that it equals $\Pp(B' \text{ is colorable}, \ I_\star = J + 1)$. By the definition of $I_\star$, this is the probability that $B''$ is colorable and $B' + \operatorname{star}(o, \mathbf x_{[J + 1]})$ is not colorable. We apply \cref{lem:low-frozen}(ii) to the multigraph $B''$, its vertex $o$, and $b = \mathbf x(J + 1)$, and we find that this event is the event that $B''$ is colorable and $o \sim_{B''} \mathbf x(J + 1)$.
+
+Conditional on $J$, the entry $\mathbf x(J + 1)$ is uniform on $V'$ and independent of $B''$. This implies that
+\begin{equation}\label{eq:low-class}
+\Pp(B' \text{ is colorable}, \ I_\star = J + 1) = \frac{1}{N'} \E\bigl[\ind\{B'' \text{ is colorable}\} \bigl(|C_{B''}(o)| - 1\bigr)\bigr].
+\end{equation}
+
+The law of $F(\lambda' s)$ is invariant under permutations of $V' \cup \{o\}$, so the expectation in \eqref{eq:low-class} does not change if $o$ is replaced by any other vertex of $V' \cup \{o\}$. Recall from \cref{def:pre-frozen} that for a colorable multigraph $F'$ on $V' \cup \{o\}$, the number $\kappa(F')$ is the number of frozen pairs of $F'$ divided by $\binom{N' + 1}{2}$, so that
+\begin{equation*}
+\sum_{v \in V' \cup \{o\}} \bigl(|C_{F'}(v)| - 1\bigr) = 2 \binom{N' + 1}{2} \kappa(F') = (N' + 1) N' \kappa(F').
+\end{equation*}
+Averaging the right side of \eqref{eq:low-class} over the $N' + 1$ vertices in place of $o$, we obtain
+\begin{equation*}
+\Pp(B' \text{ is colorable}, \ I_\star = J + 1) = \E \kappa\bigl(F(\lambda' s)\bigr).
+\end{equation*}
+Inserting this into \eqref{eq:low-shift}, we arrive at \eqref{eq:low-added}.
+
+It remains to prove \eqref{eq:low-added-integral}. Let $(F_m)_{m \ge 0}$ be the time-$m$ graphs of the edge process on $V' \cup \{o\}$ from which $F(t)$ is built. The $(m + 1)$-st pair of this process is uniform and independent of $F_m$, and \cref{lem:pre-frozen}(a) shows that $\E \kappa(F_m)$ is the probability that $F_m$ is colorable and $F_{m + 1}$ is not colorable. These events are disjoint for different $m$, and therefore
+\begin{equation*}
+\sum_{m \ge 0} \E \kappa(F_m) \le 1.
+\end{equation*}
+This bound and \cref{lem:pre-poisson} with $\theta = \lambda'$ imply \eqref{eq:low-added-integral}.
+\end{proof}
+
+The following proposition shows that identifying $D$ random vertices advances the hitting time of non-colorability, in expectation, by an amount that is much smaller than $N$ when $D$ is small.
+
+\begin{proposition}\label{prop:low-identify}
+Let $N \ge N_q$ be an integer, let $D$ be an integer with $1 \le D \le N/4$, and let $k$ be an integer with $k > e D z_0$. Then
+\begin{equation}\label{eq:low-identify}
+\E\bigl[H^{(N)} - H_Z\bigr] \le C_q \Bigl(D^k + N \Bigl(\frac{e D z_0}{k}\Bigr)^k + D^2 + 1\Bigr).
+\end{equation}
+\end{proposition}
+
+For the following figure and the proof, let $Z_0$ be a $D$-subset of $[N]$. We let $(\Pi_s)_{s \ge 0}$ denote a rate-one Poisson counting process independent of $(B_m)$ and $Z$. We set $N' = N - D$, $V' = [N] \setminus Z_0$, and $\lambda = \binom{N}{2}^{-1}$. For $s \ge 0$, we define $B'_s = B_{\Pi_s}[V']$ and $\hat z(s) = \lambda N' s$.
+
+\begin{figure}[t]
+\centering
+\input{figures/low-identify}
+\caption{The construction in the proof of \cref{prop:low-identify}, at a fixed time $s$, for a $D$-set $Z_0$ with $D = 3$. Left: the multigraph $B'_s$ on $V' = [N] \setminus Z_0$ (gray) and the neighbor lists in $V'$ of the vertices of $Z_0$ (black). The dotted occurrence illustrates the exceptional event bounded in \eqref{eq:low-inside}; if present, it becomes a loop under identification. Middle: the complementary case in which no occurrence has both endpoints in $Z_0$. In this case, the identification $B_{\Pi_s}/Z_0$ is $B'_s$ together with a star at the new vertex $o$, whose list is the concatenation of the neighbor lists. It has $\Pois(D \hat z(s))$ entries, and repeated entries give parallel occurrences. Right: the multigraph $B''$ of \cref{lem:low-added}, built from $B' = B'_s$, in which $o$ has a list of $\Pois(\hat z(s))$ entries. It has the law of the Poissonized process on the $N' + 1$ vertices of $V' \cup \{o\}$. The two lists are compared in \eqref{eq:low-tilt}.}
+\label{fig:low-identify}
+\end{figure}
+
+\begin{proof}
+We first outline the argument, which \cref{fig:low-identify} illustrates. After Poissonization and a bound for large times, we fix a time $s$ and a $D$-set $Z_0$, and we use Poisson splitting at $Z_0$. Unless some occurrence is a pair of $Z_0$, the identification $B_{\Pi_s}/Z_0$ is $B'_s$ together with a star at $o$ whose list has $\Pois(D \hat z(s))$ independent uniform entries in $V'$, independent of $B'_s$. A vertex added as in \cref{lem:low-added} has a list of $\Pois(\hat z(s))$ entries. The main step is the comparison of the two lists by a change of the Poisson mean that is truncated at length $k$, which costs the factor $D^k$; we then apply \cref{lem:low-added}.
+
+We set
+\begin{equation}\label{eq:low-prop-params}
+s_0 = 2q (\log q) N.
+\end{equation}
+By \cref{def:pre-poissonized}, $s \mapsto B_{\Pi_s}$ is the Poissonized process on $[N]$. For a multigraph $B$ on $[N]$, we define
+\begin{equation*}
+h(B) = \Pp(B \text{ is colorable and } B/Z \text{ is not colorable}),
+\end{equation*}
+where the probability is over $Z$. Since $Z$ is independent of $(B_m)$ and $\Pi$, \eqref{eq:low-advance}, Tonelli's theorem, and \cref{lem:pre-poisson} with $\theta = 1$ give
+\begin{equation}\label{eq:low-integral}
+\E[H^{(N)} - H_Z] = \sum_{m \ge 0} \E h(B_m) = \int_0^\infty \E h(B_{\Pi_s}) \dd s.
+\end{equation}
+
+We begin with large times. Since $N \ge 2q$, every map $\sigma \colon [N] \to [q]$ is constant on at least a fraction $1/(2q)$ of the pairs of $[N]$, as shown in the proof of \cref{lem:pre-lifetime}(a). Hence $\sigma$ is a coloring of $B_m$ with probability at most $(1 - 1/(2q))^m$, and a union bound over the $q^N$ maps gives
+\begin{equation*}
+\Pp(B_m \text{ is colorable}) \le q^N \Bigl(1 - \frac{1}{2q}\Bigr)^m.
+\end{equation*}
+Using $h(B) \le \ind\{B \text{ is colorable}\}$ and the $\Pois(s)$ law of $\Pi_s$, we obtain
+\begin{equation}\label{eq:low-large}
+\int_{s_0}^\infty \E h(B_{\Pi_s}) \dd s \le q^N \int_{s_0}^\infty e^{-s/(2q)} \dd s = 2q \, q^N e^{-s_0/(2q)} = 2q,
+\end{equation}
+where in the last step we used $s_0 = 2q (\log q) N$.
+
+Next, we fix $s \in [0, s_0]$ and a $D$-subset $Z_0$ of $[N]$ and bound the probability that $B_{\Pi_s}$ is colorable and $B_{\Pi_s}/Z_0$ is not. Since $Z$ is uniform and independent of $(B_m)$ and $\Pi$, a bound that holds for every $Z_0$ also holds for $\E h(B_{\Pi_s})$.
+We apply \cref{lem:pre-split}(b) with $S = [N]$ and $S_0 = Z_0$. It shows that the following are independent: the multigraph $B'_s$, which has the law of the Poissonized process on $V'$ at time $\lambda \binom{N'}{2} s$; for each $v \in Z_0$, the neighbor list $\mathbf x_v$ of $v$ in $V'$ at time $s$, which is a list of $\Pois(\hat z(s))$ independent uniform elements of $V'$; and the multigraph $B_{\Pi_s}[Z_0]$.
+
+Let $\mathbf x_{Z_0}$ be the concatenation of the lists $\mathbf x_v$ in increasing order of $v \in Z_0$. Conditional on the lengths of all the lists, the entries of $\mathbf x_{Z_0}$ are independent and uniform on $V'$. It follows that $\mathbf x_{Z_0}$ is a list of $\Pois(D \hat z(s))$ independent uniform elements of $V'$, independent of $B'_s$.
+
+Suppose that $B_{\Pi_s}[Z_0]$ is empty. Then every occurrence of $B_{\Pi_s}$ is either an occurrence of $B'_s$ or of the form $\{v, x\}$ with $v \in Z_0$ and $x \in V'$, and the identification replaces each occurrence of the second kind by $\{o, x\}$. Therefore
+\begin{equation}\label{eq:low-quotient}
+B_{\Pi_s}/Z_0 = B'_s + \operatorname{star}(o, \mathbf x_{Z_0})
+\end{equation}
+as multigraphs on $V' \cup \{o\}$, with all multiplicities. The multigraph $B'_s$ is colorable whenever $B_{\Pi_s}$ is colorable, and $B_{\Pi_s}[Z_0]$ has $\lambda \binom{D}{2} s$ occurrences in expectation. Then \eqref{eq:low-quotient} and Markov's inequality imply that
+\begin{equation}\label{eq:low-split}
+\begin{aligned}
+&\Pp\bigl(B_{\Pi_s} \text{ is colorable and } B_{\Pi_s}/Z_0 \text{ is not colorable}\bigr) \\
+&\le \lambda \binom{D}{2} s \\
+&\quad + \Pp\bigl(B'_s \text{ is colorable and } B'_s + \operatorname{star}(o, \mathbf x_{Z_0}) \text{ is not colorable}\bigr).
+\end{aligned}
+\end{equation}
+Integrating the first term over $[0, s_0]$, we find
+\begin{equation}\label{eq:low-inside}
+\int_0^{s_0} \lambda \binom{D}{2} s \dd s = \frac{D(D - 1) s_0^2}{2N(N - 1)} = 2q^2 (\log q)^2 \frac{D(D - 1) N}{N - 1} \le 2q^2 (\log q)^2 D^2,
+\end{equation}
+where in the last step we used $D \le N$.
+
+We now compare the list $\mathbf x_{Z_0}$, whose length has mean $D\hat z(s)$, with a list whose length has mean $\hat z(s)$. For this comparison, we abbreviate $\hat z = \hat z(s)$. Using $\lambda N' \le 2/(N - 1)$ and $N - 1 \ge 4q \log q$, we find
+\begin{equation}\label{eq:low-zeta}
+\hat z \le \frac{2 s_0}{N - 1} = 4q \log q + \frac{4q \log q}{N - 1} \le z_0.
+\end{equation}
+
+Let $\mathbf x = (\mathbf x(1), \mathbf x(2), \dots)$ be a sequence of independent uniform elements of $V'$, and let $J$ and $J'$ have the laws $\Pois(\hat z)$ and $\Pois(D \hat z)$, with $B'_s$, $\mathbf x$, $J$, and $J'$ independent. By the previous paragraph, the pair $(B'_s, \mathbf x_{Z_0})$ has the same law as $(B'_s, \mathbf x_{[J']})$. Let $I_\star$ be defined as in \cref{lem:low-added} with $B' = B'_s$.
+
+Non-colorability persists as $j$ increases, so on the event that $B'_s$ is colorable, the multigraph $B'_s + \operatorname{star}(o, \mathbf x_{[j]})$ is not colorable if and only if $I_\star \le j$. Using the independence of $J'$ from $(B'_s, \mathbf x)$, we obtain
+\begin{equation*}
+\begin{aligned}
+&\Pp\bigl(B'_s \text{ is colorable and } B'_s + \operatorname{star}(o, \mathbf x_{Z_0}) \text{ is not colorable}\bigr) \\
+&= \sum_{j \ge 0} \pi_{D \hat z}(j) \Pp(B'_s \text{ is colorable}, \ I_\star \le j).
+\end{aligned}
+\end{equation*}
+
+For $0 \le j \le k$, we have
+\begin{equation*}
+\pi_{D \hat z}(j) = D^j e^{-(D - 1) \hat z} \pi_{\hat z}(j) \le D^k \pi_{\hat z}(j).
+\end{equation*}
+We use this bound for $j \le k$, and we bound the probabilities by one for $j > k$. Since $J$ is independent of $(B'_s, \mathbf x)$, this gives
+\begin{equation}\label{eq:low-tilt}
+\sum_{j \ge 0} \pi_{D \hat z}(j) \Pp(B'_s \text{ is colorable}, \ I_\star \le j) \le D^k \Pp(B'_s \text{ is colorable}, \ I_\star \le J) + \Pp(J' > k).
+\end{equation}
+Further, $k > e D z_0 \ge D \hat z$, and \cref{lem:pre-tails}(b) implies that
+\begin{equation*}
+\Pp(J' > k) \le \Bigl(\frac{e D \hat z}{k}\Bigr)^k \le \Bigl(\frac{e D z_0}{k}\Bigr)^k.
+\end{equation*}
+Integrating over $[0, s_0]$, we have
+\begin{equation}\label{eq:low-tail}
+\int_0^{s_0} \Pp(J' > k) \dd s \le 2q (\log q) N \Bigl(\frac{e D z_0}{k}\Bigr)^k.
+\end{equation}
+
+Next, we bound the first term on the right side of \eqref{eq:low-tilt} with \cref{lem:low-added}. Its hypothesis on $B'_s$ holds by \cref{lem:pre-split}(a), applied to the Poissonized process on $V'$ at time $\lambda \binom{N'}{2} s$ with the partition of the pairs of $V'$ into single pairs. Let $\lambda' = \lambda \binom{N' + 1}{2}$ and let $F(t)$ be as in \cref{lem:low-added}. Using \eqref{eq:low-added}, \eqref{eq:low-zeta}, and \eqref{eq:low-added-integral}, we obtain
+\begin{equation}\label{eq:low-main-term}
+\begin{aligned}
+&\int_0^{s_0} D^k \Pp(B'_s \text{ is colorable}, \ I_\star \le J) \dd s \\
+&\le D^k (e^{z_0} - 1) \int_0^\infty \E \kappa\bigl(F(\lambda' s)\bigr) \dd s \\
+&\le \frac{D^k (e^{z_0} - 1)}{\lambda'} \\
+&\le 2 (e^{z_0} - 1) D^k.
+\end{aligned}
+\end{equation}
+In the last step, we used $N - D \ge 3N/4$, which gives
+\begin{equation*}
+\frac{1}{\lambda'} = \frac{N(N - 1)}{(N - D + 1)(N - D)} \le \frac{N^2}{(3N/4)^2} = \frac{16}{9}.
+\end{equation*}
+
+Finally, we collect the bounds. We split the integral in \eqref{eq:low-integral} at $s_0$, and we use \eqref{eq:low-large} for the integral over $[s_0, \infty)$. For the integral over $[0, s_0]$, we use \eqref{eq:low-split} and \eqref{eq:low-tilt}, and we integrate with \eqref{eq:low-inside}, \eqref{eq:low-tail}, and \eqref{eq:low-main-term}. We obtain
+\begin{equation*}
+\E[H^{(N)} - H_Z] \le 2q + 2q^2 (\log q)^2 D^2 + 2q (\log q) N \Bigl(\frac{e D z_0}{k}\Bigr)^k + 2 (e^{z_0} - 1) D^k.
+\end{equation*}
+Each of the four coefficients is bounded by $C_q = 2 e^{z_0} = 2e q^{4q}$, which gives \eqref{eq:low-identify}.
+\end{proof}
+
+\section{Proof of the low-degree estimate}\label{sec:low-main}
+
+We now prove the main result of this section. Recall that $D_n = \lfloor (\log n)^{1/4} \rfloor$, and that $r(G)$ is the expected lifetime of a multigraph $G$ on $[n]$, defined in \cref{def:pre-lifetime}.
+
+\begin{theorem}\label{thm:low-main}
+There exist $C_{\rm low}$ and $n_q$, depending only on $q$, such that for all $n \ge n_q$ and all $y > 0$,
+\begin{equation}\label{eq:low-main}
+\Pp\Bigl(H < \infty, \ \min_{v \in e_H} \deg_\Gamma(v) \le D_n, \ r(\Gamma) > y\Bigr) \le C_{\rm low} y^{-1/2} n^{3/8}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+We first fix the parameters. We set
+\begin{equation*}
+k_n = \Bigl\lceil \frac{\log n}{\log \log n} \Bigr\rceil, \qquad C_{\rm low} = 8 C_q (1 + A_q)^{1/2},
+\end{equation*}
+and we let $n_q$ be the least integer such that every $n \ge n_q$ satisfies $n - 1 \ge N_q$ and
+\begin{equation}\label{eq:low-conditions}
+\log\bigl(e z_0 \log \log n\bigr) \le \frac{1}{8} \log \log n, \qquad n^{1/4} (\log n)^{1/4} + (\log n)^{1/2} + 1 \le n^{3/8}.
+\end{equation}
+There exists such an integer, depending only on $q$, because $\log(e z_0 \log \log n)/\log \log n \to 0$ and $n^{1/4} (\log n)^{1/4} + (\log n)^{1/2} + 1 = o(n^{3/8})$ as $n \to \infty$. Let $n \ge n_q$ and $y > 0$.
+
+Since $n - 1 \ge N_q > 2q$ and $N_q \ge 15$, we have $n \ge 2q$, $\log \log n > 0$, and $1 \le D_n \le (n - 1)/4$.
+
+We begin by writing the probability in \eqref{eq:low-main} as a time integral. We define the set $\cE_{\rm low}$ and the function $h$ on multigraphs on $[n]$ by
+\begin{equation*}
+\begin{aligned}
+&\cE_{\rm low} = \Bigl\{(G, e) : G \text{ is colorable, } e \text{ is a frozen pair of } G, \ \min_{v \in e} \deg_G(v) \le D_n\Bigr\}, \\
+&h(G) = \ind\{r(G) > y\}.
+\end{aligned}
+\end{equation*}
+Recall from \cref{lem:pre-frozen}(a) that $e_H$ is a frozen pair of $\Gamma$ whenever $H < \infty$. Hence the event in \eqref{eq:low-main} is the event that $H < \infty$, $(\Gamma, e_H) \in \cE_{\rm low}$, and $r(\Gamma) > y$. \Cref{lem:pre-terminal}(a) with $L' = 0$ and $U' = \infty$, followed by \cref{lem:pre-poisson} with $\theta = 1$, shows that its probability is
+\begin{equation}\label{eq:low-step1}
+\sum_{m \ge 0} \E\bigl[\kappa_{\cE_{\rm low}}(G_m) h(G_m)\bigr] = \int_0^\infty \E\bigl[\kappa_{\cE_{\rm low}}(G(t)) h(G(t))\bigr] \dd t.
+\end{equation}
+
+Next, we reduce to a single vertex. Let $G$ be a colorable multigraph on $[n]$. Every frozen pair $e$ with $(G, e) \in \cE_{\rm low}$ has an endpoint $a$ with $\deg_G(a) \le D_n$, whose frozen class $C_G(a)$ contains the other endpoint. Counting each such pair at least once through such an endpoint, we obtain
+\begin{equation*}
+\kappa_{\cE_{\rm low}}(G) \le \binom{n}{2}^{-1} \sum_{a \in [n]} \ind\{G \text{ is colorable}, \ \deg_G(a) \le D_n\} \bigl(|C_G(a)| - 1\bigr),
+\end{equation*}
+and the two sides vanish if $G$ is not colorable.
+
+The law of $G(t)$ is invariant under relabeling, as a mixture of the laws of the multigraphs $G_m$. A permutation of $[n]$ that maps $a$ to $a'$ maps $C_G(a)$ onto the frozen class of $a'$ in the relabeled multigraph and preserves degrees, and \cref{lem:pre-lifetime}(b) shows that it preserves $h$. Therefore the $n$ terms of the sum have the same expectation at $G = G(t)$. We set $a_0 = n$. We find
+\begin{equation}\label{eq:low-root}
+\begin{aligned}
+&\E\bigl[\kappa_{\cE_{\rm low}}(G(t)) h(G(t))\bigr] \\
+&\le \frac{2}{n - 1} \E\bigl[\ind\{G(t) \text{ is colorable}, \ \deg_{G(t)}(a_0) \le D_n\} \bigl(|C_{G(t)}(a_0)| - 1\bigr) h(G(t))\bigr].
+\end{aligned}
+\end{equation}
+
+We now use the restriction on the lifetime. By \Cref{lem:pre-classmass}, every colorable multigraph $G$ on $[n]$ with $r(G) > y$ satisfies $|C_G(a_0)| \le n ((1 + A_q)/y)^{1/2}$. Further, $|C_G(a_0)| - 1 > 0$ if and only if $a_0$ lies in a frozen pair of $G$. Inserting these facts into \eqref{eq:low-root}, and using $h \le 1$ afterwards, we obtain
+\begin{equation}\label{eq:low-classmass}
+\begin{aligned}
+&\E\bigl[\kappa_{\cE_{\rm low}}(G(t)) h(G(t))\bigr] \\
+&\le \frac{2n}{n - 1} \Bigl(\frac{1 + A_q}{y}\Bigr)^{1/2} \Pp\bigl(\deg_{G(t)}(a_0) \le D_n \text{ and } a_0 \text{ lies in a frozen pair of } G(t)\bigr).
+\end{aligned}
+\end{equation}
+This is the only use of the lifetime in the proof.
+
+Next, we use \cref{lem:low-frozen}(iii). This is the step where $q \ge 3$ is used. Let $B(t) = G(t)[[n - 1]]$ be the multigraph of the occurrences of $G(t)$ that do not contain $a_0$, and let $\mathbf x$ be the neighbor list of $a_0$ in $[n - 1]$ at time $t$. Then
+\begin{equation*}
+G(t) = B(t) + \operatorname{star}(a_0, \mathbf x),
+\end{equation*}
+and $\deg_{G(t)}(a_0)$ is the length of $\mathbf x$.
+
+We set $p = (n - 2)/n$ and $z(t) = 2t/n$. We apply \cref{lem:pre-split}(c) with $S = [n]$ and $a = a_0$. It shows that $B(t)$ and $\mathbf x$ are independent, that $B(t)$ has the law of the Poissonized process on $[n - 1]$ at time $pt$, and that $\mathbf x$ is a list of $\Pois(z(t))$ independent uniform elements of $[n - 1]$.
+
+Suppose that $a_0$ lies in a frozen pair of $G(t)$. Then \cref{lem:low-frozen}(iii) and $q \ge 3$ show that $B(t)$ is colorable and that $\mathbf x$ is never monochromatic in $B(t)$.
+
+For an integer $D \ge 0$ and a multigraph $B$ on $[n - 1]$, we let $\mathrm{nm}_D(B)$ denote the probability that a list of $D$ independent uniform elements of $[n - 1]$ is never monochromatic in $B$, with $\mathrm{nm}_D(B) = 0$ if $B$ is not colorable. Since every map is constant on the empty list, we have $\mathrm{nm}_0 = 0$.
+
+A coloring that is constant on a list is constant on each prefix of the list, so a list with a prefix that is never monochromatic in $B$ is itself never monochromatic in $B$. Realizing a list of length $D \le D_n$ as the prefix of a list of length $D_n$, we find $\mathrm{nm}_D(B) \le \mathrm{nm}_{D_n}(B)$.
+
+Conditioning on the length of $\mathbf x$ and on $B(t)$, and using $\sum_{D} \pi_{z(t)}(D) \le 1$, we obtain
+\begin{equation}\label{eq:low-nm}
+\begin{aligned}
+&\Pp\bigl(\deg_{G(t)}(a_0) \le D_n \text{ and } a_0 \text{ lies in a frozen pair of } G(t)\bigr) \\
+&\le \sum_{D = 0}^{D_n} \pi_{z(t)}(D) \E\bigl[\mathrm{nm}_D(B(t))\bigr] \\
+&\le \E\bigl[\mathrm{nm}_{D_n}(B(t))\bigr].
+\end{aligned}
+\end{equation}
+
+We now pass to identifications. Let $(B_m)_{m \ge 0}$ be the time-$m$ graphs of an edge process on $[n - 1]$. As in \cref{sec:low-identify}, we let $Z$ be a uniform random $D_n$-subset of $[n - 1]$, independent of $(B_m)$. We claim that for every colorable multigraph $F$ on $[n - 1]$,
+\begin{equation}\label{eq:low-completion}
+\mathrm{nm}_{D_n}(F) \le \Pp(F/Z \text{ is not colorable}).
+\end{equation}
+
+To prove \eqref{eq:low-completion}, let $\mathbf x'$ be a list of $D_n$ independent uniform elements of $[n - 1]$, and let $Z_1$ denote its set of entries. Given $\mathbf x'$, let $Z'$ be the union of $Z_1$ and a uniform random subset of $[n - 1] \setminus Z_1$ with $D_n - |Z_1|$ elements, chosen independently of everything else. The joint law of $\mathbf x'$ and $Z'$ is invariant under relabeling of $[n - 1]$, so the law of $Z'$ is invariant under all permutations of $[n - 1]$. The permutations act transitively on the $D_n$-subsets of $[n - 1]$, and hence $Z'$ is a uniform $D_n$-subset.
+
+Now suppose that $\mathbf x'$ is never monochromatic in $F$. Then no coloring of $F$ is constant on $Z' \supset Z_1$, and \cref{lem:low-frozen}(iv) shows that $F/Z'$ is not colorable. This proves \eqref{eq:low-completion}.
+
+Applying \cref{lem:pre-poisson} on $[n - 1]$ with the factor $p$, followed by \eqref{eq:low-completion} and \eqref{eq:low-advance} with $N = n - 1$ and $D = D_n$, we find
+\begin{equation}\label{eq:low-to-identify}
+\begin{aligned}
+&\int_0^\infty \E\bigl[\mathrm{nm}_{D_n}(B(t))\bigr] \dd t \\
+&= \frac{1}{p} \sum_{m \ge 0} \E\bigl[\mathrm{nm}_{D_n}(B_m)\bigr] \\
+&\le \frac{1}{p} \sum_{m \ge 0} \Pp\bigl(B_m \text{ is colorable and } B_m/Z \text{ is not colorable}\bigr) \\
+&= \frac{1}{p} \E\bigl[H^{(n - 1)} - H_Z\bigr].
+\end{aligned}
+\end{equation}
+
+To bound the right side of \eqref{eq:low-to-identify}, we apply \cref{prop:low-identify} with $N = n - 1 \ge N_q$, $D = D_n$, and $k = k_n$. Using $\log D_n \le (1/4) \log \log n$ and $k_n \le \log n/\log \log n + 1$, we find
+\begin{equation*}
+D_n^{k_n} \le \exp\Bigl(\Bigl(\frac{\log n}{\log \log n} + 1\Bigr) \frac{\log \log n}{4}\Bigr) = n^{1/4} (\log n)^{1/4}.
+\end{equation*}
+Further, using $D_n \le (\log n)^{1/4}$, $k_n \ge \log n/\log \log n$, and the first condition in \eqref{eq:low-conditions}, we find
+\begin{equation*}
+\begin{aligned}
+&\frac{e D_n z_0}{k_n} \\
+&\le e z_0 (\log \log n) (\log n)^{-3/4} \\
+&= \exp\Bigl(\log\bigl(e z_0 \log \log n\bigr) - \frac{3}{4} \log \log n\Bigr) \\
+&\le \exp\Bigl(-\frac{5}{8} \log \log n\Bigr) < 1.
+\end{aligned}
+\end{equation*}
+In particular, $k_n > e D_n z_0$, and
+\begin{equation*}
+(n - 1) \Bigl(\frac{e D_n z_0}{k_n}\Bigr)^{k_n} \le n \exp\Bigl(-\frac{5}{8} k_n \log \log n\Bigr) \le n \exp\Bigl(-\frac{5}{8} \log n\Bigr) = n^{3/8}.
+\end{equation*}
+Inserting these bounds and $D_n^2 \le (\log n)^{1/2}$ into \eqref{eq:low-identify}, we obtain
+\begin{equation}\label{eq:low-advance-bound}
+\E\bigl[H^{(n - 1)} - H_Z\bigr] \le C_q \bigl(n^{1/4} (\log n)^{1/4} + n^{3/8} + (\log n)^{1/2} + 1\bigr) \le 2 C_q n^{3/8},
+\end{equation}
+where in the last step we used the second condition in \eqref{eq:low-conditions}.
+
+Finally, we combine \eqref{eq:low-step1}, \eqref{eq:low-classmass}, \eqref{eq:low-nm}, \eqref{eq:low-to-identify}, and \eqref{eq:low-advance-bound}. With $p^{-1} = n/(n - 2)$, this gives
+\begin{equation*}
+\begin{aligned}
+&\Pp\Bigl(H < \infty, \ \min_{v \in e_H} \deg_\Gamma(v) \le D_n, \ r(\Gamma) > y\Bigr) \\
+&\le \frac{2n^2}{(n - 1)(n - 2)} \Bigl(\frac{1 + A_q}{y}\Bigr)^{1/2} \cdot 2 C_q n^{3/8} \\
+&\le 8 C_q (1 + A_q)^{1/2} y^{-1/2} n^{3/8},
+\end{aligned}
+\end{equation*}
+where in the last step we used $2n^2 \le 4(n - 1)(n - 2)$, which holds for $n \ge 6$. This completes the proof.
+\end{proof}
+
+With $y = x_n$, we obtain the first estimate required in \cref{sec:red-split}.
+
+\begin{corollary}\label{cor:low}
+For all large $n$, we have
+\begin{equation}\label{eq:low-cor}
+\Pp\Bigl(H < \infty, \ \min_{v \in e_H} \deg_\Gamma(v) \le D_n, \ r(\Gamma) > x_n\Bigr) \le \eps_n.
+\end{equation}
+In particular, for every $\eta \in (0, \eta_0]$ and all large $n$, the hypothesis \eqref{eq:red-low} of \cref{prop:red-split} holds.
+\end{corollary}
+
+\begin{proof}
+Let $C_{\rm low}$ and $n_q$ be as in \cref{thm:low-main}, and recall that $x_n = n (\log n)^{-3}$ for $n \ge 3$. For $n \ge n_q$, \cref{thm:low-main} with $y = x_n$ bounds the left side of \eqref{eq:low-cor} by
+\begin{equation*}
+C_{\rm low} x_n^{-1/2} n^{3/8} = C_{\rm low} (\log n)^{3/2} n^{-1/8}.
+\end{equation*}
+This is bounded by $(\log n)^{-3/2} = \eps_n$ as soon as $C_{\rm low} (\log n)^3 \le n^{1/8}$, which holds for all large $n$. The last statement follows from the fact that the event in \eqref{eq:red-low} is contained in the event in \eqref{eq:low-cor}.
+\end{proof}
+
+\begin{remark}\label{rem:low-limit}
+The exponent $1/4$ in $D_n$ is not essential, but \cref{prop:low-identify} does not reach degrees of order $(\log n)^{1/2}$. Let $b_0 \in (0, 1)$ and $b_1 > 0$, and let $D = \lfloor (\log N)^{b_0} \rfloor$ and $k = \lceil b_1 \log N/\log \log N \rceil$. Then, as $N \to \infty$,
+\begin{equation*}
+D^k = N^{b_0 b_1 + o(1)}, \qquad N \Bigl(\frac{e D z_0}{k}\Bigr)^k = N^{1 - b_1 (1 - b_0) + o(1)}.
+\end{equation*}
+The two exponents are equal at $b_1 = 1$, where both equal $b_0$, and for every other $b_1$ the larger of them exceeds $b_0$. With $b_1 = 1$, \cref{prop:low-identify} gives $\E[H^{(N)} - H_Z] \le N^{b_0 + o(1)}$. The proof of \cref{thm:low-main} with $D_n$ replaced by $\lfloor (\log n)^{b_0} \rfloor$ then bounds the probability in \eqref{eq:low-cor} by $n^{b_0 - 1/2 + o(1)}$. For $b_0 < 1/2$, this is at most $\eps_n$ for all large $n$.
+
+At $b_0 = 1/2$, the two terms in \cref{prop:low-identify} cannot both be $o(\sqrt N)$, regardless of the admissible choice of $k$. Indeed, set $D = \lfloor \sqrt{\log N} \rfloor$ and suppose that $D^k \le \sqrt N$. Then $k \le (\log N)/(2 \log D)$. The expression $k \log(k/(e D z_0))$ is increasing in $k > e D z_0$, and hence
+\[
+\begin{split}
+k \log\Bigl(\frac{k}{e D z_0}\Bigr)
+&\le \frac{\log N}{2 \log D}
+\log\Bigl(\frac{\log N}{2 e D z_0 \log D}\Bigr) \\
+&= \frac{\log N}{2}
+- \frac{\log N}{2 \log D}
+\log\Bigl(\frac{2 e z_0 D^2 \log D}{\log N}\Bigr)
+< \frac{\log N}{2}
+\end{split}
+\]
+for all large $N$, since $2 e z_0 D^2 \log D/\log N \sim e z_0 \log\log N \to \infty$. Thus $N(e D z_0/k)^k > \sqrt N$. If instead $D^k > \sqrt N$, the first term already exceeds $\sqrt N$. This proves the stated limitation of the bound at $b_0 = 1/2$. Vertices of degree larger than $D_n$ require a different argument.
+\end{remark}

@@ -15,6 +15,20 @@ Both are the single statement `ThresholdChallenge.MainStatement` in `Challenge.l
 `Classical.choice` only. The Comparator accepted it with con-ron `--verified`, NanoDa and Lean's default kernel on a
 clean build (`verification/`).
 
+## Manuscript
+
+[Read the manuscript (PDF)](Aronow_Lopatto_colorability_threshold.pdf).
+The [LaTeX sources](paper/) include all figures, the bibliography, and the local style file.
+To regenerate the PDF with a standard TeX installation:
+
+```bash
+cd paper
+latexmk -pdf -outdir=build main.tex
+```
+
+The formalization targets the two headline theorems above. The manuscript also
+contains explanatory remarks and discussion of related work.
+
 ## Release
 
 `Challenge.lean` is the verbatim frozen 125-line headline challenge. The original

@@ -1,0 +1,183 @@
+
+\makeatletter
+
+\usepackage{lmodern}
+\usepackage[sc]{mathpazo}
+\usepackage{bm}
+\linespread{1.1}
+\usepackage{microtype}
+\microtypesetup{stretch=15,shrink=15}
+
+\usepackage{geometry}
+\geometry{letterpaper,left=1in,right=1in,top=0.75in,bottom=0.75in,includeheadfoot,
+  headheight=15pt,headsep=16pt,footskip=26pt}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\tolerance=1000
+\clubpenalty=3000 \widowpenalty=3000 \displaywidowpenalty=1500
+\raggedbottom
+\allowdisplaybreaks[2]
+
+\usepackage{enumitem}
+\setlist{topsep=4pt plus 2pt minus 1pt,itemsep=2pt plus 1pt,parsep=0pt}
+\setlist[itemize]{leftmargin=1.5em}
+\setlist[enumerate]{leftmargin=2em}
+
+\usepackage[newparttoc]{titlesec}
+\usepackage{titletoc,fancyhdr}
+
+\newcommand{\manuscript@spacedsc}[1]{{\scshape\textls[90]{\MakeLowercase{#1}}}}
+\newcommand{\manuscript@headpar}{\rightskip=0pt plus 0.5\hsize\relax
+  \parfillskip=0pt plus 0.5\hsize\relax\hyphenpenalty=10000\relax\exhyphenpenalty=10000\relax}
+
+\titleformat{\part}[display]
+  {\normalfont\centering}
+  {\large\manuscript@spacedsc{\partname\ \thepart}}
+  {22pt}
+  {\fontsize{22}{28}\selectfont}
+\assignpagestyle{\part}{empty}
+
+\titleformat{\chapter}[display]
+  {\normalfont\manuscript@headpar}
+  {\manuscript@spacedsc{\chaptertitlename\ \thechapter}}
+  {12pt}
+  {\fontsize{20}{25}\selectfont}
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\manuscript@headpar}
+  {}
+  {0pt}
+  {\fontsize{20}{25}\selectfont\manuscript@starmark}
+\titlespacing*{\chapter}{0pt}{12pt}{30pt}
+\newcommand{\manuscript@starmark}[1]{#1\markboth{#1}{#1}}
+
+\titleformat{\section}
+  {\normalfont\fontsize{13.5}{17}\selectfont\bfseries\manuscript@headpar}{\thesection}{0.75em}{}
+\titlespacing*{\section}{0pt}{22pt plus 4pt minus 2pt}{9pt plus 2pt}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\manuscript@headpar}{\thesubsection}{0.75em}{}
+\titlespacing*{\subsection}{0pt}{15pt plus 3pt minus 2pt}{6pt plus 1pt}
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{9pt plus 2pt minus 1pt}{0.6em}
+
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+
+\newcommand{\shorthead}[2]{\expandafter\def\csname manuscript@sh@\detokenize{#1}\endcsname{#2}}
+\newcommand{\manuscript@lookup}[1]{%
+  \ifcsname manuscript@sh@\detokenize{#1}\endcsname
+    \expandafter\let\expandafter\manuscript@headtext\csname manuscript@sh@\detokenize{#1}\endcsname
+  \else
+    \def\manuscript@headtext{#1}%
+  \fi}
+\newcommand{\manuscript@headfont}{\normalfont\small\itshape}
+\DeclareRobustCommand{\manuscript@hd}[2]{%
+  \ifx\relax#1\relax\else{\upshape#1}\hspace{0.8em}\fi#2}
+\newsavebox{\manuscript@chapbox}
+\newsavebox{\manuscript@secbox}
+\newsavebox{\manuscript@cachedchapbox}
+\newsavebox{\manuscript@cachedsecbox}
+\newif\ifmanuscript@headtoolong
+\newif\ifmanuscript@cachedheadtoolong
+\let\manuscript@cachedheadkey\relax
+\newcommand{\manuscript@computeheads}{%
+  \manuscript@headtoolongfalse
+  \sbox\manuscript@chapbox{\manuscript@headfont\nouppercase{\leftmark}}%
+  \sbox\manuscript@secbox{}%
+  \protected@edef\manuscript@l{\leftmark}%
+  \protected@edef\manuscript@r{\rightmark}%
+  \ifx\manuscript@r\@empty\else\ifx\manuscript@r\manuscript@l\else
+    \sbox\manuscript@secbox{\manuscript@headfont\nouppercase{\rightmark}}%
+  \fi\fi
+  \dimen@=\wd\manuscript@chapbox\advance\dimen@ 4em\relax
+  \ifdim\dimen@>\headwidth
+    \sbox\manuscript@chapbox{\manuscript@headfont\@chapapp\ \thechapter}%
+    \manuscript@headtoolongtrue
+  \fi
+  \dimen@=\wd\manuscript@chapbox\advance\dimen@\wd\manuscript@secbox\advance\dimen@ 8em\relax
+  \ifdim\dimen@>\headwidth
+    \sbox\manuscript@secbox{\manuscript@headfont
+      \expandafter\let\csname manuscript@hd \endcsname\manuscript@hdnum\nouppercase{\rightmark}}%
+  \fi}
+\newcommand{\manuscript@heads}[1]{%
+  \protected@edef\manuscript@headkey{%
+    {\leftmark}{\rightmark}{\the\headwidth}%
+    {\fontname\font}{\the\dimexpr1em\relax}{\thechapter}{\@chapapp}}%
+  \ifx\manuscript@headkey\manuscript@cachedheadkey\else
+    \manuscript@computeheads
+    \global\setbox\manuscript@cachedchapbox=\copy\manuscript@chapbox
+    \global\setbox\manuscript@cachedsecbox=\copy\manuscript@secbox
+    \global\let\manuscript@cachedheadkey\manuscript@headkey
+    \ifmanuscript@headtoolong
+      \global\manuscript@cachedheadtoolongtrue
+    \else
+      \global\manuscript@cachedheadtoolongfalse
+    \fi
+  \fi
+  \setbox\manuscript@chapbox=\copy\manuscript@cachedchapbox
+  \setbox\manuscript@secbox=\copy\manuscript@cachedsecbox
+  \ifmanuscript@cachedheadtoolong
+    \ifx\relax#1\relax\else\PackageWarningNoLine{manuscript-style}{Running head too long on
+      page \thepage; give the chapter a \string\shorthead}\fi
+  \fi}
+\newcommand{\manuscript@hdnum}[2]{\ifx\relax#1\relax\else\S\,{\upshape#1}\fi}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\manuscript@heads{warn}\usebox\manuscript@chapbox}
+\fancyhead[R]{\manuscript@heads{}%
+  \ifdim\wd\manuscript@secbox>\z@\usebox\manuscript@secbox\hspace{2em}\fi
+  \normalfont\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\normalfont\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\renewcommand{\chaptermark}[1]{\manuscript@lookup{#1}%
+  \markboth{\manuscript@hd{\ifnum\c@secnumdepth>\m@ne\if@mainmatter\thechapter\fi\fi}{\manuscript@headtext}}{}}
+\renewcommand{\sectionmark}[1]{\manuscript@lookup{#1}%
+  \markright{\manuscript@hd{\ifnum\c@secnumdepth>\z@\thesection\fi}{\manuscript@headtext}}}
+
+\contentsmargin{2.2em}
+\titlecontents{part}[0pt]
+  {\addvspace{16pt plus 2pt}\normalfont}
+  {\manuscript@spacedsc{\partname\ \thecontentslabel}\hspace{1em}}
+  {}
+  {\hfill\contentspage}
+  [\addvspace{4pt}]
+\titlecontents{chapter}[2.2em]
+  {\addvspace{7pt plus 1pt}\normalfont}
+  {\contentslabel{2.2em}}
+  {\hspace*{-2.2em}}
+  {\hfill\contentspage}
+\titlecontents{section}[4.8em]
+  {\normalfont\small}
+  {\contentslabel{2.6em}}
+  {\hspace*{-2.6em}}
+  {\titlerule*[0.9em]{.}\contentspage}
+
+\@ifpackageloaded{natbib}{%
+  \renewcommand{\bibsection}{\chapter*{References}%
+    \addcontentsline{toc}{chapter}{References}}%
+}{}
+
+\newlength{\manuscriptenvskip}
+\setlength{\manuscriptenvskip}{10pt plus 3pt minus 2pt}
+\newtheoremstyle{plain}{\manuscriptenvskip}{\manuscriptenvskip}
+  {\itshape}{}{\bfseries}{.}{0.5em}{}
+\newtheoremstyle{definition}{\manuscriptenvskip}{\manuscriptenvskip}
+  {\normalfont}{}{\bfseries}{.}{0.5em}{}
+\newtheoremstyle{remark}{\manuscriptenvskip}{\manuscriptenvskip}
+  {\normalfont}{}{\itshape}{.}{0.5em}{}
+
+\usepackage[font=small,labelsep=period,skip=8pt]{caption}
+
+\usepackage{etoolbox}
+\patchcmd{\@footnotetext}{\footnotesize}{\small}{}{}
+
+\usepackage[hidelinks,bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdfauthor={},pdfpagemode=UseNone,pdfdisplaydoctitle=true,
+  pdfstartview={FitH \hypercalcbp{\paperheight}}}
+
+\makeatother

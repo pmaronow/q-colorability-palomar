@@ -1,0 +1,95 @@
+\chapter{Proof of the main theorems}\label{sec:proof}
+
+In this section, we prove the window bound of \cref{thm:proof-window} and deduce \cref{thm:intro-main,thm:intro-window} from it. The window bound combines the reduction of \cref{sec:red} with the estimates of \cref{sec:low,sec:high}, and the deduction uses the convergence criterion of \cref{thm:red-convergence}, which is proved in \cref{app:conv}. We end with three remarks on the scope of the argument.
+
+\section{Parameters and the window bound}\label{sec:proof-window}
+
+Throughout this section, we retain the fixed integer $q \ge 3$. We now set $\Lambda = \gamma_q + 2$. With this choice, we recall the parameter definitions:
+\begin{equation}\label{eq:proof-params}
+\begin{gathered}
+\gamma_q = \frac{\log q}{\log (q / (q - 1))}, \qquad \Lambda = \gamma_q + 2, \qquad M = \lfloor \Lambda n \rfloor, \qquad \eta_0 = \frac{e^{-2 \Lambda}}{8}, \\
+A_q = 2q \log q + 2q + 1, \qquad K = \lceil 8 \Lambda \rceil, \qquad \eps_1 = \eps_2 = 1, \qquad x_n = n \eps_n^2, \\
+\eps_n = (\log n)^{-3/2}, \qquad k_n = \biggl\lceil \frac{\log n}{\log \log n} \biggr\rceil, \qquad D_n = \lfloor (\log n)^{1/4} \rfloor, \qquad w_0 = \lfloor D_n / 2 \rfloor,
+\end{gathered}
+\end{equation}
+where the last line is for $n \ge 3$. Each of these parameters was introduced in the section where it is first used, and we collect them here. After choosing $q$, we fix $\eta \in (0, \eta_0]$. We use the quantiles $L_n(\eta)$ and $U_n(\eta)$ and the window $w_n(\eta)$ of \cref{def:pre-quantile} for this value of $\Lambda$. Here $\gamma_q$ is the first-moment bound for the threshold, $A_q$ bounds the expected lifetime in \cref{lem:pre-lifetime}, $\eps_n$ is the target bound for the probabilities in \cref{prop:red-split}, $x_n = n \eps_n^2$, $k_n$ bounds the list lengths retained in the proof in \cref{sec:low}, $D_n$ is the degree cut, and $K$ and $w_0$ are the parameters of \cref{prop:high-descent,thm:high-main}.
+
+Every estimate used below holds for all sufficiently large $n$, and the conditions on $n$ are of three kinds. The conditions of \cref{sec:low} consist of the threshold $n_q$ of \cref{thm:low-main} and, in \cref{cor:low}, a comparison of the negative power $n^{-1/8}$ with a power of $\log n$. Those of \cref{sec:high} use that $w_0 \log(w_0 / (2 e \Lambda))$ grows faster than $\log \log n$. The thresholds in these two sections are determined by $q$, through $\Lambda$. Finally, the bounds on the quantiles in \cref{lem:pre-centre} hold for each fixed $\eta$, and therefore the threshold in \cref{thm:proof-window} depends on $\eta$ as well.
+
+\begin{theorem}\label{thm:proof-window}
+Let $q \ge 3$, and let the parameters be given by \eqref{eq:proof-params}. For every $\eta \in (0, \eta_0]$, there exists $n_0$, depending only on $q$ and $\eta$, such that for all $n \ge n_0$,
+\begin{equation}\label{eq:proof-window}
+w_n(\eta) \le \frac{6 \Lambda}{\eta^2} \, n (\log n)^{-3/2}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Fix $\eta \in (0, \eta_0]$. We abbreviate $L = L_n(\eta)$ and $U = U_n(\eta)$. We will verify the hypotheses \eqref{eq:red-low} and \eqref{eq:red-high} of \cref{prop:red-split} for all large $n$.
+
+For \eqref{eq:red-low}, recall that \cref{cor:low} gives \eqref{eq:red-low-target} for all large $n$, with a threshold depending only on $q$. The event in \eqref{eq:red-low} is contained in the event in \eqref{eq:red-low-target}, so \eqref{eq:red-low} holds for these $n$.
+
+For \eqref{eq:red-high}, note that $0 \le L \le U \le M$ by \cref{lem:pre-quantile}. We apply \eqref{eq:high-main-window} with $L' = L$ and $U' = U$, and we use that $\eps_n = (\log n)^{-3/2}$ for $n \ge 3$. For all large $n$, we obtain
+\[
+\begin{split}
+\Pp \Bigl( L < H \le U, \ \min_{v \in e_H} \deg_\Gamma(v) > D_n, \ r(\Gamma) > x_n \Bigr) &\le \Pp \Bigl( L < H \le U, \ \min_{v \in e_H} \deg_\Gamma(v) > D_n \Bigr)\\
+&\le \eps_n,
+\end{split}
+\]
+which is \eqref{eq:red-high}.
+
+The proposition \cref{prop:red-split} now applies for all large $n$. It implies that $w_n(\eta) \le (6 \Lambda / \eta^2) \, n \eps_n$, which is \eqref{eq:proof-window}.
+\end{proof}
+
+\section{Proofs of the main theorems}\label{sec:proof-main}
+
+\begin{proof}[Proof of \cref{thm:intro-main}]
+We apply \cref{thm:red-convergence} with $\delta_n = \eps_n$, and we first check its hypotheses. Since $\log 3 > 1$, the sequence $(\eps_n)$ takes values in $(0, 1]$ and is nonincreasing. Further, for every integer $j \ge 2$, we have $\lfloor e^j \rfloor \ge 3$ and
+\[
+\lfloor e^j \rfloor \ge e^j - 1 \ge e^{j - 1}, \qquad \text{and hence} \qquad \eps_{\lfloor e^j \rfloor} \le \bigl( \log e^{j - 1} \bigr)^{-3/2} = (j - 1)^{-3/2}.
+\]
+Since $\eps_{\lfloor e \rfloor} = \eps_2 = 1$, it follows that
+\[
+\sum_{j \ge 1} \eps_{\lfloor e^j \rfloor} \le 1 + \sum_{j \ge 2} (j - 1)^{-3/2} < \infty.
+\]
+
+Next, \cref{thm:proof-window} shows that for every $\eta \in (0, \eta_0]$, the hypothesis \eqref{eq:red-window-hyp} holds with $K'(\eta) = 6 \Lambda / \eta^2$ and a suitable $n_1(\eta)$.
+
+The hypotheses of \cref{thm:red-convergence} hold, so there exists a constant $\alpha_q \in [1/2, \gamma_q]$ with the properties (1)--(3) stated there. Properties (2) and (3) state that $G(n, \lfloor cn \rfloor)$ is $q$-colorable with probability tending to one for every constant $c \in [0, \alpha_q)$ and tending to zero for every constant $c > \alpha_q$, and that the same holds for $G(n, d/n)$ with the threshold $d_q = 2 \alpha_q$. This is \cref{thm:intro-main}.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:intro-window}]
+Let $\epsilon \in (0, 1)$. We set $\eta_1 = \min(\epsilon / 2, \eta_0)$ and $m_n = L_n(\eta_1)$. As shown in the proof of \cref{thm:intro-main}, \cref{thm:red-convergence} applies. Its property (1) gives $m_n / n \to \alpha_q$.
+
+We now bound the probability that $H$ is far from $m_n$. Recall from \cref{lem:pre-centre}(a) that $U_n(\eta_1) < M$ for all large $n$. For such $n$, we apply \cref{lem:pre-quantile} at the level $\eta_1$, with $m = L_n(\eta_1)$ and with $m = U_n(\eta_1) + 1$, and we obtain
+\[
+\Pp \bigl( H \le L_n(\eta_1) \bigr) < \eta_1, \qquad \Pp \bigl( H > U_n(\eta_1) + 1 \bigr) < \eta_1.
+\]
+Hence, with probability at least $1 - 2 \eta_1 \ge 1 - \epsilon$, we have $L_n(\eta_1) < H \le U_n(\eta_1) + 1$, and on this event
+\[
+0 < H - m_n \le w_n(\eta_1) + 1.
+\]
+
+Finally, applying \cref{thm:proof-window} at the level $\eta_1 \in (0, \eta_0]$, we have $w_n(\eta_1) \le (6 \Lambda / \eta_1^2) \, n (\log n)^{-3/2}$ for all large $n$. We set $C = 6 \Lambda / \eta_1^2 + 1$. Using also $n (\log n)^{-3/2} \ge 1$ for $n \ge 3$, we conclude that for all large $n$,
+\[
+\Pp \bigl( \abs{H - m_n} \le C n (\log n)^{-3/2} \bigr) \ge 1 - \epsilon.
+\]
+This proves \cref{thm:intro-window}, with a constant $C$ determined by $q$ and $\epsilon$.
+\end{proof}
+
+\section{Remarks}\label{sec:proof-remarks}
+
+\begin{remark}\label{rem:proof-q3}
+We record where the proof uses the assumption $q \ge 3$. There are two places. The first is the part of \cref{lem:low-frozen} which shows that if a vertex lies in a frozen pair, then its neighbors use at least $q - 1$ colors in every coloring of the multigraph with this vertex removed. Since $q - 1 \ge 2$, the list of its neighbors is then never monochromatic. This is the one use of $q \ge 3$ in the proof of \cref{thm:low-main}, and the implication fails for $q = 2$ (see \cref{rem:low-q2}). The second is \cref{lem:pre-centre}(b), which uses that a multigraph whose components each contain at most one cycle is $q$-colorable when $q \ge 3$, and it gives the lower bound $\alpha_q \ge 1/2$. The remaining steps hold, with the same proofs, for every $q \ge 2$; for the estimates of \cref{sec:high}, see \cref{rem:high-q2}. Some use of $q \ge 3$ is unavoidable, since for $q = 2$ the threshold is not sharp. Indeed, for every constant $d \in (0, 1)$, the probability that $G(n, d/n)$ is bipartite converges to $e^{d/2} ((1 - d)/(1 + d))^{1/4} \in (0, 1)$; see \cite[Section~1, equation~(1.5)]{pittel2010frequently}, and \cite[p.~64]{achlioptas1999sharp} for a discussion of the case $q = 2$.
+\end{remark}
+
+\begin{remark}\label{rem:proof-sqrt}
+We now explain why the variance bound of \cref{sec:red} cannot certify windows below the order $\sqrt n$. Fix $\eta \in (0, \eta_0]$. In this remark, we write $L = L_n(\eta)$ and $U = U_n(\eta)$. We use the capped variable $Y$ of \eqref{eq:red-Y} and the variables $Y^{(-i)}$ of \eqref{eq:red-Ydel} at this level; in the latter, the occurrence $e_i$ is omitted. The proof of \cref{prop:red-window} rests on the inequalities
+\[
+\eta^2 w_n(\eta)^2 \le \Var(Y) \le \sum_{i = 1}^U \E \bigl[ \bigl( Y^{(-i)} - Y \bigr)^2 \bigr] = \E \bigl[ H \bigl( 2 r_{U - H + 1}(\Gamma) - 1 \bigr); L < H \le U \bigr].
+\]
+The first inequality is \cref{lem:red-varlower}, the second is the Efron--Stein inequality used in the proof of \cref{lem:red-deletion}, and the identity is \eqref{eq:red-deletion}. On the event $\{ L < H \le U \}$, the multigraph $\Gamma$ is colorable and $U - H + 1 \ge 1$, so $r_{U - H + 1}(\Gamma) \ge 1$ by \cref{lem:pre-lifetime}(a). Hence the right side is at least $\E [H \ind \{ L < H \le U \}] \ge (L + 1) \Pp(L < H \le U)$, and \cref{lem:pre-centre}(b) with $c_0 = 1/4$ implies that $L > n/4$ for all large $n$. Thus, whenever $\Pp(L < H \le U)$ is bounded below by a positive constant, the right side of \eqref{eq:red-deletion} is at least of order $n$, and the bound on $w_n(\eta)$ that these inequalities can yield is at least of order $\sqrt n$. This is a limitation of the variance bound, not a lower bound on the window. For comparison, Wilson proved that the transition for $q$-colorability has width at least of order $\sqrt n$ in the number of edges \cite[Corollary~6]{wilson2002critical}. The window $n (\log n)^{-3/2}$ of \cref{thm:proof-window} is much larger than this scale.
+\end{remark}
+
+\begin{remark}\label{rem:proof-finite}
+\Cref{thm:intro-main,thm:intro-window} are asymptotic statements, and the proof gives no useful bounds at practical sizes of $n$. The conditions on $n$ in \cref{sec:low,sec:high} are explicit inequalities, but they hold only for very large $n$. For example, the hypothesis $w_0 \ge K$ of \cref{thm:high-main} is equivalent to $(\log n)^{1/4} \ge 2K$, so it requires $\log n \ge (2K)^4 \ge (16 \Lambda)^4$. Moreover, \cref{thm:red-convergence} identifies $\alpha_q$ only as a limit. It does not provide a rate for the convergence of $L_n(\eta)/n$ to $\alpha_q$, and the proof gives no information on the value of $\alpha_q$ beyond the bounds $1/2 \le \alpha_q \le \gamma_q$.
+\end{remark}

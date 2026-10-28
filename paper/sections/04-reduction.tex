@@ -1,0 +1,234 @@
+\chapter{Reduction to two estimates}\label{sec:red}
+
+In this section, we reduce the existence of the threshold to two estimates on the final edge $e_H$. The reduction has three steps. In \cref{sec:red-convergence}, we state our convergence criterion, \cref{thm:red-convergence}. It asserts that $\alpha_q$ exists if, at every small quantile level $\eta$, the window satisfies $w_n(\eta) = O(n \delta_n)$ for a sequence $\delta_n$ that is summable along $n = \lfloor e^k \rfloor$. We prove it in \cref{app:conv}. In \cref{sec:red-deletion}, we bound the variance of a capped version of $V$ by the expected lifetime of $\Gamma$, restricted to final edges inside the window. We conclude in \cref{prop:red-window} that $w_n(\eta) = O(n \eps_n)$ whenever this expected lifetime, capped at $n \eps_n$, is $O(n \eps_n^2)$. In \cref{sec:red-split}, we split the last expectation according to the degrees in $\Gamma$ of the endpoints of $e_H$, and we state the two estimates that remain. The heuristics behind these steps are explained in \cref{sec:overview}.
+
+From \cref{sec:pre}, we use the quantiles of \cref{def:pre-quantile,lem:pre-quantile}, the frozen pairs of \cref{def:pre-frozen,lem:pre-frozen}, the identity \eqref{eq:pre-terminal}, and the expected lifetime of \cref{def:pre-lifetime}. We now fix the sequences that are used in the rest of the paper. We set $\eps_n = (\log n)^{-3/2}$ for $n \ge 3$ and $\eps_1 = \eps_2 = 1$, and we define
+\begin{equation}\label{eq:red-parameters}
+x_n = n \eps_n^2, \qquad D_n = \lfloor (\log n)^{1/4} \rfloor.
+\end{equation}
+We call $x_n$ the \emph{lifetime level} and $D_n$ the \emph{degree cut}.
+
+\section{The convergence criterion}\label{sec:red-convergence}
+
+Recall the level $\eta_0 = e^{-2 \Lambda}/8$ and the window $w_n(\eta) = U_n(\eta) - L_n(\eta)$ of \cref{def:pre-quantile}. The following theorem reduces the existence of the threshold to a bound on the window. Its proof, in \cref{app:conv}, uses the coloring interpolation of Bayati, Gamarnik, and Tetali \cite[Theorem~5 and Proposition~2]{bayati2013combinatorial} and adapts the comparisons between system sizes and the balanced-tree argument of the $k$-SAT preprint \cite[Section~5]{openai2026limiting} to quantiles and geometrically summable errors. The earlier additive form of near-superadditivity appears in \cite[arXiv:1006.3786v1, Section~4.3, Lemma~8 and Remark~3]{abbe2014concentration}.
+
+\begin{theorem}\label{thm:red-convergence}
+Let $(\delta_n)_{n \ge 1}$ be a nonincreasing sequence in $(0, 1]$ such that $\sum_{k \ge 1} \delta_{\lfloor e^k \rfloor} < \infty$. Suppose that for every $\eta \in (0, \eta_0]$ there exist $K'(\eta) > 0$ and an integer $n_1(\eta)$ such that
+\begin{equation}\label{eq:red-window-hyp}
+w_n(\eta) \le K'(\eta) n \delta_n \qquad \text{for all } n \ge n_1(\eta).
+\end{equation}
+Then there exists $\alpha_q \in [1/2, \gamma_q]$ with the following properties.
+\begin{enumerate}[label=(\arabic*)]
+\item For every $\eta \in (0, \eta_0]$, we have $L_n(\eta)/n \to \alpha_q$ and $U_n(\eta)/n \to \alpha_q$ as $n \to \infty$.
+\item For every $c \in [0, \alpha_q)$, we have $\Pp(H > \lfloor cn \rfloor) \to 1$ and $\Pp(G(n, \lfloor cn \rfloor) \text{ is colorable}) \to 1$ as $n \to \infty$. For every $c > \alpha_q$, both probabilities tend to $0$.
+\item For every $d \in [0, 2 \alpha_q)$, we have $\Pp(G(n, d/n) \text{ is colorable}) \to 1$ as $n \to \infty$. For every $d > 2 \alpha_q$, this probability tends to $0$.
+\end{enumerate}
+\end{theorem}
+
+Note that the statements on $\Pp(H > \lfloor cn \rfloor)$ in (2) determine $\alpha_q$, so $\alpha_q$ depends only on $q$ (and not on $\Lambda$ or on the sequence $\delta_n$). We will apply \cref{thm:red-convergence} with $\delta_n = \eps_n$. The remaining argument verifies \eqref{eq:red-window-hyp} for this sequence.
+
+\begin{remark}\label{rem:red-af}
+The window bound at every level $\eta \in (0, \eta_0]$ makes the sharp-threshold theorem of Achlioptas and Friedgut \cite[Theorem~1.1]{achlioptas1999sharp} unnecessary for the proof of \cref{thm:red-convergence}. In \cref{app:conv}, we first prove convergence of the normalized quantiles at each level, use their nesting to identify a common limit, and then let $\eta$ tend to zero to obtain the zero-one laws. The summability of $(\delta_{\lfloor e^k \rfloor})$ is needed for the comparisons used there; see \cref{rem:conv-necessity}.
+\end{remark}
+
+\section{Deletion and the expected lifetime of the last colorable graph}\label{sec:red-deletion}
+
+Throughout \cref{sec:red-deletion,sec:red-split}, we fix $\eta \in (0, \eta_0]$ and an integer $n \ge 2q$. We write $L$, $U$, and $w$ for $L_n(\eta)$, $U_n(\eta)$, and $w_n(\eta)$. Recall from \cref{def:pre-quantile,lem:pre-quantile} that $0 \le L \le U \le M$. For an event $A$ and a nonnegative or integrable expression $X$ defined on $A$, we define $\E[X; A]$ to be the integral of $X$ over $A$. When we write this as $\E[X\ind_A]$, we first extend $X$ by zero outside $A$. We define the capped variable
+\begin{equation}\label{eq:red-Y}
+Y = \min(U, \max(L, V)).
+\end{equation}
+Since $U \le M$ and $V = \min(H - 1, M)$, we have $Y = \min(U, \max(L, H - 1))$. Checking the three cases $H \le L + 1$, $L + 1 < H \le U$, and $H > U$ separately, we find
+\begin{equation*}
+\#\{m \in \{L + 1, \dots, U\} : m < H\} = \min(U, \max(L, H - 1)) - L.
+\end{equation*}
+Since $G_m$ is colorable if and only if $m < H$, this implies
+\begin{equation}\label{eq:red-Ysum}
+Y = L + \sum_{m = L + 1}^{U} \ind\{G_m \text{ is colorable}\}.
+\end{equation}
+For $1 \le i \le U$ and $m \ge 0$, we let $G_m^{(-i)}$ denote the multiset $\{e_j : 1 \le j \le m, \ j \ne i\}$. We have $G_m^{(-i)} = G_m$ for $m < i$, and for $m \ge i$ the multigraph $G_m^{(-i)}$ is obtained from $G_m$ by omitting the occurrence $e_i$ (the other occurrences keep their indices). Following \eqref{eq:red-Ysum}, we define
+\begin{equation}\label{eq:red-Ydel}
+Y^{(-i)} = L + \sum_{m = L + 1}^{U} \ind\{G_m^{(-i)} \text{ is colorable}\}.
+\end{equation}
+The variable $Y^{(-i)}$ is a function of the pairs $e_j$ with $j \le U$ and $j \ne i$.
+
+The next lemma gives an exact identity for the sum of the squared differences $Y^{(-i)} - Y$. Bounds of this kind have antecedents. In \cite[Theorem~1(b)]{aldous1991threshold}, Aldous considered the first time $T$ at which independent copies of a random subset of a finite set cover that set. He bounded the variance of $T$ by an absolute constant times $\E T$ times the expected time that a fresh independent sequence of such subsets needs to cover the set left uncovered by the first $T - 1$ of them. This theorem applies to $H$. Indeed, let each pair $\{u, v\}$ cover the maps $\sigma \colon [n] \to [q]$ with $\sigma(u) = \sigma(v)$; since $n > q$, every map is covered by some pair. Then $H$ is the first time at which $e_1, \dots, e_H$ cover all maps, the maps left uncovered by $e_1, \dots, e_{H - 1}$ form the set $\Col(\Gamma)$, and the expected time to cover this set is $r(\Gamma)$. The theorem therefore bounds $\Var(H)$ by an absolute constant times $\E H \, \E r(\Gamma)$.
+
+For random $k$-SAT, Carenini's 2026 preprint applies Aldous's bound to the expected number of further independent clauses needed to make the final satisfiable formula unsatisfiable \cite[Theorem~4.1 and equation~(4.1)]{carenini2026polynomial}. The limiting-threshold preprint \cite[Lemmas~3.1 and~3.2]{openai2026limiting} applies the deletion form of the Efron--Stein inequality to a capped hitting time, retains the original clause indices, and expands the squares of deletion delays over pairs of times. The variance preprint \cite[Section~3.3, Lemma~3.4]{openai2026variance} also combines these delays with expected lifetimes. \Cref{lem:red-deletion} is the analogous computation for colorability. Instead of the bound for $\Var(H)$, we use the exact identity \eqref{eq:red-deletion}, in which only final edges $e_H$ with $L < H \le U$ appear, and we give its short proof.
+
+\begin{lemma}\label{lem:red-deletion}
+Let $\eta \in (0, \eta_0]$ and let $n \ge 2q$ be an integer. Then
+\begin{equation}\label{eq:red-deletion}
+\sum_{i = 1}^{U} \E\bigl[(Y^{(-i)} - Y)^2\bigr] = \E\bigl[H \bigl(2 r_{U - H + 1}(\Gamma) - 1\bigr); L < H \le U\bigr]
+\end{equation}
+and
+\begin{equation}\label{eq:red-var-upper}
+\Var(Y) \le 2U \, \E\bigl[\min(w, r(\Gamma)); L < H \le U\bigr].
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We begin by computing the differences $Y^{(-i)} - Y$. Fix $1 \le i \le U$, and for $m \ge i$ let
+\begin{equation*}
+\cX_{m, i} = \{G_m^{(-i)} \text{ is colorable and } G_m \text{ is not colorable}\}.
+\end{equation*}
+For $m < i$, we have $G_m^{(-i)} = G_m$. For $m \ge i$, we have $G_m = G_m^{(-i)} + e_i$, and every coloring of $G_m$ is a coloring of $G_m^{(-i)}$, so that
+\begin{equation*}
+\ind\{G_m^{(-i)} \text{ is colorable}\} - \ind\{G_m \text{ is colorable}\} = \ind_{\cX_{m, i}}.
+\end{equation*}
+Subtracting \eqref{eq:red-Ysum} from \eqref{eq:red-Ydel}, we have
+\begin{equation}\label{eq:red-diff}
+Y^{(-i)} - Y = \sum_{m = \max(i, L + 1)}^{U} \ind_{\cX_{m, i}}.
+\end{equation}
+
+Next, we square \eqref{eq:red-diff}. Let $m < l$ be indices in the range of the sum. The multigraph $G_l$ contains $G_m$, so it is not colorable on $\cX_{m, i}$, and hence
+\begin{equation*}
+\cX_{m, i} \cap \cX_{l, i} = \cX_{m, i} \cap \{G_l^{(-i)} \text{ is colorable}\}.
+\end{equation*}
+Expanding the square gives
+\begin{equation}\label{eq:red-square}
+(Y^{(-i)} - Y)^2 = \sum_{m = \max(i, L + 1)}^{U} \Bigl(\ind_{\cX_{m, i}} + 2 \sum_{l = m + 1}^{U} \ind_{\cX_{m, i} \cap \{G_l^{(-i)} \text{ is colorable}\}}\Bigr).
+\end{equation}
+
+The main step is to compute the conditional probabilities of these events given $G_m^{(-i)}$. Fix $m \ge i$ and $l > m$. The multigraph $G_m^{(-i)}$ is a function of the pairs $e_j$ with $j \le m$ and $j \ne i$, and we have
+\begin{equation*}
+G_m = G_m^{(-i)} + e_i, \qquad G_l^{(-i)} = G_m^{(-i)} + e_{m + 1} + \dots + e_l.
+\end{equation*}
+The pairs $e_i, e_{m + 1}, \dots, e_l$ are independent, uniform, and independent of $G_m^{(-i)}$.
+
+Let $G$ be a colorable multigraph on $[n]$ with $\Pp(G_m^{(-i)} = G) > 0$. By \cref{lem:pre-frozen}(a), the multigraph $G + e_i$ is not colorable if and only if $e_i$ is a frozen pair of $G$, and this has conditional probability $\kappa(G)$.
+
+The definition of $T_G$ in \cref{def:pre-lifetime} shows that $G + e_{m + 1} + \dots + e_l$ is colorable with conditional probability $\Pp(T_G > l - m)$. Using the independence of $e_i$ from $e_{m + 1}, \dots, e_l$, we find that
+\begin{equation}\label{eq:red-cond}
+\begin{gathered}
+\Pp\bigl(\cX_{m, i} \bigm| G_m^{(-i)} = G\bigr) = \kappa(G), \\
+\Pp\bigl(\cX_{m, i} \cap \{G_l^{(-i)} \text{ is colorable}\} \bigm| G_m^{(-i)} = G\bigr) = \kappa(G) \Pp(T_G > l - m).
+\end{gathered}
+\end{equation}
+The two probabilities in \eqref{eq:red-cond} vanish if $G$ is not colorable, and so does $\kappa(G)$.
+
+For $m \in \{L + 1, \dots, U\}$ and a multigraph $G$ on $[n]$, we set
+\begin{equation*}
+h'_m(G) = \ind\{G \text{ is colorable}\} \bigl(2 r_{U - m + 1}(G) - 1\bigr).
+\end{equation*}
+For colorable $G$, we have $\Pp(T_G > 0) = 1$, and \eqref{eq:pre-rb} and \cref{lem:pre-lifetime}(a) give
+\begin{equation}\label{eq:red-weight}
+1 + 2 \sum_{l = m + 1}^{U} \Pp(T_G > l - m) = 2 r_{U - m + 1}(G) - 1 = h'_m(G) \ge 1.
+\end{equation}
+The indicator makes $h'_m$ nonnegative, as \cref{lem:pre-terminal} requires. Taking expectations in \eqref{eq:red-square} and inserting \eqref{eq:red-cond} and \eqref{eq:red-weight}, we obtain
+\begin{equation}\label{eq:red-one-i}
+\E\bigl[(Y^{(-i)} - Y)^2\bigr] = \sum_{m = \max(i, L + 1)}^{U} \E\bigl[\kappa(G_m^{(-i)}) h'_m(G_m^{(-i)})\bigr].
+\end{equation}
+
+We now sum over $i$. For fixed $m \in \{L + 1, \dots, U\}$, the terms of \eqref{eq:red-one-i} with index $m$ occur exactly for $1 \le i \le m$. For each such $i$, $G_m^{(-i)}$ is the multiset of $m - 1$ independent uniform pairs, and it has the law of $G_{m - 1}$. Exchanging the two sums, we find
+\begin{equation}\label{eq:red-sum-i}
+\sum_{i = 1}^{U} \E\bigl[(Y^{(-i)} - Y)^2\bigr] = \sum_{m = L + 1}^{U} m \, \E\bigl[\kappa(G_{m - 1}) h'_m(G_{m - 1})\bigr].
+\end{equation}
+
+To evaluate the right side of \eqref{eq:red-sum-i}, let $\cE$ denote the set of all pairs $(G, e)$ such that $G$ is a colorable multigraph on $[n]$ and $e$ is a frozen pair of $G$. Then $\kappa_\cE = \kappa$. By \cref{lem:pre-frozen}(a), the final edge $e_H$ is a frozen pair of $\Gamma$ whenever $H < \infty$, and then $(\Gamma, e_H) \in \cE$. Applying \cref{lem:pre-terminal}(a) with this $\cE$, with $L' = m - 1$ and $U' = m$, and with $h_{m - 1} = h'_m$, we have
+\begin{equation*}
+\E\bigl[\kappa(G_{m - 1}) h'_m(G_{m - 1})\bigr] = \E\bigl[h'_m(\Gamma); H = m\bigr].
+\end{equation*}
+Inserting this into \eqref{eq:red-sum-i}, and using that $\Gamma$ is colorable, we arrive at \eqref{eq:red-deletion}. This is an identity of expectations. An individual deletion delay need not vanish on a trajectory with $H \le L$.
+
+To prove \eqref{eq:red-var-upper}, we use the Efron--Stein inequality \cite{efron1981jackknife,steele1986efron} in the following form, stated in \cite[(3.6)]{boucheron2005moment} and \cite[Theorem~3.1]{boucheron2013concentration}. Let $X_1, \dots, X_k$ be independent random variables, let $Z$ be a square-integrable function of $(X_1, \dots, X_k)$, and for each $i$ let $Z_i$ be a square-integrable random variable that is measurable with respect to $\sigma(X_j : j \ne i)$. Then
+\begin{equation*}
+\Var(Z) \le \sum_{i = 1}^{k} \E\bigl[(Z - Z_i)^2\bigr].
+\end{equation*}
+
+By \eqref{eq:red-Ysum}, the variable $Y$ is a bounded function of the independent pairs $e_1, \dots, e_U$, and $Y^{(-i)}$ is a bounded function of the pairs $e_j$ with $j \le U$ and $j \ne i$. Applying the inequality with $Z = Y$ and $Z_i = Y^{(-i)}$, and using \eqref{eq:red-deletion}, we find
+\begin{equation*}
+\Var(Y) \le \E\bigl[H \bigl(2 r_{U - H + 1}(\Gamma) - 1\bigr); L < H \le U\bigr].
+\end{equation*}
+We have $H \le U$ and $1 \le U - H + 1 \le w$ on the event $\{L < H \le U\}$, and therefore
+\begin{equation*}
+r_{U - H + 1}(\Gamma) \le r_w(\Gamma) \le \min\bigl(w, r(\Gamma)\bigr),
+\end{equation*}
+where we used that $\Gamma$ is colorable and that, by \cref{lem:pre-lifetime}(a), $r_b(G)$ is nondecreasing in $b$ and bounded by $\min(b, r(G))$ for colorable $G$ and integers $b \ge 1$. Inserting this into the previous bound and dropping the term $-1$ gives \eqref{eq:red-var-upper}.
+\end{proof}
+
+We will also need the following elementary lower bound on the variance of $Y$.
+
+\begin{lemma}\label{lem:red-varlower}
+Let $\eta \in (0, \eta_0]$ and let $n \ge 2q$ be an integer. Then $\Var(Y) \ge \eta^2 w^2$.
+\end{lemma}
+
+\begin{proof}
+If $w = 0$, there is nothing to prove. We may therefore assume that $L < U$. Let $Y'$ be an independent copy of $Y$. We have $|Y - Y'| = w$ on each of the disjoint events $\{Y = L, \ Y' = U\}$ and $\{Y = U, \ Y' = L\}$, and therefore
+\begin{equation*}
+\Var(Y) = \frac{1}{2} \E\bigl[(Y - Y')^2\bigr] \ge \Pp(Y = L) \Pp(Y = U) w^2.
+\end{equation*}
+Because $L < U$, the definition \eqref{eq:red-Y} gives
+\begin{equation*}
+\{Y = L\} = \{V \le L\}, \qquad \{Y = U\} = \{V \ge U\}.
+\end{equation*}
+Recall from the definitions of $L$ and $U$ in \cref{def:pre-quantile} that $\Pp(V \le L) \ge \eta$ and $\Pp(V \ge U) \ge \eta$, which completes the proof.
+\end{proof}
+
+Combining the two lemmas, we bound the window by the expected lifetime of $\Gamma$ at final edges inside the window, capped at $n \eps_n$.
+
+\begin{proposition}\label{prop:red-window}
+Let $\eta \in (0, \eta_0]$, let $n \ge 2q$ be an integer, and let $K_0 \ge 0$. Suppose that
+\begin{equation}\label{eq:red-hyp}
+\E\bigl[\min(n \eps_n, r(\Gamma)); L < H \le U\bigr] \le K_0 n \eps_n^2.
+\end{equation}
+Then $w \le \max(1, 2 \Lambda K_0/\eta^2) n \eps_n$.
+\end{proposition}
+
+\begin{proof}
+If $w < n \eps_n$, there is nothing to prove. We therefore suppose that $w \ge n \eps_n$. Then $w > 0$, and for all real $y \ge 0$ we have
+\begin{equation}\label{eq:red-minscale}
+\min(w, y) \le \frac{w}{n \eps_n} \min(n \eps_n, y).
+\end{equation}
+Indeed, if $y \le n \eps_n$, the right side is at least $y$, and if $y > n \eps_n$, it equals $w$. Combining \cref{lem:red-varlower}, \eqref{eq:red-var-upper}, \eqref{eq:red-minscale}, and \eqref{eq:red-hyp}, we find
+\begin{equation*}
+\begin{split}
+\eta^2 w^2 \le \Var(Y) &\le 2U \, \E\bigl[\min(w, r(\Gamma)); L < H \le U\bigr] \\
+&\le \frac{2Uw}{n \eps_n} \E\bigl[\min(n \eps_n, r(\Gamma)); L < H \le U\bigr] \le 2 \Lambda K_0 n \eps_n w,
+\end{split}
+\end{equation*}
+where in the last step we also used $U \le M \le \Lambda n$. Dividing by $\eta^2 w$ gives $w \le (2 \Lambda K_0/\eta^2) n \eps_n$.
+\end{proof}
+
+\section{Splitting by the degrees of the endpoints}\label{sec:red-split}
+
+We now split the expectation in \eqref{eq:red-hyp} according to the degrees in $\Gamma$ of the two endpoints of $e_H$. Recall that degrees count occurrences with multiplicity. When some endpoint has degree at most $D_n$, we keep the restriction $r(\Gamma) > x_n$; it is used in \cref{sec:low}, through \cref{lem:pre-classmass}, to bound the size of the frozen class of that endpoint. When both endpoints have degree larger than $D_n$, however, the estimate of \cref{sec:high} holds without a restriction on the lifetime.
+
+\begin{proposition}\label{prop:red-split}
+Let $\eta \in (0, \eta_0]$ and let $n \ge 2q$ be an integer. Suppose that
+\begin{equation}\label{eq:red-low}
+\Pp\Bigl(L < H \le U, \ \min_{v \in e_H} \deg_\Gamma(v) \le D_n, \ r(\Gamma) > x_n\Bigr) \le \eps_n
+\end{equation}
+and
+\begin{equation}\label{eq:red-high}
+\Pp\Bigl(L < H \le U, \ \min_{v \in e_H} \deg_\Gamma(v) > D_n, \ r(\Gamma) > x_n\Bigr) \le \eps_n.
+\end{equation}
+Then
+\begin{equation*}
+\E\bigl[\min(n \eps_n, r(\Gamma)); L < H \le U\bigr] \le 3 n \eps_n^2 \qquad \text{and} \qquad w \le \frac{6 \Lambda}{\eta^2} n \eps_n.
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+For every real $y \ge 0$, we have
+\begin{equation*}
+\min(n \eps_n, y) \le x_n + n \eps_n \ind\{y > x_n\},
+\end{equation*}
+since the left side is bounded by $y \le x_n$ if $y \le x_n$, and by $n \eps_n$ otherwise. Exactly one of the two degree conditions in \eqref{eq:red-low} and \eqref{eq:red-high} holds on the event $\{L < H \le U, \ r(\Gamma) > x_n\}$. Using this fact, \eqref{eq:red-low}, \eqref{eq:red-high}, and $x_n = n \eps_n^2$, we find that
+\begin{equation*}
+\begin{split}
+\E\bigl[\min(n \eps_n, r(\Gamma)); L < H \le U\bigr] &\le x_n \Pp(L < H \le U) + n \eps_n \Pp\bigl(L < H \le U, \ r(\Gamma) > x_n\bigr) \\
+&\le n \eps_n^2 + 2 n \eps_n^2.
+\end{split}
+\end{equation*}
+This is the first claim. The second claim follows from \cref{prop:red-window} with $K_0 = 3$, since $6 \Lambda/\eta^2 \ge 1$.
+\end{proof}
+
+The hypotheses of \cref{prop:red-split} are verified in the next two sections, by estimates that hold for all large $n$. In \cref{sec:low}, we prove \cref{thm:low-main}, and \cref{cor:low} gives, for all large $n$,
+\begin{equation}\label{eq:red-low-target}
+\Pp\Bigl(H < \infty, \ \min_{v \in e_H} \deg_\Gamma(v) \le D_n, \ r(\Gamma) > x_n\Bigr) \le \eps_n.
+\end{equation}
+This bound concerns final edges at all times. It implies \eqref{eq:red-low} for every $\eta \in (0, \eta_0]$, since the event in \eqref{eq:red-low} is contained in the event in \eqref{eq:red-low-target}. In \cref{sec:high}, we prove \cref{thm:high-main}, which gives, for all large $n$ and all integers $0 \le L' \le U' \le M$,
+\begin{equation}\label{eq:red-high-target}
+\Pp\Bigl(L' < H \le U', \ \min_{v \in e_H} \deg_\Gamma(v) > D_n\Bigr) \le \eps_n.
+\end{equation}
+Taking $L' = L$ and $U' = U$, we see that \eqref{eq:red-high-target} implies \eqref{eq:red-high}. The two estimates can then be combined with \cref{prop:red-split,thm:red-convergence}.

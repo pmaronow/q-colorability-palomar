@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x = 1cm, y = 1cm,
+  box/.style = {draw, rounded corners = 2pt, align = center, font = \footnotesize, inner sep = 3pt, text width = 3.6cm, minimum height = 1.15cm},
+  wide/.style = {box, text width = 4.6cm, minimum height = 1cm},
+  arr/.style = {-{Stealth[length = 2mm]}, semithick}]
+\node[box] (frozen) at (-6.1, 0) {\Cref{lem:low-frozen}\\ restriction on\\ neighbor colors};
+\node[box] (ident) at (-2.05, 0) {\Cref{prop:low-identify}\\ identification of\\ random vertices};
+\node[box] (delete) at (2.05, 0) {\Cref{lem:high-deletion},\\ \cref{prop:high-descent}\\ deleting occurrences};
+\node[box] (pot) at (6.1, 0) {\Cref{lem:high-onestep},\\ \cref{thm:high-potential}\\ growth of classes\\ of equal colors};
+\node[box] (low) at (-4.1, -2.5) {\Cref{thm:low-main}\\ final edges at low degree};
+\node[box] (high) at (4.1, -2.5) {\Cref{thm:high-main}\\ final edges at high degree};
+\node[box] (window) at (-4.1, -4.6) {\Cref{prop:red-window}\\ window and lifetime};
+\node[box] (split) at (0, -4.6) {\Cref{prop:red-split}\\ splitting by degrees};
+\node[wide] (wb) at (-2.6, -6.7) {\Cref{thm:proof-window}\\ bound on the window};
+\node[wide] (conv) at (3.4, -6.7) {\Cref{thm:red-convergence} (\cref{app:conv})\\ convergence of the threshold};
+\node[wide] (main) at (0.4, -8.7) {\Cref{thm:intro-main,thm:intro-window}};
+\draw[arr] (frozen) -- (low);
+\draw[arr] (ident) -- (low);
+\draw[arr] (delete) -- (high);
+\draw[arr] (pot) -- (high);
+\draw[arr] (low) -- (split);
+\draw[arr] (high) -- (split);
+\draw[arr] (window) -- (split);
+\draw[arr] (split) -- (wb);
+\draw[arr] (wb) -- (main);
+\draw[arr] (conv) -- (main);
+\end{tikzpicture}

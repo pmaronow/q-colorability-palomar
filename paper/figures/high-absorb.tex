@@ -1,0 +1,40 @@
+\begin{tikzpicture}[x = 0.95cm, y = 0.95cm,
+  vtx/.style = {circle, fill = black, inner sep = 1.3pt},
+  rel/.style = {densely dotted, very thick},
+  virt/.style = {dashed, thick},
+  act/.style = {line width = 1.4pt},
+  hull/.style = {gray, dash pattern = on 2pt off 2pt, rounded corners = 9pt},
+  lab/.style = {font = \small}]
+\begin{scope}
+  \draw[hull] (-1.25, 1.75) -- (0.95, 1.75) -- (4.25, -0.05) -- (4.25, -2.0) -- (-1.25, -2.0) -- cycle;
+  \draw[thick] (0, 0) ellipse (0.85 and 1.3);
+  \node[vtx, label = {[lab]left:$u$}] (u) at (0, 0.55) {};
+  \node[vtx] at (-0.3, -0.35) {};
+  \node[vtx] at (0.3, -0.75) {};
+  \node[lab] at (0, -1.6) {$C_G(u)$};
+  \node[vtx, label = {[lab]above:$y$}] (y) at (2.75, 1.45) {};
+  \node[vtx, label = {[lab]below:$a$}] (a) at (2.05, -0.65) {};
+  \node[vtx, label = {[lab]below:$b$}] (b) at (3.55, -0.65) {};
+  \draw[virt] (u) -- (y);
+  \draw[rel] (y) -- (a);
+  \draw[rel] (y) -- (b);
+  \draw[act] (a) -- (b);
+  \node[lab, gray] at (2.85, -1.6) {$C_{G + uy}(u)$};
+  \node[lab] at (1.5, -2.45) {direct case};
+\end{scope}
+\begin{scope}[xshift = 6.6cm]
+  \draw[hull] (-1.25, 1.75) -- (0.95, 1.75) -- (3.45, 0.15) -- (3.45, -2.0) -- (-1.25, -2.0) -- cycle;
+  \draw[thick] (0, 0) ellipse (0.85 and 1.3);
+  \node[vtx, label = {[lab]left:$u$}] (u) at (0, 0.55) {};
+  \node[vtx, label = {[lab]left:$a$}] (a) at (0.2, -0.65) {};
+  \node[vtx] at (-0.4, -0.15) {};
+  \node[lab] at (0, -1.6) {$C_G(u)$};
+  \node[vtx, label = {[lab]above:$y$}] (y) at (2.6, 1.45) {};
+  \node[vtx, label = {[lab]below:$b$}] (b) at (2.55, -0.65) {};
+  \draw[virt] (u) -- (y);
+  \draw[rel] (y) -- (b);
+  \draw[act] (a) -- (b);
+  \node[lab, gray] at (2.2, -1.6) {$C_{G + uy}(u)$};
+  \node[lab] at (1.1, -2.45) {cross case};
+\end{scope}
+\end{tikzpicture}
