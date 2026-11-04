@@ -1,4 +1,8 @@
-import ThLean.W.SA27S.SignedWeights
+module
+
+public import ThLean.W.SA27S.SignedWeights
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

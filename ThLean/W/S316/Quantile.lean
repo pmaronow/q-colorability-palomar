@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Process
-import ThLean.Defs.Sanity
+module
+
+public import ThLean.BP.S3.Process
+public import ThLean.Defs.Sanity
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

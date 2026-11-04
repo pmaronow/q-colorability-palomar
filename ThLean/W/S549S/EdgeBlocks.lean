@@ -1,4 +1,8 @@
-import ThLean.W.S549S.ProductMean
+module
+
+public import ThLean.W.S549S.ProductMean
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

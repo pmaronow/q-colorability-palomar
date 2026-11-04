@@ -1,7 +1,11 @@
-import ThLean.W.S340S.Partition
-import ThLean.W.S302.S3_03a
-import ThLean.W.S332.PoissonMass
-import ThLean.W.S341.PoissonZero
+module
+
+public import ThLean.W.S340S.Partition
+public import ThLean.W.S302.S3_03a
+public import ThLean.W.S332.PoissonMass
+public import ThLean.W.S341.PoissonZero
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

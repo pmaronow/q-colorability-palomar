@@ -1,7 +1,11 @@
-import ThLean.W.S370S.Shared
-import ThLean.W.S370S.Joined
-import ThLean.W.S370S.DecodeShared
-import ThLean.W.S370S.DecodeJoined
+module
+
+public import ThLean.W.S370S.Shared
+public import ThLean.W.S370S.Joined
+public import ThLean.W.S370S.DecodeShared
+public import ThLean.W.S370S.DecodeJoined
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

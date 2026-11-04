@@ -1,4 +1,8 @@
-import ThLean.W.S364S.WalkConnector
+module
+
+public import ThLean.W.S364S.WalkConnector
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

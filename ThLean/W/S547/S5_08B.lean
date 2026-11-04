@@ -1,4 +1,8 @@
-import ThLean.W.S547.S5_08BHelpers
+module
+
+public import ThLean.W.S547.S5_08BHelpers
+
+@[expose] public section
 
 set_option maxHeartbeats 600000
 

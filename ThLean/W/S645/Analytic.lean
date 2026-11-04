@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Analytic
+module
+
+public import ThLean.BP.S6.Analytic
+
+@[expose] public section
 
 noncomputable section
 

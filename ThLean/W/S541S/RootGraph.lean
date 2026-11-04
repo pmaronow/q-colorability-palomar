@@ -1,5 +1,9 @@
-import ThLean.W.S541S.Probability
-import ThLean.W.S560.S5_01A
+module
+
+public import ThLean.W.S541S.Probability
+public import ThLean.W.S560.S5_01A
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

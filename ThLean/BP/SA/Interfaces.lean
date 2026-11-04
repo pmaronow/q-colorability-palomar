@@ -1,5 +1,10 @@
-import ThLean.BP.SA.Convergence
-import ThLean.BP.SA.Alternatives
+module
+
+public import ThLean.BP.SA.Convergence
+public import ThLean.BP.SA.Alternatives
+
+@[expose] public section
+
 noncomputable section
 open Filter
 open scoped BigOperators Topology ENNReal

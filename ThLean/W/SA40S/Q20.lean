@@ -1,4 +1,8 @@
-import ThLean.W.SA40S.FiniteSampling
+module
+
+public import ThLean.W.SA40S.FiniteSampling
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

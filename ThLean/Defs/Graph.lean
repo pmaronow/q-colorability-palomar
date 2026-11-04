@@ -1,4 +1,8 @@
-import ThLean.Defs.Probability
+module
+
+public import ThLean.Defs.Probability
+
+@[expose] public section
 
 noncomputable section
 open Filter

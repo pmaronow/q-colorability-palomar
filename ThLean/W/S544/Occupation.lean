@@ -1,4 +1,8 @@
-import ThLean.Contrib.S544.Occupation
+module
+
+public import ThLean.Contrib.S544.Occupation
+
+@[expose] public section
 
 noncomputable section
 set_option maxHeartbeats 1000000

@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Credit
+module
+
+public import ThLean.BP.S6.Credit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

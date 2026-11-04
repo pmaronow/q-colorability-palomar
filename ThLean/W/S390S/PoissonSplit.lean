@@ -1,5 +1,9 @@
-import ThLean.W.S390S.Atoms
-import ThLean.W.S390S.Lists
+module
+
+public import ThLean.W.S390S.Atoms
+public import ThLean.W.S390S.Lists
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

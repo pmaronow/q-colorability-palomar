@@ -1,5 +1,9 @@
-import ThLean.W.S340S.Words
-import ThLean.W.S340S.Masses
+module
+
+public import ThLean.W.S340S.Words
+public import ThLean.W.S340S.Masses
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

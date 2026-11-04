@@ -1,5 +1,9 @@
-import ThLean.W.S523S.Kernels
-import ThLean.W.S523S.GraphSplit
+module
+
+public import ThLean.W.S523S.Kernels
+public import ThLean.W.S523S.GraphSplit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology

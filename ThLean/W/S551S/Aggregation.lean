@@ -1,4 +1,8 @@
-import ThLean.W.S551S.Series
+module
+
+public import ThLean.W.S551S.Series
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

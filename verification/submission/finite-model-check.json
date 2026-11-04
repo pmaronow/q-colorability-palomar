@@ -1,0 +1,62 @@
+{
+  "scope": "Small finite-model sanity checks; not an asymptotic proof or Lean check",
+  "cases": [
+    {
+      "n": 3,
+      "q": 2,
+      "prefix_length": 7,
+      "sequences": 2187,
+      "window_checks": 85,
+      "bernoulli_probability_checks": 5,
+      "survival": [
+        "1",
+        "1",
+        "1",
+        "7/9",
+        "5/9",
+        "31/81",
+        "7/27",
+        "127/729"
+      ],
+      "hitting_mass": [
+        "0",
+        "0",
+        "2/9",
+        "2/9",
+        "14/81",
+        "10/81",
+        "62/729"
+      ],
+      "status": "PASS"
+    },
+    {
+      "n": 4,
+      "q": 3,
+      "prefix_length": 7,
+      "sequences": 279936,
+      "window_checks": 85,
+      "bernoulli_probability_checks": 5,
+      "survival": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "319/324",
+        "613/648"
+      ],
+      "hitting_mass": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/324",
+        "25/648"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

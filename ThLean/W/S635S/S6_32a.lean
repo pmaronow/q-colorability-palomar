@@ -1,4 +1,8 @@
-import ThLean.W.S635S.Finite
+module
+
+public import ThLean.W.S635S.Finite
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

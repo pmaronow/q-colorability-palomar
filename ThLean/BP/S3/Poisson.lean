@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Terminal
-import ThLean.BP.S3.Lifetime
+module
+
+public import ThLean.BP.S3.Terminal
+public import ThLean.BP.S3.Lifetime
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

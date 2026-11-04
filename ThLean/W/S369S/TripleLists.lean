@@ -1,4 +1,8 @@
-import ThLean.W.S369S.ListGraph
+module
+
+public import ThLean.W.S369S.ListGraph
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

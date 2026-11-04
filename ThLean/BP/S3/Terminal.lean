@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Graph
-import ThLean.BP.S3.Process
+module
+
+public import ThLean.BP.S3.Graph
+public import ThLean.BP.S3.Process
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

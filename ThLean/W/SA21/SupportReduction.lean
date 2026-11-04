@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Interpolation
-import Mathlib.Logic.Equiv.Fin.Basic
+module
+
+public import ThLean.BP.SA.Interpolation
+public import Mathlib.Logic.Equiv.Fin.Basic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology

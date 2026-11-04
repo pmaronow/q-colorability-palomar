@@ -1,4 +1,8 @@
-import ThLean.W.S390S.Discrete
+module
+
+public import ThLean.W.S390S.Discrete
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

@@ -1,4 +1,8 @@
-import ThLean.W.S422.TerminalHelpers
+module
+
+public import ThLean.W.S422.TerminalHelpers
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

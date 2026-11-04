@@ -1,8 +1,12 @@
-import ThLean.W.S340S.Atoms
-import ThLean.W.S333.S3_32
-import ThLean.W.S334.Shuffle
-import ThLean.W.S335.PoissonSplit
-import ThLean.W.S336.PoissonSplit
+module
+
+public import ThLean.W.S340S.Atoms
+public import ThLean.W.S333.S3_32
+public import ThLean.W.S334.Shuffle
+public import ThLean.W.S335.PoissonSplit
+public import ThLean.W.S336.PoissonSplit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

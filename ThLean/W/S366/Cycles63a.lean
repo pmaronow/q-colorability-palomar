@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Cycles
+module
+
+public import ThLean.BP.S3.Cycles
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

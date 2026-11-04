@@ -1,4 +1,8 @@
-import ThLean.BP.SA.Convergence
+module
+
+public import ThLean.BP.SA.Convergence
+
+@[expose] public section
 
 noncomputable section
 open Filter

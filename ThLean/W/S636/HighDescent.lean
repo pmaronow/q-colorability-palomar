@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Descent
+module
+
+public import ThLean.BP.S6.Descent
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators
@@ -378,4 +382,3 @@ theorem S6_32bStatement_of_deps (h01 : S6_01aStatement) (h03 : S6_03Statement)
           exact (h01 (Hist n m)).smul 2 (fun x => kappaDegree q j (tupleGraph x))
 
 end ThLean.W.S636
-

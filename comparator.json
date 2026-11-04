@@ -9,16 +9,5 @@
     "propext",
     "Quot.sound",
     "Classical.choice"
-  ],
-  "external_kernels": {
-    "con-ron": [
-      "con-ron",
-      "--verified",
-      "--jobs=8",
-      "--progress=50000"
-    ],
-    "nanoda": [
-      "nanoda_bin"
-    ]
-  }
+  ]
 }

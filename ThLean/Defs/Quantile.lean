@@ -1,4 +1,8 @@
-import ThLean.Defs.Process
+module
+
+public import ThLean.Defs.Process
+
+@[expose] public section
 
 noncomputable section
 open Filter

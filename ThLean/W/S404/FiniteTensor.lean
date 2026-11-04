@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Finite
+module
+
+public import ThLean.BP.S4.Finite
+
+@[expose] public section
 
 set_option maxHeartbeats 800000
 

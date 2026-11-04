@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Foundation
+module
+
+public import ThLean.BP.S6.Foundation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

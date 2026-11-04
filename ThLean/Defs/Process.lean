@@ -1,4 +1,8 @@
-import ThLean.Defs.High
+module
+
+public import ThLean.Defs.High
+
+@[expose] public section
 
 noncomputable section
 open Filter

@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Poisson
+module
+
+public import ThLean.BP.S3.Poisson
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

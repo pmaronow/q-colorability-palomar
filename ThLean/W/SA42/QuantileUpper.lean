@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Quantiles
-import ThLean.BP.SA.Basics
+module
+
+public import ThLean.BP.SA.Quantiles
+public import ThLean.BP.SA.Basics
+
+@[expose] public section
 
 noncomputable section
 open Filter

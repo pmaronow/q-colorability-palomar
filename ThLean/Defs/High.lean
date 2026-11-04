@@ -1,4 +1,8 @@
-import ThLean.Defs.Frozen
+module
+
+public import ThLean.Defs.Frozen
+
+@[expose] public section
 
 noncomputable section
 open Filter

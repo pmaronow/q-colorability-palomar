@@ -1,4 +1,8 @@
-import ThLean.W.S369S.TripleLists
+module
+
+public import ThLean.W.S369S.TripleLists
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

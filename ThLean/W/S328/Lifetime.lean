@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Lifetime
+module
+
+public import ThLean.BP.S3.Lifetime
+
+@[expose] public section
 
 /-! P1-26 follows from the exponential survival tail and its summation bound. -/
 

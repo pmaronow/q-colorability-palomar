@@ -1,4 +1,8 @@
-import ThLean.Defs.Bridge
+module
+
+public import ThLean.Defs.Bridge
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import ThLean.W.BR01.PairBridge
+module
+
+public import ThLean.W.BR01.PairBridge
+
+@[expose] public section
 
 namespace ThLean.W.BR01S
 

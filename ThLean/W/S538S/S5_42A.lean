@@ -1,4 +1,8 @@
-import ThLean.W.S538S.TerminalBound
+module
+
+public import ThLean.W.S538S.TerminalBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

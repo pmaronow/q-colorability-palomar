@@ -1,34 +1,34 @@
 # q-colorability threshold: Lean formalization (Palomar package)
 
-Lean 4 formalization of the two headline theorems of P. M. Aronow and Patrick Lopatto, *Existence of the
-q-Colorability Threshold for Sparse Random Graphs*. The Lean statement was written from the frozen draft of
-2026-10-27. Theorems 1.1 and 1.2 of the manuscript included below have the same mathematical content; that version
-writes ε for η, says explicitly that c and d are fixed reals ≥ 0, and explicitly takes n₀ to be an integer with
-n₀ ≥ 2q (`Challenge.lean` requires n₀ ≥ max 3 (2q)):
+Lean 4 formalization of the two headline theorems of P. M. Aronow and Patrick Lopatto,
+*Existence of the q-Colorability Threshold for Sparse Random Graphs*:
 
-- **Theorem 1.1.** For every integer q ≥ 3 there is α_q ∈ [1/2, γ_q], γ_q = log q / log(q/(q−1)), such that
-  P(G(n, ⌊cn⌋) is q-colorable) → 1 for 0 ≤ c < α_q and → 0 for c > α_q, and
-  P(G(n, d/n) is q-colorable) → 1 for 0 ≤ d < 2α_q and → 0 for d > 2α_q.
-- **Theorem 1.2.** For the same α_q and every η ∈ (0, 1) there are C > 0, n₀ and integers m_n with m_n / n → α_q
-  such that, for n ≥ n₀, the hitting time H of non-q-colorability in the multigraph edge process satisfies
-  |H − m_n| ≤ C n (log n)^{−3/2} with probability at least 1 − η.
+- **Theorem 1.1.** For every integer q ≥ 3 there is α_q ∈ [1/2, γ_q], where
+  γ_q = log q / log(q/(q−1)), such that P(G(n, ⌊cn⌋) is q-colorable) tends to 1
+  for fixed 0 ≤ c < α_q and to 0 for fixed c > α_q. Likewise,
+  P(G(n, d/n) is q-colorable) tends to 1 for fixed 0 ≤ d < 2α_q and to 0
+  for fixed d > 2α_q.
+- **Theorem 1.2.** For the same α_q and every η ∈ (0, 1), there are C > 0,
+  an integer n₀ ≥ 2q, and integers m_n with m_n/n → α_q such that, for n ≥ n₀,
+  the first loss H of q-colorability in the multigraph edge process satisfies
+  |H − m_n| ≤ C n (log n)^(−3/2) with probability at least 1 − η.
 
-The edge process draws independent uniform unordered pairs of distinct vertices
-with replacement, retaining repeated edge occurrences. The binomial model
-G(n, d/n) is interpreted for positive integers n and 0 ≤ d ≤ n; for each fixed
-d ≥ 0, this condition holds for all sufficiently large n.
+The edge process samples independent uniform unordered pairs of distinct vertices
+with replacement and retains repeated edge occurrences. G(n, d/n) has its usual
+probability interpretation for positive n and 0 ≤ d ≤ n; for each fixed d ≥ 0,
+this holds for all sufficiently large n. No conclusion is asserted at the threshold.
 
-Both are the single statement `ThresholdChallenge.MainStatement` in `Challenge.lean` (Mathlib only, 125 lines).
-`Solution.lean` supplies `ThresholdChallenge.main` with no `sorry`. After the
-source cleanup, a clean rebuild compiled all 444 project modules. The Comparator
-accepted the proof with con-ron `--verified`, NanoDa, and Lean's default kernel,
-using only `propext`, `Quot.sound`, and `Classical.choice`. The records are in
-`verification/rebuild/` and `verification/comparator/` (see `verification/README.md`).
+`ThresholdChallenge.MainStatement` in `Challenge.lean` combines both results under
+one existential threshold. `Solution.lean` supplies the closed theorem
+`ThresholdChallenge.main`. The Challenge imports only Mathlib. The Solution's
+442-file local import closure excludes the Challenge's deliberate theorem placeholder.
+The permitted axioms are exactly `propext`, `Quot.sound`, and `Classical.choice`;
+there are no definition holes.
 
-## Manuscript
+## Manuscript and fidelity
 
 [Read the manuscript (PDF)](Aronow_Lopatto_colorability_threshold.pdf).
-The [LaTeX sources](paper/) include all figures, the bibliography, and the local style file.
+The [LaTeX sources](paper/) include the figures, bibliography, and local style file.
 To regenerate the PDF with a standard TeX installation:
 
 ```bash
@@ -36,49 +36,74 @@ cd paper
 latexmk -pdf -outdir=build main.tex
 ```
 
-The formalization targets the two headline theorems above. The manuscript also
-contains explanatory remarks and discussion of related work.
+The Lean statement was written from the frozen draft of 2026-10-27. The included
+manuscript has the same headline statements. Its ε is the Challenge's η, and
+`n₀ ≥ max 3 (2q)` is equivalent to `n₀ ≥ 2q` for q ≥ 3.
+The formalization covers these two theorems, rather than every remark and
+literature statement in the manuscript.
 
-## Release
+[The fidelity audit](verification/submission/fidelity.md) records the comparison
+of models, quantifiers, probability normalizations, hitting-time indexing, and
+window rounding. `scripts/check_finite_models.py` supplies independent exact
+finite-model sanity checks. These checks supplement the Lean proofs.
 
-`Challenge.lean` is the verbatim frozen 125-line headline challenge, with SHA-256
-`037fe846ca2426d2d0f87527ce9618ce6a510099013691f8cd5c649093294856`.
+All 444 project Lean files use the module system. The submission port adds public
+imports, exposed public declarations, and four explanatory definition docstrings;
+`scripts/audit_submission.py` checks that every mathematical token agrees with the
+original package after removing only the port syntax and comments. The Challenge
+and its definitions-only companion are textually identical after removing the
+final theorem and its docstring. Comparator also checks their compiled declarations.
 
-`Solution.lean` imports the definitions-only companion through the project Bridge
-and ends with:
+## Reproduce verification
 
-```lean
-theorem ThresholdChallenge.main : ThresholdChallenge.MainStatement := ThLean.Final.main
-```
-
-The recorded comparison found that all 19 compiled companion declarations,
-including generated helpers, have exactly the same names, universe parameters,
-types, and values as the frozen definitions. Both source files are unchanged.
-The Solution's 442-module local import closure excludes the frozen theorem stub.
-The permitted axioms in `comparator.json` are exactly `propext`, `Quot.sound`, and `Classical.choice`.
-The definition-exemption list is empty.
-
-Reproduce with the pinned Lean toolchain and dependency manifest:
+Use the committed `lean-toolchain` and `lake-manifest.json`:
 
 ```bash
 lake exe cache get
-lake build
-python3 scripts/run_comparator.py --package . --report verification --label comparator
+lake --no-cache build
+python3 scripts/audit_submission.py
+python3 scripts/check_finite_models.py
+python3 scripts/run_comparator.py --package . --report verification --label local-check
 sha256sum -c verification/release-source.sha256
 ```
 
-The runner writes its records and exports under `verification/comparator/`,
-exports the Challenge and Solution, and invokes `lake comparator` with its
-sandbox enabled. The requested kernels are `con-ron --verified`, NanoDa, and
-Lean's default kernel (`leanchecker`). Success requires all three acceptance
-markers and `Your solution is okay!`.
+Choose a fresh report label for each run. The runner requires the selected Lean
+toolchain's `leanexport`, `leanchecker`, and `nanoda_bin`; it also runs con-ron in
+verified mode when available. `--con-ron /path/to/con-ron` selects an explicit
+checker. Palomar currently specifies a newer con-ron binary for this Lean release
+in its [checker revisions](https://github.com/PalomarRegistry/PalomarSubmission/blob/main/checker-revisions.json).
+The checked-in current report records the actual tool paths and binary hashes.
 
-`verification/rebuild/` and `verification/comparator/` record the clean rebuild and
-Comparator run of this release. `verification/package-audit.json` records the
-original release's source hashes, dependency revisions, and static import closure.
-The static source checks and cleanup inventory are in `verification/source-audit.json`.
-`verification/release-source.sha256` covers all 444 `.lean` files of the package and the four
-toolchain, dependency, build, and Comparator configuration files.
+The submitted `comparator.json` uses Palomar's restricted schema. The local runner
+adds checker commands only to a temporary execution configuration. Its export
+files are omitted from Git; their sizes and hashes remain in the result record.
+This local reproduction is separate from Palomar's protected verification workflow.
+See [verification records and their scope](verification/README.md).
+For the official static validators, install the requirements of a checkout of
+[PalomarSubmission](https://github.com/PalomarRegistry/PalomarSubmission) and run:
+
+```bash
+python3 scripts/check_palomar.py --palomar-submission /path/to/PalomarSubmission \
+  --licensee-bundle /path/to/bundle --json-output verification/local-static.json
+```
+
+The Bundler executable must have PalomarSubmission's locked Licensee dependencies
+installed; this enables the exact SPDX licence detector as well as the source,
+configuration, dependency, and metadata checks.
+
+## Submission inputs
+
+Use repository `pmaronow/q-colorability-palomar`, the full 40-character SHA of the
+prepared commit, configuration path `comparator.json`, and metadata path
+`formalization.yaml`. Leave the project directory blank for the repository root.
+The repository must be public before Palomar can read it; this preparation does
+not change its visibility.
+
+`formalization.yaml` records the author-confirmed human authors and responsible
+maintainers, P. M. Aronow and Patrick Lopatto, and material AI tools Opus 5.5,
+Luna 6, and GPT Sol 6.1. Source and release history are retained in
+`provenance.json`. Original frozen-source hashes and earlier verification records
+remain historical evidence, rather than claims about unchanged current bytes.
 
 ## Licence
 
@@ -86,6 +111,5 @@ The original project Lean sources and scripts are licensed under the
 [MIT License](LICENSE), copyright (c) 2026 P. M. Aronow and Patrick Lopatto.
 Third-party material and dependencies retain the licences and attributions
 listed in [NOTICE](NOTICE). This grant does not cover the manuscript PDF or
-LaTeX sources.
-The [donor-source audit](verification/donor-audit.json) records the comparison
-scope, matching helper patterns, source locations, and limits of the review.
+LaTeX sources. The [donor-source audit](verification/donor-audit.json) records
+comparison scope, credited helper patterns, source locations, and limits of review.

@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Poisson
-import ThLean.Contrib.S559.Hazard
+module
+
+public import ThLean.BP.S5.Poisson
+public import ThLean.Contrib.S559.Hazard
+
+@[expose] public section
 
 noncomputable section
 open Filter

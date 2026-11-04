@@ -1,4 +1,8 @@
-import ThLean.Final.Imports
+module
+
+public import ThLean.Final.Imports
+
+@[expose] public section
 
 /-! Explicit assembly of `ThresholdChallenge.MainStatement` from the integrated theorems
 (generated from the composition rules; every step is checked by Lean). -/
@@ -350,4 +354,3 @@ theorem p340 : ThresholdChallenge.MainStatement := p339 p5 p32 p86 p197 p251 p25
 theorem main : ThresholdChallenge.MainStatement := p340
 
 end ThLean.Final
-

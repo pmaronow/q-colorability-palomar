@@ -1,4 +1,8 @@
-import ThLean.W.S541S.RootGraph
+module
+
+public import ThLean.W.S541S.RootGraph
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

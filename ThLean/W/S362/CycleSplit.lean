@@ -1,4 +1,8 @@
-import ThLean.W.S362.CycleArcs
+module
+
+public import ThLean.W.S362.CycleArcs
+
+@[expose] public section
 
 noncomputable section
 namespace ThLean.W.S362

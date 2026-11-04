@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Completion
+module
+
+public import ThLean.BP.S5.Completion
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

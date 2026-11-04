@@ -1,5 +1,9 @@
-import ThLean.W.S523S.Aggregation
-import ThLean.W.S523S.Measurability
+module
+
+public import ThLean.W.S523S.Aggregation
+public import ThLean.W.S523S.Measurability
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

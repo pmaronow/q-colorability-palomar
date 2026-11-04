@@ -1,5 +1,9 @@
-import ThLean.BP.S4.Objects
-import ThLean.BP.S4.Finite
+module
+
+public import ThLean.BP.S4.Objects
+public import ThLean.BP.S4.Finite
+
+@[expose] public section
 
 /-!
 The finite-average helpers `mean_mul_left`

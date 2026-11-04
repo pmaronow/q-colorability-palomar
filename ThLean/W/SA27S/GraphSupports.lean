@@ -1,4 +1,8 @@
-import ThLean.W.SA27S.TripleWeights
+module
+
+public import ThLean.W.SA27S.TripleWeights
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

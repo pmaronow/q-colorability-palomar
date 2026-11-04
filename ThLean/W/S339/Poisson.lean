@@ -1,6 +1,10 @@
-import ThLean.BP.S3.Support
-import ThLean.BP.S3.Poisson
-import ThLean.W.S339.ListMean
+module
+
+public import ThLean.BP.S3.Support
+public import ThLean.BP.S3.Poisson
+public import ThLean.W.S339.ListMean
+
+@[expose] public section
 
 noncomputable section
 open Filter

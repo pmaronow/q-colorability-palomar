@@ -1,6 +1,10 @@
-import ThLean.W.S370S.CodeLists
-import ThLean.W.S370S.Sizing
-import ThLean.W.S362.CycleIndex
+module
+
+public import ThLean.W.S370S.CodeLists
+public import ThLean.W.S370S.Sizing
+public import ThLean.W.S362.CycleIndex
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

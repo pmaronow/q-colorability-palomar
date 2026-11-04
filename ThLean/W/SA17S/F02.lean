@@ -1,8 +1,12 @@
-import ThLean.BP.SA.Basics
-import ThLean.W.S309.Process
-import ThLean.W.S310.S3_04a
-import ThLean.W.S312.Process
-import ThLean.W.S314.Quantile
+module
+
+public import ThLean.BP.SA.Basics
+public import ThLean.W.S309.Process
+public import ThLean.W.S310.S3_04a
+public import ThLean.W.S312.Process
+public import ThLean.W.S314.Quantile
+
+@[expose] public section
 
 noncomputable section
 

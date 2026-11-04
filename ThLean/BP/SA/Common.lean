@@ -1,4 +1,9 @@
-import ThLean.Defs
+module
+
+public import ThLean.Defs
+
+@[expose] public section
+
 noncomputable section
 open Filter
 open scoped BigOperators Topology ENNReal

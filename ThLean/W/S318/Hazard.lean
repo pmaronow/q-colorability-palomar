@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Terminal
+module
+
+public import ThLean.BP.S3.Terminal
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMeanENN_congr`

@@ -1,4 +1,8 @@
-import ThLean.W.SA28S.Coefficients
+module
+
+public import ThLean.W.SA28S.Coefficients
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

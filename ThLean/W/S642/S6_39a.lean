@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Descent
+module
+
+public import ThLean.BP.S6.Descent
+
+@[expose] public section
 
 open scoped BigOperators
 

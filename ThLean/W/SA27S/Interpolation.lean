@@ -1,6 +1,10 @@
-import ThLean.W.SA27S.TripleSeries
-import ThLean.W.SA27S.GraphSupports
-import ThLean.W.SA27.Interpolation
+module
+
+public import ThLean.W.SA27S.TripleSeries
+public import ThLean.W.SA27S.GraphSupports
+public import ThLean.W.SA27.Interpolation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import ThLean.W.S303.Graph
+module
+
+public import ThLean.W.S303.Graph
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

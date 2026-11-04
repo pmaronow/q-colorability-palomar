@@ -1,5 +1,9 @@
-import ThLean.W.S549S.EdgeBlocks
-import ThLean.W.S549.PoissonSplit
+module
+
+public import ThLean.W.S549S.EdgeBlocks
+public import ThLean.W.S549.PoissonSplit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology

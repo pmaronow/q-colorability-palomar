@@ -1,5 +1,9 @@
-import ThLean.W.S523S.Kernels
-import ThLean.W.S523S.Measurability
+module
+
+public import ThLean.W.S523S.Kernels
+public import ThLean.W.S523S.Measurability
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_add`, `uniformMean_comm`

@@ -1,4 +1,8 @@
-import ThLean.BP.SA.Transfer
+module
+
+public import ThLean.BP.SA.Transfer
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

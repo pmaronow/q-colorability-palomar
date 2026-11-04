@@ -1,4 +1,8 @@
-import ThLean.W.S541S.RootKernel
+module
+
+public import ThLean.W.S541S.RootKernel
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

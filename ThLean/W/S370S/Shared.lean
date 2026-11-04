@@ -1,6 +1,10 @@
-import ThLean.W.S370S.CodeLists
-import ThLean.W.S370S.Realize
-import ThLean.W.S370S.Sizing
+module
+
+public import ThLean.W.S370S.CodeLists
+public import ThLean.W.S370S.Realize
+public import ThLean.W.S370S.Sizing
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

@@ -1,4 +1,8 @@
-import ThLean.W.S539.S5_30_Prelim
+module
+
+public import ThLean.W.S539.S5_30_Prelim
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

@@ -1,5 +1,9 @@
-import ThLean.W.S538S.FiniteMean
-import ThLean.W.S553.S5_11
+module
+
+public import ThLean.W.S538S.FiniteMean
+public import ThLean.W.S553.S5_11
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

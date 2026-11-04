@@ -1,7 +1,12 @@
-import ThLean.BP.SA.Basics
-import ThLean.BP.SA.Quantiles
-import ThLean.BP.SA.Tree
-import ThLean.BP.SA.Transfer
+module
+
+public import ThLean.BP.SA.Basics
+public import ThLean.BP.SA.Quantiles
+public import ThLean.BP.SA.Tree
+public import ThLean.BP.SA.Transfer
+
+@[expose] public section
+
 noncomputable section
 open Filter
 open scoped BigOperators Topology ENNReal

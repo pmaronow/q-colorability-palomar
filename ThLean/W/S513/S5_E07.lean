@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Elementary
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+module
+
+public import ThLean.BP.S5.Elementary
+public import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory Set

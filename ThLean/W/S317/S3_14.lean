@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Terminal
+module
+
+public import ThLean.BP.S3.Terminal
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

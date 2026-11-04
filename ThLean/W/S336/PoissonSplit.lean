@@ -1,4 +1,8 @@
-import ThLean.W.S336.ListSums
+module
+
+public import ThLean.W.S336.ListSums
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

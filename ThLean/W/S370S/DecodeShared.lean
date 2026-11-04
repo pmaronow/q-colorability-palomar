@@ -1,4 +1,8 @@
-import ThLean.W.S370S.DecodeLists
+module
+
+public import ThLean.W.S370S.DecodeLists
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Lifetime
+module
+
+public import ThLean.BP.S3.Lifetime
+
+@[expose] public section
 
 namespace ThLean.W.S331
 

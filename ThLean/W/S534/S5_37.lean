@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Main
+module
+
+public import ThLean.BP.S5.Main
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Interpolation
-import Mathlib.Algebra.MvPolynomial.Coeff
+module
+
+public import ThLean.BP.SA.Interpolation
+public import Mathlib.Algebra.MvPolynomial.Coeff
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

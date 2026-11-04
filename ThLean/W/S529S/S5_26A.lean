@@ -1,5 +1,9 @@
-import ThLean.W.S529S.Averages
-import ThLean.W.S529.S5_26A
+module
+
+public import ThLean.W.S529S.Averages
+public import ThLean.W.S529.S5_26A
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

@@ -1,8 +1,12 @@
-import ThLean.BP.S3.Exports
-import ThLean.W.S309.Process
-import ThLean.W.S381.Adapters
-import ThLean.W.S302.S3_03a
-import ThLean.W.S422.TerminalHelpers
+module
+
+public import ThLean.BP.S3.Exports
+public import ThLean.W.S309.Process
+public import ThLean.W.S381.Adapters
+public import ThLean.W.S302.S3_03a
+public import ThLean.W.S422.TerminalHelpers
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

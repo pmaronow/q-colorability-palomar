@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Graph
+module
+
+public import ThLean.BP.S3.Graph
+
+@[expose] public section
 
 noncomputable section
 

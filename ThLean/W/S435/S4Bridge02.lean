@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Bridges
+module
+
+public import ThLean.BP.S4.Bridges
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

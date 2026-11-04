@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Elementary
+module
+
+public import ThLean.BP.S5.Elementary
+
+@[expose] public section
 
 set_option maxHeartbeats 1000000
 

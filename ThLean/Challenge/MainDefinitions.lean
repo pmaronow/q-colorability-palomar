@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 The two headline statements of Aronow--Lopatto, frozen draft 2026-10-27.
@@ -20,10 +24,12 @@ def completeEdges (n : ℕ) : Finset (Sym2 (Fin n)) :=
 /-- One unordered pair of distinct vertices. -/
 abbrev Pair (n : ℕ) := {e : Sym2 (Fin n) // e ∈ completeEdges n}
 
+/-- Existence of a vertex map to `Fin q` separating the endpoints of every edge in `E`. -/
 def Colorable (q n : ℕ) (E : Finset (Sym2 (Fin n))) : Prop :=
   ∃ σ : Fin n → Fin q,
     ∀ u v : Fin n, s(u, v) ∈ E → σ u ≠ σ v
 
+/-- All simple loopless graphs on `Fin n` with exactly `m` edges, represented by edge sets. -/
 def graphsWithEdges (n m : ℕ) : Finset (Finset (Sym2 (Fin n))) :=
   (completeEdges n).powerset.filter (fun E => E.card = m)
 
@@ -55,6 +61,8 @@ abbrev EdgePrefix (n m : ℕ) := Fin m → Pair n
 def prefixMultigraph {n m : ℕ} (x : EdgePrefix n m) : Multiset (Pair n) :=
   (List.ofFn x : Multiset (Pair n))
 
+/-- Existence of a `q`-coloring separating the endpoints of every occurrence in `G`.
+Repeated occurrences impose the same coloring constraint. -/
 def MultigraphColorable (q : ℕ) {n : ℕ} (G : Multiset (Pair n)) : Prop :=
   ∃ σ : Fin n → Fin q,
     ∀ e ∈ G, ∀ u v : Fin n, e.val = s(u, v) → σ u ≠ σ v
@@ -82,6 +90,8 @@ def hittingWindowProbability (q n : ℕ) (a : ℤ) (w : ℝ) : ℝ :=
   ∑ k ∈ Finset.range (Nat.floor ((a : ℝ) + w)),
     if |((k + 1 : ℕ) : ℝ) - (a : ℝ)| ≤ w then hittingMass q n k else 0
 
+/-- The first-moment upper bound on the threshold in edges per vertex:
+`log q / log (q / (q - 1))`, with natural logarithms; used for `q ≥ 3`. -/
 def gamma (q : ℕ) : ℝ :=
   Real.log (q : ℝ) / Real.log ((q : ℝ) / ((q : ℝ) - 1))
 

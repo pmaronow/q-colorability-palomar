@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Identification
+module
+
+public import ThLean.BP.S5.Identification
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

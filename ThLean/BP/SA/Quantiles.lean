@@ -1,4 +1,9 @@
-import ThLean.BP.SA.Interpolation
+module
+
+public import ThLean.BP.SA.Interpolation
+
+@[expose] public section
+
 noncomputable section
 open Filter
 open scoped BigOperators Topology ENNReal

@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Quantiles
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import ThLean.BP.SA.Quantiles
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 noncomputable section
 

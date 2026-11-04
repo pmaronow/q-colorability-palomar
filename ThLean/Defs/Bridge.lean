@@ -1,5 +1,9 @@
-import ThLean.Defs.Interface
-import ThLean.Challenge.MainDefinitions
+module
+
+public import ThLean.Defs.Interface
+public import ThLean.Challenge.MainDefinitions
+
+@[expose] public section
 
 /-! Representation obligations B00--B21 from P0. No declaration below uses
 ThresholdChallenge.main; these are statements for later proof writers. -/

@@ -1,5 +1,9 @@
-import ThLean.W.SA20.Interpolation
-import ThLean.W.SA20S.Histogram
+module
+
+public import ThLean.W.SA20.Interpolation
+public import ThLean.W.SA20S.Histogram
+
+@[expose] public section
 
 noncomputable section
 

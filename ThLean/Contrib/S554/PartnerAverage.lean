@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Poisson
+module
+
+public import ThLean.BP.S5.Poisson
+
+@[expose] public section
 
 noncomputable section
 

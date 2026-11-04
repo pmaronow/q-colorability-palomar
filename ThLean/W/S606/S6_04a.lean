@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Foundation
+module
+
+public import ThLean.BP.S6.Foundation
+
+@[expose] public section
 
 set_option maxHeartbeats 1000000
 noncomputable section

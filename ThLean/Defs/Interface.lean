@@ -1,4 +1,8 @@
-import ThLean.Defs.Extras
+module
+
+public import ThLean.Defs.Extras
+
+@[expose] public section
 
 /-! Closed contracts shared by the section owners. These propositions must be
 proved by their owners; importing this file supplies no proofs of them. -/

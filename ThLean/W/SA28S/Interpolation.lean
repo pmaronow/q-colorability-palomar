@@ -1,5 +1,9 @@
-import ThLean.W.SA28S.EndpointSeries
-import ThLean.W.SA28.Interpolation
+module
+
+public import ThLean.W.SA28S.EndpointSeries
+public import ThLean.W.SA28.Interpolation
+
+@[expose] public section
 
 noncomputable section
 

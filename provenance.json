@@ -5,10 +5,25 @@
   "release_commit": "b874ebe714fc04b4d6cef38cb30278d9068652c9",
   "cleanup_baseline_commit": "7775f1d998f78958f125831640b884abb36a1f41",
   "frozen_challenge_sha256": "037fe846ca2426d2d0f87527ce9618ce6a510099013691f8cd5c649093294856",
-  "companion_rule": "verbatim frozen source with the final theorem and its docstring removed",
-  "companion_sha256": "28a24fb7bc6cadee4ecdedff69adb8490949f71aad21ecf6469d4f7e7709d78f",
   "original_release_modified_project_files": [
     "ThLean/Defs/Bridge.lean",
     "ThLean/Final/Imports.lean"
-  ]
+  ],
+  "original_companion_rule": "verbatim frozen source with the final theorem and its docstring removed",
+  "original_companion_sha256": "28a24fb7bc6cadee4ecdedff69adb8490949f71aad21ecf6469d4f7e7709d78f",
+  "companion_rule": "Current Challenge.lean with the terminal theorem and its docstring removed; both files use the same module-system port and explanatory docstrings.",
+  "companion_sha256": "794c503e0321fda5b58f33b420200fc7be076d17a1ea4b942dd0444c5ae28234",
+  "current_challenge_sha256": "7e3e8df4c043d3e508fc19a1fafda1463a8efe9a0aa1f6033d7881931a4a4c25",
+  "submission_preparation": {
+    "baseline_commit": "03a35c170b1135d8546c8d63ccadc7939389eff1",
+    "changes": [
+      "Port all 444 project Lean sources to modules with public imports and exposed public declarations.",
+      "Add four matching explanatory definition docstrings in Challenge and its definitions-only companion.",
+      "Use the restricted Palomar Comparator configuration schema.",
+      "Add author-confirmed formalization metadata and reproducible current-source audits."
+    ],
+    "mathematical_terms": "Unchanged from baseline; scripts/audit_submission.py verifies token identity after removing only module-port syntax and comments.",
+    "verification_directory": "verification/submission",
+    "visibility": "Not changed by this preparation; publication remains a separate author action."
+  }
 }

@@ -1,7 +1,11 @@
-import ThLean.BP.S6.Descent
-import ThLean.W.S601.FiniteMean
-import ThLean.W.S602.Foundation
-import ThLean.W.S306.Graph
+module
+
+public import ThLean.BP.S6.Descent
+public import ThLean.W.S601.FiniteMean
+public import ThLean.W.S602.Foundation
+public import ThLean.W.S306.Graph
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

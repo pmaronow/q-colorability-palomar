@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Transfer
-import ThLean.BP.SA.Interpolation
+module
+
+public import ThLean.BP.SA.Transfer
+public import ThLean.BP.SA.Interpolation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import ThLean.W.S364.S3_61
+module
+
+public import ThLean.W.S364.S3_61
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

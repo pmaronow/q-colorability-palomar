@@ -1,4 +1,8 @@
-import ThLean.Contrib.S549.PoissonSplit
+module
+
+public import ThLean.Contrib.S549.PoissonSplit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology ENNReal

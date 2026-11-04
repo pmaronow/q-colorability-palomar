@@ -1,4 +1,8 @@
-import ThLean.W.S369.ThetaEncoding
+module
+
+public import ThLean.W.S369.ThetaEncoding
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import ThLean.Defs.Bridge
+module
+
+public import ThLean.Defs.Bridge
+
+@[expose] public section
 
 open scoped BigOperators
 attribute [local instance] Classical.propDecidable
@@ -219,4 +223,3 @@ theorem PublicModelsStatement_holds : ThresholdFoundations.PublicModelsStatement
 
 example : ThresholdFoundations.PublicModelsStatement :=
   ThLean.W.BR03.PublicModelsStatement_holds
-

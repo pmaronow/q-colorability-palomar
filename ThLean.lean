@@ -1,1 +1,3 @@
-import ThLean.Final.Main
+module
+
+public import ThLean.Final.Main

@@ -1,4 +1,8 @@
-import ThLean.W.S559S.Laws
+module
+
+public import ThLean.W.S559S.Laws
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_mul_left`

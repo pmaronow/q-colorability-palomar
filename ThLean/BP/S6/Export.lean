@@ -1,6 +1,10 @@
-import ThLean.BP.S6.Main
-import ThLean.BP.S6.Measure
-import ThLean.Defs.Interface
+module
+
+public import ThLean.BP.S6.Main
+public import ThLean.BP.S6.Measure
+public import ThLean.Defs.Interface
+
+@[expose] public section
 
 noncomputable section
 open ThresholdFoundations

@@ -1,4 +1,8 @@
-import ThLean.W.SA28S.Graph
+module
+
+public import ThLean.W.SA28S.Graph
+
+@[expose] public section
 
 /-!
 The finite-average helpers `mean_const`

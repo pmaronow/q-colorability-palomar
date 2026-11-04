@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Parameters
+module
+
+public import ThLean.BP.S4.Parameters
+
+@[expose] public section
 
 noncomputable section
 open Filter

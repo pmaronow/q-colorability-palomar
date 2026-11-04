@@ -1,6 +1,10 @@
-import ThLean.W.S390S.SplitGraph
-import ThLean.W.S390S.Discrete
-import ThLean.W.S302.S3_03a
+module
+
+public import ThLean.W.S390S.SplitGraph
+public import ThLean.W.S390S.Discrete
+public import ThLean.W.S302.S3_03a
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Poisson
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+module
+
+public import ThLean.BP.S3.Poisson
+public import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+
+@[expose] public section
 
 noncomputable section
 

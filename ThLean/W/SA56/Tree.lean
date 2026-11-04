@@ -1,4 +1,8 @@
-import ThLean.BP.SA.Tree
+module
+
+public import ThLean.BP.SA.Tree
+
+@[expose] public section
 
 namespace ThLean.W.SA56
 

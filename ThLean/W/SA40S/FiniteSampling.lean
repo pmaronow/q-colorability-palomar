@@ -1,4 +1,8 @@
-import ThLean.BP.SA.Quantiles
+module
+
+public import ThLean.BP.SA.Quantiles
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

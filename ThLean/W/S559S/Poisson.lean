@@ -1,5 +1,9 @@
-import ThLean.W.S559S.Averages
-import ThLean.W.S559.Poisson
+module
+
+public import ThLean.W.S559S.Averages
+public import ThLean.W.S559.Poisson
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology ENNReal

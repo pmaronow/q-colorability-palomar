@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Occupation
+module
+
+public import ThLean.BP.S5.Occupation
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_mono`, `uniformMean_nonneg`

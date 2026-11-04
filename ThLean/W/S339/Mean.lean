@@ -1,5 +1,9 @@
-import ThLean.W.S339.Poisson
-import ThLean.W.S339.ListMean
+module
+
+public import ThLean.W.S339.Poisson
+public import ThLean.W.S339.ListMean
+
+@[expose] public section
 
 noncomputable section
 open Filter

@@ -1,0 +1,65 @@
+{
+  "scope": "Resolved dependency revisions and selected toolchain; supplements official static validators.",
+  "project_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "minimum": "v4.35.0-rc2",
+  "toolchain_matches_mathlib": true,
+  "toolchain_matches_current_minimum": true,
+  "packages": [
+    {
+      "name": "mathlib",
+      "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "matches": true
+    },
+    {
+      "name": "plausible",
+      "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "matches": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "matches": true
+    },
+    {
+      "name": "importGraph",
+      "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "matches": true
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "matches": true
+    },
+    {
+      "name": "aesop",
+      "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "matches": true
+    },
+    {
+      "name": "Qq",
+      "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "matches": true
+    },
+    {
+      "name": "batteries",
+      "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "matches": true
+    },
+    {
+      "name": "Cli",
+      "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "matches": true
+    }
+  ],
+  "status": "PASS"
+}

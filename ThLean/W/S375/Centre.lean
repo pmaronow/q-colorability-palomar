@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Centre
+module
+
+public import ThLean.BP.S3.Centre
+
+@[expose] public section
 
 noncomputable section
 

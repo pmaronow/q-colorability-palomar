@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Identification
-import ThLean.Contrib.S529.EarlyAssembly
+module
+
+public import ThLean.BP.S5.Identification
+public import ThLean.Contrib.S529.EarlyAssembly
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

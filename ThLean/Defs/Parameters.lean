@@ -1,4 +1,8 @@
-import ThLean.Defs.Quantile
+module
+
+public import ThLean.Defs.Quantile
+
+@[expose] public section
 
 noncomputable section
 open Filter

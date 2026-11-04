@@ -1,5 +1,9 @@
-import Mathlib.Analysis.Convex.SpecificFunctions.Basic
-import ThLean.BP.S6.Credit
+module
+
+public import Mathlib.Analysis.Convex.SpecificFunctions.Basic
+public import ThLean.BP.S6.Credit
+
+@[expose] public section
 
 noncomputable section
 

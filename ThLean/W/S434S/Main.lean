@@ -1,4 +1,8 @@
-import ThLean.W.S434S.Normalization
+module
+
+public import ThLean.W.S434S.Normalization
+
+@[expose] public section
 
 noncomputable section
 

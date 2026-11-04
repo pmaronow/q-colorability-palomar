@@ -1,4 +1,8 @@
-import ThLean.W.S362.CycleIndex
+module
+
+public import ThLean.W.S362.CycleIndex
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

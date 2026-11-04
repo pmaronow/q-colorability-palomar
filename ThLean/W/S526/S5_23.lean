@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Identification
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+module
+
+public import ThLean.BP.S5.Identification
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

@@ -1,8 +1,12 @@
-import ThLean.Defs.Low
-import ThLean.Defs.Cycles
-import ThLean.Defs.Poisson
-import ThLean.Defs.Parameters
-import ThLean.Defs.Tree
+module
+
+public import ThLean.Defs.Low
+public import ThLean.Defs.Cycles
+public import ThLean.Defs.Poisson
+public import ThLean.Defs.Parameters
+public import ThLean.Defs.Tree
+
+@[expose] public section
 
 /-! Additional concrete objects required by the five section blueprints. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import ThLean.BP.S4.Deletion
-import ThLean.BP.S4.Finite
+module
+
+public import ThLean.BP.S4.Deletion
+public import ThLean.BP.S4.Finite
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

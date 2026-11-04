@@ -1,4 +1,8 @@
-import ThLean.Contrib.S364.S3_61Connector
+module
+
+public import ThLean.Contrib.S364.S3_61Connector
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

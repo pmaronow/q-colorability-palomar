@@ -1,6 +1,10 @@
-import ThLean.BP.S3.Tails
-import Mathlib.Analysis.Normed.Algebra.Exponential
-import Mathlib.Analysis.SpecialFunctions.Exponential
+module
+
+public import ThLean.BP.S3.Tails
+public import Mathlib.Analysis.Normed.Algebra.Exponential
+public import Mathlib.Analysis.SpecialFunctions.Exponential
+
+@[expose] public section
 
 set_option maxHeartbeats 1000000
 

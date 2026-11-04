@@ -1,4 +1,9 @@
-import ThLean.BP.SA.Common
+module
+
+public import ThLean.BP.SA.Common
+
+@[expose] public section
+
 noncomputable section
 open Filter
 open scoped BigOperators Topology ENNReal

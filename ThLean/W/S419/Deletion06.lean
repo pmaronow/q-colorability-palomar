@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Deletion
+module
+
+public import ThLean.BP.S4.Deletion
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_congr`

@@ -1,4 +1,8 @@
-import ThLean.W.S363.Rotate
+module
+
+public import ThLean.W.S363.Rotate
+
+@[expose] public section
 
 set_option maxHeartbeats 1000000
 

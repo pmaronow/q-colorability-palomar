@@ -1,4 +1,8 @@
-import ThLean.W.S434.S4_BRIDGE_01C
+module
+
+public import ThLean.W.S434.S4_BRIDGE_01C
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_sub`

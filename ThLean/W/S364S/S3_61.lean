@@ -1,4 +1,8 @@
-import ThLean.W.S364S.Connector
+module
+
+public import ThLean.W.S364S.Connector
+
+@[expose] public section
 
 universe u
 

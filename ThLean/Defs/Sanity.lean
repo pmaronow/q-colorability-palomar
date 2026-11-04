@@ -1,4 +1,8 @@
-import ThLean.Defs.Extras
+module
+
+public import ThLean.Defs.Extras
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

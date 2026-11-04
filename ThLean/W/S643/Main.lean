@@ -1,4 +1,8 @@
-import ThLean.BP.S6.Main
+module
+
+public import ThLean.BP.S6.Main
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

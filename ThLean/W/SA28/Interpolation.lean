@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Interpolation
-import ThLean.Contrib.SA28.Endpoints
+module
+
+public import ThLean.BP.SA.Interpolation
+public import ThLean.Contrib.SA28.Endpoints
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

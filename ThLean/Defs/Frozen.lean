@@ -1,4 +1,8 @@
-import ThLean.Defs.Graph
+module
+
+public import ThLean.Defs.Graph
+
+@[expose] public section
 
 noncomputable section
 open Filter

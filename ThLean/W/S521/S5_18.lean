@@ -1,4 +1,8 @@
-import ThLean.W.S521.PairCounting
+module
+
+public import ThLean.W.S521.PairCounting
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

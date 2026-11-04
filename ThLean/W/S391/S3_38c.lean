@@ -1,4 +1,8 @@
-import ThLean.W.S391.SplitRoot
+module
+
+public import ThLean.W.S391.SplitRoot
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

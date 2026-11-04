@@ -1,4 +1,8 @@
-import ThLean.Contrib.S553.Nodes
+module
+
+public import ThLean.Contrib.S553.Nodes
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

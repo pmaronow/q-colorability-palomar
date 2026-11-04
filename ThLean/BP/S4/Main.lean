@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Window
+module
+
+public import ThLean.BP.S4.Window
+
+@[expose] public section
 
 noncomputable section
 open Filter

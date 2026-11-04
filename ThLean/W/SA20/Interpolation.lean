@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Interpolation
-import ThLean.Contrib.SA20.Histogram
+module
+
+public import ThLean.BP.SA.Interpolation
+public import ThLean.Contrib.SA20.Histogram
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

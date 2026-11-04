@@ -1,4 +1,8 @@
-import ThLean.W.S340S.Partition
+module
+
+public import ThLean.W.S340S.Partition
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

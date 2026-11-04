@@ -1,16 +1,18 @@
-import ThLean.Defs.Probability
-import ThLean.Defs.Graph
-import ThLean.Defs.Frozen
-import ThLean.Defs.High
-import ThLean.Defs.Process
-import ThLean.Defs.Quantile
-import ThLean.Defs.Low
-import ThLean.Defs.Cycles
-import ThLean.Defs.Simple
-import ThLean.Defs.Poisson
-import ThLean.Defs.Parameters
-import ThLean.Defs.Tree
-import ThLean.Defs.Extras
-import ThLean.Defs.Interface
-import ThLean.Defs.Bridge
-import ThLean.Defs.Sanity
+module
+
+public import ThLean.Defs.Probability
+public import ThLean.Defs.Graph
+public import ThLean.Defs.Frozen
+public import ThLean.Defs.High
+public import ThLean.Defs.Process
+public import ThLean.Defs.Quantile
+public import ThLean.Defs.Low
+public import ThLean.Defs.Cycles
+public import ThLean.Defs.Simple
+public import ThLean.Defs.Poisson
+public import ThLean.Defs.Parameters
+public import ThLean.Defs.Tree
+public import ThLean.Defs.Extras
+public import ThLean.Defs.Interface
+public import ThLean.Defs.Bridge
+public import ThLean.Defs.Sanity

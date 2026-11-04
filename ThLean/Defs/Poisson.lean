@@ -1,4 +1,8 @@
-import ThLean.Defs.Simple
+module
+
+public import ThLean.Defs.Simple
+
+@[expose] public section
 
 noncomputable section
 open Filter

@@ -1,5 +1,9 @@
-import ThLean.W.S368S.Components
-import ThLean.W.S368S.Transport
+module
+
+public import ThLean.W.S368S.Components
+public import ThLean.W.S368S.Transport
+
+@[expose] public section
 
 noncomputable section
 universe u

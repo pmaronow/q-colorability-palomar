@@ -1,5 +1,9 @@
-import ThLean.BP.S4.Bridges
-import ThLean.Contrib.S434.Bridge01C
+module
+
+public import ThLean.BP.S4.Bridges
+public import ThLean.Contrib.S434.Bridge01C
+
+@[expose] public section
 
 noncomputable section
 open Filter

@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Reduction
+module
+
+public import ThLean.BP.S4.Reduction
+
+@[expose] public section
 
 set_option maxHeartbeats 1000000
 

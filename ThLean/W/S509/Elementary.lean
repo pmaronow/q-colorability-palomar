@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Elementary
-import Mathlib.Analysis.SpecialFunctions.Stirling
+module
+
+public import ThLean.BP.S5.Elementary
+public import Mathlib.Analysis.SpecialFunctions.Stirling
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Reduction
+module
+
+public import ThLean.BP.S4.Reduction
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal

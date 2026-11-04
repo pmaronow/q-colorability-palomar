@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Tails
-import Mathlib.Analysis.SpecialFunctions.Stirling
+module
+
+public import ThLean.BP.S3.Tails
+public import Mathlib.Analysis.SpecialFunctions.Stirling
+
+@[expose] public section
 
 noncomputable section
 

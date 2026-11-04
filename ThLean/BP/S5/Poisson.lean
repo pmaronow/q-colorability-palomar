@@ -1,5 +1,9 @@
-import ThLean.BP.S5.Structure
-import ThLean.BP.S5.Elementary
+module
+
+public import ThLean.BP.S5.Structure
+public import ThLean.BP.S5.Elementary
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

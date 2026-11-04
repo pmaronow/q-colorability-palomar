@@ -1,5 +1,9 @@
-import ThLean.BP.S3.Cycles
-import Mathlib.Data.List.Perm.Subperm
+module
+
+public import ThLean.BP.S3.Cycles
+public import Mathlib.Data.List.Perm.Subperm
+
+@[expose] public section
 
 noncomputable section
 

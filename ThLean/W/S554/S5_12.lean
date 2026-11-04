@@ -1,4 +1,8 @@
-import ThLean.Contrib.S554.PartnerAverage
+module
+
+public import ThLean.Contrib.S554.PartnerAverage
+
+@[expose] public section
 
 noncomputable section
 

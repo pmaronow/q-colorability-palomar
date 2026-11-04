@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Support
+module
+
+public import ThLean.BP.S3.Support
+
+@[expose] public section
 
 noncomputable section
 open Filter MeasureTheory

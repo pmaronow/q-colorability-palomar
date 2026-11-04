@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Deletion
+module
+
+public import ThLean.BP.S4.Deletion
+
+@[expose] public section
 
 noncomputable section
 set_option maxHeartbeats 1000000

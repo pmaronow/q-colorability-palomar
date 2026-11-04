@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Transfer
-import ThLean.W.BR01.PairBridge
+module
+
+public import ThLean.BP.SA.Transfer
+public import ThLean.W.BR01.PairBridge
+
+@[expose] public section
 
 set_option maxHeartbeats 5000000
 

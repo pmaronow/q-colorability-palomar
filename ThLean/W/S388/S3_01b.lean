@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Adapters
+module
+
+public import ThLean.BP.S3.Adapters
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ENNReal
@@ -267,4 +271,3 @@ theorem S3_01bStatement_holds : ThLean.BP.S3.S3_01bStatement := by
 example : ThLean.BP.S3.S3_01bStatement := S3_01bStatement_holds
 
 end ThLean.W.S388
-

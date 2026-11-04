@@ -1,4 +1,8 @@
-import ThLean.BP.S3.Adapters
+module
+
+public import ThLean.BP.S3.Adapters
+
+@[expose] public section
 
 noncomputable section
 set_option maxHeartbeats 1000000

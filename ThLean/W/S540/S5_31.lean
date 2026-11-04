@@ -1,4 +1,8 @@
-import ThLean.BP.S5.Occupation
+module
+
+public import ThLean.BP.S5.Occupation
+
+@[expose] public section
 
 noncomputable section
 set_option maxHeartbeats 500000

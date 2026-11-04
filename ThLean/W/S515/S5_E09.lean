@@ -1,6 +1,10 @@
-import ThLean.BP.S5.Elementary
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import ThLean.BP.S5.Elementary
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 open Filter
 open scoped Topology

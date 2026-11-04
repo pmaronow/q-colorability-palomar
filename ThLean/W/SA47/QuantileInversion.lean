@@ -1,5 +1,9 @@
-import ThLean.BP.SA.Basics
-import ThLean.BP.SA.Quantiles
+module
+
+public import ThLean.BP.SA.Basics
+public import ThLean.BP.SA.Quantiles
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Topology ENNReal

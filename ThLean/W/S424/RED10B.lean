@@ -1,4 +1,8 @@
-import ThLean.BP.S4.Bridges
+module
+
+public import ThLean.BP.S4.Bridges
+
+@[expose] public section
 
 /-!
 The finite-average helpers `uniformMean_mul_left`
