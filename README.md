@@ -56,7 +56,8 @@ final theorem and its docstring. Comparator also checks their compiled declarati
 
 ## Reproduce verification
 
-Use the committed `lean-toolchain` and `lake-manifest.json`:
+Use the committed `lean-toolchain` and `lake-manifest.json`, and Python 3.11 or newer
+for the verification scripts:
 
 ```bash
 lake exe cache get

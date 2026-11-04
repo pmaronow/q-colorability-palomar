@@ -4,8 +4,7 @@ public import ThLean.Final.Imports
 
 @[expose] public section
 
-/-! Explicit assembly of `ThresholdChallenge.MainStatement` from the integrated theorems
-(generated from the composition rules; every step is checked by Lean). -/
+/-! Assembly of `ThresholdChallenge.MainStatement` from the section theorems. -/
 
 namespace ThLean.Final
 

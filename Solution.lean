@@ -4,6 +4,6 @@ public import ThLean.Final.Main
 
 @[expose] public section
 
-/-! Closed solution of the frozen threshold challenge. -/
+/-! Proof of `ThresholdChallenge.MainStatement`. -/
 
 theorem ThresholdChallenge.main : ThresholdChallenge.MainStatement := ThLean.Final.main

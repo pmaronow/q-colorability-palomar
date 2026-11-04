@@ -442,4 +442,4 @@ public import ThLean.W.SA80.Transfer
 
 @[expose] public section
 
-/-! Dependency bundle for the final assembly, independent of the release aggregate. -/
+/-! Imports used by the final theorem assembly. -/

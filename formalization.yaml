@@ -7,13 +7,14 @@ project:
     For every integer q at least 3, the formalization proves the existence of a
     limiting q-colorability threshold for sparse random graphs. A single
     constant alpha_q in [1/2, log(q)/log(q/(q-1))] gives the transition for the
-    uniform model with floor(c n) edges and, at average degree 2 alpha_q, for the
-    binomial model with edge probability d/n. For the same constant, the first
-    loss of q-colorability under independent uniform additions of unordered
-    pairs of distinct vertices is concentrated, with any fixed probability
-    at least 1-eta, within C n (log n)^(-3/2) steps of deterministic integer
-    centers whose ratios to n converge to alpha_q. Repeated edges are retained
-    in this process. The scope is Theorems 1.1 and 1.2 of the included manuscript.
+    uniform model with floor(c n) edges and the transition at d = 2 alpha_q for
+    the binomial model with edge probability d/n. For every fixed eta in (0,1),
+    there is C > 0 such that, for all sufficiently large n, the first loss of
+    q-colorability under independent uniform additions of unordered pairs of
+    distinct vertices lies within C n (log n)^(-3/2) steps of deterministic
+    integer centers with probability at least 1-eta. The centers divided by n
+    converge to the same alpha_q. Repeated edges are retained in this process.
+    The scope is Theorems 1.1 and 1.2 of the included manuscript.
   authors:
     - "P. M. Aronow"
     - "Patrick Lopatto"
@@ -22,8 +23,6 @@ project:
     - "Patrick Lopatto"
   license: "MIT"
 
-# The complete retained proof development is present here, rather than fetched
-# from another substantive-formalization repository by a thin wrapper.
 sources:
   - title: "Existence of the q-Colorability Threshold for Sparse Random Graphs"
     authors:
@@ -136,19 +135,20 @@ alignment:
   namespace: "ThresholdChallenge"
   statements:
     - source: "Theorem 1.1 (thm:intro-main)"
-      lean: "ThresholdChallenge.ThresholdStatement"
-      module: "Challenge.lean"
+      lean: "ThresholdChallenge.main"
+      module: "Solution.lean"
       status: "proved"
       note: >-
-        The threshold part of ThresholdChallenge.main, including both the
-        fixed-edge and sparse binomial models and the interval for alpha_q.
+        The ThresholdChallenge.ThresholdStatement conjunct of the proved main
+        theorem, including both graph models and the interval for alpha_q.
     - source: "Theorem 1.2 (thm:intro-window)"
-      lean: "ThresholdChallenge.WindowStatement"
-      module: "Challenge.lean"
+      lean: "ThresholdChallenge.main"
+      module: "Solution.lean"
       status: "proved"
       note: >-
-        The window part of ThresholdChallenge.main, using the same alpha_q
-        and integer deterministic centers for the with-replacement edge process.
+        The ThresholdChallenge.WindowStatement conjunct of the proved main
+        theorem, using the same alpha_q and integer deterministic centers for
+        the with-replacement edge process.
 
 acknowledgements: >-
   Mathlib and its dependencies, Lean and the independent kernel checkers retain

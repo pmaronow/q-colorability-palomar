@@ -6,7 +6,6 @@ public import Mathlib
 
 /-!
 The two headline statements of Aronow--Lopatto, frozen draft 2026-10-27.
-This file has no project imports and no assumed section-level results.
 All probabilities below are elementary counts or finite sums.
 -/
 
@@ -74,18 +73,18 @@ def processSurvival (q n m : ℕ) : ℝ :=
       (fun x => MultigraphColorable q (prefixMultigraph x))).card : ℝ) /
     (Fintype.card (EdgePrefix n m) : ℝ)
 
-/-- `P(H=k+1)`. In particular `H=1` has mass `S_0-S_1`.
-Under `q ≥ 1`, the empty graph is colorable and `H ≥ 1`. -/
+/-- `P(H=k+1)` for `q ≥ 1` and `n ≥ 2`.
+The empty graph is colorable, so `H ≥ 1` and `H=1` has mass `S_0-S_1`. -/
 def hittingMass (q n k : ℕ) : ℝ :=
   processSurvival q n k - processSurvival q n (k + 1)
 
-/-- Probability of `|H-a| ≤ w`, with integer centre and real width.
+/-- Probability of `|H-a| ≤ w` for `q ≥ 1` and `n ≥ 2`, with integer centre and real width.
 Sum over `H=k+1`; `k < floor_nat(a+w)` means `k+1 ≤ a+w` whenever
 the interval contains a positive integer. The indicator handles its lower end.
 The sum is empty if `a+w < 1`; every summand is zero if `w < 0`.
-`H=∞` contributes zero to every finite interval. For `n ≥ 2*q`, its
-mass is zero (the lifetime bound in the paper); finiteness is not assumed
-in this definition. No floor is applied to `w` before adding the centre. -/
+`H=∞` contributes zero to every finite interval. For `q ≥ 3` and `n ≥ 2*q`,
+its mass is zero by the lifetime bound in the paper. No finiteness assumption
+is needed for this sum, and no floor is applied to `w` before adding the centre. -/
 def hittingWindowProbability (q n : ℕ) (a : ℤ) (w : ℝ) : ℝ :=
   ∑ k ∈ Finset.range (Nat.floor ((a : ℝ) + w)),
     if |((k + 1 : ℕ) : ℝ) - (a : ℝ)| ≤ w then hittingMass q n k else 0
@@ -111,9 +110,8 @@ def ThresholdStatement (q : ℕ) (α : ℝ) : Prop :=
   (∀ d : ℝ, 2 * α < d →
     Tendsto (fun n : ℕ => sparseBinomialProbability q n d) atTop (𝓝 0))
 
-/-- Theorem 1.2. The exponent is real `-3/2`, not natural subtraction.
-Centres are integers, as in the paper. The onset includes the harmless
-restrictions needed to interpret the logarithm and the edge process. -/
+/-- Theorem 1.2, with integer centres and real exponent `-3/2`.
+The onset ensures the logarithm and edge process have their intended domains. -/
 def WindowStatement (q : ℕ) (α : ℝ) : Prop :=
   ∀ η : ℝ, 0 < η → η < 1 →
     ∃ C : ℝ, 0 < C ∧ ∃ n₀ : ℕ, max 3 (2 * q) ≤ n₀ ∧
@@ -123,8 +121,7 @@ def WindowStatement (q : ℕ) (α : ℝ) : Prop :=
           1 - η ≤ hittingWindowProbability q n (a n)
             (C * (n : ℝ) * Real.rpow (Real.log (n : ℝ)) (-(3 : ℝ) / 2))
 
-/-- One existential forces the SAME threshold in Theorems 1.1 and 1.2.
-This is the closed challenge, not a theorem assumed by the proofs. -/
+/-- Theorems 1.1 and 1.2 with one shared threshold. -/
 def MainStatement : Prop :=
   ∀ q : ℕ, 3 ≤ q → ∃ α : ℝ, ThresholdStatement q α ∧ WindowStatement q α
 

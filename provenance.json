@@ -12,15 +12,16 @@
   "original_companion_rule": "verbatim frozen source with the final theorem and its docstring removed",
   "original_companion_sha256": "28a24fb7bc6cadee4ecdedff69adb8490949f71aad21ecf6469d4f7e7709d78f",
   "companion_rule": "Current Challenge.lean with the terminal theorem and its docstring removed; both files use the same module-system port and explanatory docstrings.",
-  "companion_sha256": "794c503e0321fda5b58f33b420200fc7be076d17a1ea4b942dd0444c5ae28234",
-  "current_challenge_sha256": "7e3e8df4c043d3e508fc19a1fafda1463a8efe9a0aa1f6033d7881931a4a4c25",
+  "companion_sha256": "d549832c65e3574676019ec67d0e7bf93e0f20dc323c3df717bb086e72d5c60e",
+  "current_challenge_sha256": "1d1bce9f32852bfb2cb60dac769724b9480037b7b879c61784fe6a5f80b56935",
   "submission_preparation": {
     "baseline_commit": "03a35c170b1135d8546c8d63ccadc7939389eff1",
     "changes": [
       "Port all 444 project Lean sources to modules with public imports and exposed public declarations.",
       "Add four matching explanatory definition docstrings in Challenge and its definitions-only companion.",
       "Use the restricted Palomar Comparator configuration schema.",
-      "Add author-confirmed formalization metadata and reproducible current-source audits."
+      "Add author-confirmed formalization metadata and reproducible current-source audits.",
+      "Clarify probability-domain docstrings and metadata alignment; remove stale development commentary without changing mathematical tokens."
     ],
     "mathematical_terms": "Unchanged from baseline; scripts/audit_submission.py verifies token identity after removing only module-port syntax and comments.",
     "verification_directory": "verification/submission",
