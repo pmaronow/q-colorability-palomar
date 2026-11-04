@@ -1,0 +1,20 @@
+{
+  "scope": "Integrity receipts for downloaded checker/toolchain artifacts used in local verification.",
+  "lean": {
+    "release_tag": "v4.35.0-rc2",
+    "release_commit": "11acb17ec6b07a8f9e9173e6845197929540936b",
+    "asset": "lean-4.35.0-rc2-linux.tar.zst",
+    "expected_sha256_from_github_release": "b67d0e0ba959fc74e186f1b44aebca32d6ecb6a28f8e9a029fc4e9f73398a049",
+    "observed_sha256": "b67d0e0ba959fc74e186f1b44aebca32d6ecb6a28f8e9a029fc4e9f73398a049",
+    "matches": true
+  },
+  "con_ron_override": {
+    "release_tag": "v4.36.0-rc1",
+    "release_commit": "c9afcddf514a6772bd4d649f7cfc04eff0b9f15e",
+    "archive_sha256": "26b3cea1a006ad419215520b8668dcd3f6a9eeba1a123756563a739f9c6274b2",
+    "binary_sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "matches_palomar_checker_revisions": true
+  },
+  "palomar_submission_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "status": "PASS"
+}

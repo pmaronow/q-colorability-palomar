@@ -106,3 +106,22 @@ every argument in the manuscript or constitute expert peer review of the whole
 development. Fresh build and Comparator/kernel results for this edited tree
 must be assessed separately; historical acceptance logs describe their original
 source snapshot.
+
+## Targeted literature check
+
+A separate spot-check examined the introduction, related-work account, authors'
+note, overview attribution, abstract, and bibliography. Primary-source checks
+confirmed the sharp-threshold/convergence distinction in
+[Achlioptas–Friedgut](https://cgi.di.uoa.gr/~optas/papers/k-col-threshold.pdf), the
+log-probability limit and interpolation comparison in
+[Bayati–Gamarnik–Tetali](https://arxiv.org/html/0912.2444v3), the cited bounds in
+[Coja-Oghlan–Vilenchik](https://arxiv.org/html/1304.1063) and
+[Ayre–Coja-Oghlan–Greenhill](https://arxiv.org/html/1812.09691v4), and the window
+claims in Carenini's [TR26-229](https://eccc.weizmann.ac.il/report/2026/229/) and
+[TR26-145](https://eccc.weizmann.ac.il/report/2026/145/). All four pinned OpenAI
+preprint PDFs cited by the manuscript resolved; their main statements and
+priority credit agree with the manuscript's summaries. The manuscript discloses
+machine writing, the unrefereed status of recent preprints, and adapted proof
+ingredients. No material attribution or literature discrepancy was found in this
+scope. This check does not validate every one of the 63 bibliography entries or
+independently establish the informal proofs.

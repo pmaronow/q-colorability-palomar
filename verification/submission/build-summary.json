@@ -1,0 +1,16 @@
+{
+  "scope": "Completed local source-trace-validated build of the prepared module port, using the standard pinned Mathlib cache.",
+  "prepared_source_commit": "ecde8e9cf80975f2e26a3124a7ca0f4706a00bd8",
+  "command": [
+    "lake",
+    "--fail-fast",
+    "--no-cache",
+    "build"
+  ],
+  "exit_code": 0,
+  "project_modules_compiled": 444,
+  "total_build_jobs": 9377,
+  "log": "build.log",
+  "status": "PASS",
+  "log_formatting": "Stored build logs have trailing line whitespace removed; warnings, command output and verdicts are retained."
+}

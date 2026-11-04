@@ -1,0 +1,39 @@
+{
+  "scope": "Local readiness to submit the prepared sources; public visibility deliberately deferred. This is not Palomar registration or editorial approval.",
+  "status": "PASS",
+  "prepared_source_commit": "ecde8e9cf80975f2e26a3124a7ca0f4706a00bd8",
+  "source_snapshot_sha256": "4a2a247e1f52398f78759d39c72a9a7eefca55183bd5e6f922a8c4efe68eeda3",
+  "lean_sources": 444,
+  "solution_import_closure": 442,
+  "build": "PASS",
+  "comparator": "PASS",
+  "kernels": {
+    "nanoda kernel accepts the solution": true,
+    "con-ron kernel accepts the solution": true,
+    "Lean default kernel accepts the solution": true,
+    "Your solution is okay!": true
+  },
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "fidelity": "Headline statements, model definitions, selected bridges and source preservation reviewed; no substantive mismatch found. See fidelity.md for scope.",
+  "official_local_static_validators": "PASS",
+  "finite_model_checks": "PASS",
+  "dependency_pins_and_toolchain": "PASS",
+  "submission_inputs": {
+    "repository": "pmaronow/q-colorability-palomar",
+    "project_directory": "",
+    "comparator_config": "comparator.json",
+    "formalization_metadata": "formalization.yaml"
+  },
+  "deferred_by_user": [
+    "Make the repository public before submitting."
+  ],
+  "not_performed": [
+    "Palomar protected verification workflow",
+    "Palomar editorial review",
+    "Submission or registration"
+  ]
+}
