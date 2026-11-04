@@ -1,8 +1,8 @@
 {
   "scope": "Local readiness to submit the prepared sources; public visibility deliberately deferred. This is not Palomar registration or editorial approval.",
   "status": "PASS",
-  "prepared_source_commit": "ecde8e9cf80975f2e26a3124a7ca0f4706a00bd8",
-  "source_snapshot_sha256": "4a2a247e1f52398f78759d39c72a9a7eefca55183bd5e6f922a8c4efe68eeda3",
+  "prepared_source_commit": "8c417467642557a661520e9c8a63b51a9d8d3ab6",
+  "source_snapshot_sha256": "1e4b4cca1985f459beab875243abda0b9d1860a34640277d09e468750f85d3bb",
   "lean_sources": 444,
   "solution_import_closure": 442,
   "build": "PASS",
@@ -35,5 +35,15 @@
     "Palomar protected verification workflow",
     "Palomar editorial review",
     "Submission or registration"
+  ],
+  "kernel_report": "final-review/comparator-result.json",
+  "source_audit": "final-review/source-audit.json",
+  "static_validation": "final-review/palomar-static.json",
+  "additional_intake_checks": "final-review/additional-intake-checks.json",
+  "final_review_changes": [
+    "Clarified the registry abstract parameters and alignment to the proved theorem.",
+    "Qualified probability docstrings with their valid domains.",
+    "Removed stale development commentary while retaining mathematical explanations and provenance.",
+    "Rebuilt and compared fresh exports; all three kernels accept the final pair."
   ]
 }

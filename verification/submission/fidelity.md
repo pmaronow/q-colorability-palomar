@@ -4,7 +4,7 @@ This audit compares the formal headline statement with Theorems 1.1 and 1.2 in
 the included manuscript, and compares the ported Lean sources with release
 commit `03a35c170b1135d8546c8d63ccadc7939389eff1`. No substantive statement mismatch
 was found. The module port and added docstrings preserve every mathematical
-token under the normalization recorded in `source-audit.json`.
+token under the normalization recorded in `final-review/source-audit.json`.
 
 ## Manuscript correspondence
 
@@ -77,7 +77,7 @@ python3 scripts/audit_submission.py
 python3 scripts/check_finite_models.py
 ```
 
-Both scripts use only Python's standard library. `source-audit.json` records
+Both scripts use only Python's standard library. `final-review/source-audit.json` records
 the baseline and current byte hashes, mathematical token hashes for all 444
 Lean files, module headers, line caps, import graph, trust-marker scan, and
 companion identity. The normalization ignores comments and whitespace outside

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "command": [
+    "lake",
+    "--no-cache",
+    "build"
+  ],
+  "exit_code": 0,
+  "project_module_count": 444,
+  "build_jobs": 9377,
+  "log": "build.log",
+  "log_formatting": "Trailing line whitespace removed."
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Additional current-snapshot intake checks supplementing check_palomar.py",
+  "checks": {
+    "supported_toolchain": "v4.35.0-rc2",
+    "exactly_one_lakefile": "lakefile.toml",
+    "solution_source": "Solution.lean",
+    "mathlib_toolchain_matches": true,
+    "resolved_dependency_pins_match": 9,
+    "snapshot_bytes": 5739100,
+    "symlinks": 0
+  },
+  "status": "PASS"
+}

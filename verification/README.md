@@ -1,8 +1,28 @@
 # Verification records
 
-## Prepared submission
+## Final submission review
 
-`submission/` contains evidence for the module-compatible prepared source tree:
+`submission/final-review/` records the final documentation and metadata cleanup.
+The changes clarify probability domains, remove stale development commentary,
+make the registry abstract's parameters precise, and point source alignment to
+the proved theorem in `Solution.lean`. All mathematical tokens remain unchanged.
+
+- `source-audit.json` contains current source hashes and the successful static audit.
+- `build-summary.json` and `build.log` record the successful rebuild.
+- `palomar-static.json` and `additional-intake-checks.json` record current metadata,
+  configuration, licence, source, toolchain, dependency, layout, and size checks.
+- `comparator-result.json` and `comparator.log` record the fresh comparison and
+  three-kernel replay of the final exported pair. The result includes the final
+  source snapshot, checker hashes, export hashes, and acceptance markers.
+- `export-comparison.json` records that the Solution export is byte-identical to
+  the earlier accepted export. The Challenge export changed, so the pair was
+  compared again; the fresh verdict is in `comparator-result.json`.
+
+`submission/readiness.json` and `release-source.sha256` describe the final package.
+
+## Initial submission preparation
+
+`submission/` also preserves the initial module-port verification records:
 
 - `source-audit.json` records source hashes, line/header checks, the local import
   closure, trust-marker scan, companion identity, and mathematical-token identity
